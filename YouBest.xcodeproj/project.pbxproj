@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
+		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
+		46B21E721891702000952309 /* JobMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E711891702000952309 /* JobMO.m */; };
+		46B21E751891702100952309 /* GoodsMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E741891702100952309 /* GoodsMO.m */; };
+		46B21E781891702100952309 /* PlayerMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E771891702100952309 /* PlayerMO.m */; };
+		46B21E7B1891702100952309 /* RecordMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E7A1891702100952309 /* RecordMO.m */; };
+		46B21E7E1891702100952309 /* TaskMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E7D1891702100952309 /* TaskMO.m */; };
+		46B21E811891702100952309 /* GiftMO.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E801891702100952309 /* GiftMO.m */; };
+		46D358B4188E390600D722CB /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D358B3188E390600D722CB /* YouBest.storyboard */; };
+		46D358B7188E3E8900D722CB /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B6188E3E8900D722CB /* PlayersViewController.m */; };
+		46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B9188EB79B00D722CB /* TasksViewController.m */; };
+		46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358BC188EB7BA00D722CB /* GiftsViewController.m */; };
+		46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358C2188EBFD100D722CB /* TabsViewController.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -35,6 +48,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46B21E5718916DA500952309 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		46B21E5818916DA500952309 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
+		46B21E5918916DA500952309 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
+		46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
+		46B21E701891702000952309 /* JobMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobMO.h; sourceTree = "<group>"; };
+		46B21E711891702000952309 /* JobMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobMO.m; sourceTree = "<group>"; };
+		46B21E731891702100952309 /* GoodsMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsMO.h; sourceTree = "<group>"; };
+		46B21E741891702100952309 /* GoodsMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsMO.m; sourceTree = "<group>"; };
+		46B21E761891702100952309 /* PlayerMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMO.h; sourceTree = "<group>"; };
+		46B21E771891702100952309 /* PlayerMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerMO.m; sourceTree = "<group>"; };
+		46B21E791891702100952309 /* RecordMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordMO.h; sourceTree = "<group>"; };
+		46B21E7A1891702100952309 /* RecordMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordMO.m; sourceTree = "<group>"; };
+		46B21E7C1891702100952309 /* TaskMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskMO.h; sourceTree = "<group>"; };
+		46B21E7D1891702100952309 /* TaskMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskMO.m; sourceTree = "<group>"; };
+		46B21E7F1891702100952309 /* GiftMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftMO.h; sourceTree = "<group>"; };
+		46B21E801891702100952309 /* GiftMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftMO.m; sourceTree = "<group>"; };
+		46D358B3188E390600D722CB /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
+		46D358B5188E3E8900D722CB /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
+		46D358B6188E3E8900D722CB /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
+		46D358B8188EB79B00D722CB /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		46D358B9188EB79B00D722CB /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
+		46D358BB188EB7BA00D722CB /* GiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsViewController.h; sourceTree = "<group>"; };
+		46D358BC188EB7BA00D722CB /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
+		46D358C1188EBFD100D722CB /* TabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsViewController.h; sourceTree = "<group>"; };
+		46D358C2188EBFD100D722CB /* TabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsViewController.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +119,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B21E501891655000952309 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				46B21E5718916DA500952309 /* Logger.h */,
+				46B21E5818916DA500952309 /* Logger.m */,
+				46B21E5918916DA500952309 /* NSManagedObjectContext+Utils.h */,
+				46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		46B21E5D18916E9E00952309 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				46B21E7F1891702100952309 /* GiftMO.h */,
+				46B21E801891702100952309 /* GiftMO.m */,
+				46B21E7C1891702100952309 /* TaskMO.h */,
+				46B21E7D1891702100952309 /* TaskMO.m */,
+				46B21E791891702100952309 /* RecordMO.h */,
+				46B21E7A1891702100952309 /* RecordMO.m */,
+				46B21E761891702100952309 /* PlayerMO.h */,
+				46B21E771891702100952309 /* PlayerMO.m */,
+				46B21E731891702100952309 /* GoodsMO.h */,
+				46B21E741891702100952309 /* GoodsMO.m */,
+				46B21E701891702000952309 /* JobMO.h */,
+				46B21E711891702000952309 /* JobMO.m */,
+			);
+			path = ManagedObject;
+			sourceTree = "<group>";
+		};
 		EE6B474F1885168E00362B84 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +187,17 @@
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
 				EE6B476F1885168E00362B84 /* YouBest.xcdatamodeld */,
+				46D358B3188E390600D722CB /* YouBest.storyboard */,
+				46D358B5188E3E8900D722CB /* PlayersViewController.h */,
+				46D358B6188E3E8900D722CB /* PlayersViewController.m */,
+				46D358C1188EBFD100D722CB /* TabsViewController.h */,
+				46D358C2188EBFD100D722CB /* TabsViewController.m */,
+				46D358B8188EB79B00D722CB /* TasksViewController.h */,
+				46D358B9188EB79B00D722CB /* TasksViewController.m */,
+				46D358BB188EB7BA00D722CB /* GiftsViewController.h */,
+				46D358BC188EB7BA00D722CB /* GiftsViewController.m */,
+				46B21E5D18916E9E00952309 /* ManagedObject */,
+				46B21E501891655000952309 /* Utils */,
 				EE6B47641885168E00362B84 /* Supporting Files */,
 			);
 			path = YouBest;
@@ -200,6 +279,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = family;
 				TargetAttributes = {
+					EE6B47571885168E00362B84 = {
+						DevelopmentTeam = 74G5LGJ29X;
+					};
 					EE6B47771885168E00362B84 = {
 						TestTargetID = EE6B47571885168E00362B84;
 					};
@@ -228,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D358B4188E390600D722CB /* YouBest.storyboard in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
 			);
@@ -248,7 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B21E811891702100952309 /* GiftMO.m in Sources */,
+				46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */,
+				46B21E721891702000952309 /* JobMO.m in Sources */,
+				46B21E7B1891702100952309 /* RecordMO.m in Sources */,
+				46B21E781891702100952309 /* PlayerMO.m in Sources */,
+				46B21E751891702100952309 /* GoodsMO.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
+				46B21E7E1891702100952309 /* TaskMO.m in Sources */,
+				46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */,
+				46B21E5B18916DA500952309 /* Logger.m in Sources */,
+				46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */,
+				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
+				46D358B7188E3E8900D722CB /* PlayersViewController.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
 				EE6B47711885168E00362B84 /* YouBest.xcdatamodeld in Sources */,
 			);
@@ -451,6 +546,7 @@
 				EE6B478C1885168E00362B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE6B478D1885168E00362B84 /* Build configuration list for PBXNativeTarget "YouBestTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +555,7 @@
 				EE6B478F1885168E00362B84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
