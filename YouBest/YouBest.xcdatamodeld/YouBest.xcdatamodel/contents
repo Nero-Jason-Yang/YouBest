@@ -2,50 +2,43 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Gift" representedClassName="GiftMO" syncable="YES">
         <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="goods" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goods" inverseName="gifts" inverseEntity="Goods" syncable="YES"/>
         <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="gifts" inverseEntity="Player" syncable="YES"/>
     </entity>
-    <entity name="Goods" representedClassName="GoodsMO" syncable="YES">
+    <entity name="GiftTemplate" representedClassName="GoodsMO" syncable="YES">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gifts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Gift" inverseName="goods" inverseEntity="Gift" syncable="YES"/>
-    </entity>
-    <entity name="Job" representedClassName="JobMO" syncable="YES">
-        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="reward" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="job" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Player" representedClassName="PlayerMO" syncable="YES">
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="gifts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Gift" inverseName="player" inverseEntity="Gift" syncable="YES"/>
-        <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Record" inverseName="player" inverseEntity="Record" syncable="YES"/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="player" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Record" representedClassName="RecordMO" syncable="YES">
-        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="moid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="money" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="records" inverseEntity="Player" syncable="YES"/>
-    </entity>
     <entity name="Task" representedClassName="TaskMO" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="deadline" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="doneDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="reward" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="job" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Job" inverseName="tasks" inverseEntity="Job" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="tasks" inverseEntity="Player" syncable="YES"/>
+    </entity>
+    <entity name="TaskTemplate" representedClassName="JobMO" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reward" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Gift" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Goods" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Job" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Player" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Record" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Task" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GiftTemplate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TaskTemplate" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
