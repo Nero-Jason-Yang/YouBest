@@ -1,73 +1,48 @@
-Task
-.title   任务标题
-.content 任务具体内容
-.reward  任务报酬，金币数量
-.state   任务状态，
-.creationDate 创建时间
-.finishDate   完成时间
-.deadline     最后期限
-~player    任务所有者
 
-TaskTemplate
-.title   任务标题
-.content 任务具体内容
-.reward  任务报酬，金币数量
-.remark  备注，仅管理员可以阅读
-
-Gift
-.title   礼物名称
-.content 礼物具体描述
-.price   礼物价格，金币数量
-.state   礼物状态，
-.creationDate 上架时间
-.finishDate   购买时间
-.number  礼物剩余数量，-1表示无限，当减少到0时自动下架
-~player  礼物所有者
-
-GiftTemplate
-.title   礼物名称
-.content 礼物具体描述
-.price   礼物价格，金币数量
-.remark  备注，仅管理员可以阅读
-
-
-
-
-
-
-Template
-.identity  ID
-.type      项目类型（任务、礼物）
-.name      项目名称（标题）
-.content   项目内容（描述）
-.value     项目值（金币数量）
-.remark    项目备注（仅管理员可读）
-
-Item
-.type         类型（任务、礼物）
-.name         名称
-.content      内容
-.value        值，任务报酬、礼物价格
-.state        项目状态 0:closed 1:finished 2:in-progress 3:ready
-.creationDate 创建时间
-.deadline     最后期限
-.startDate    开始时间
-.finishDate   完成时间
-.number       剩余数量
-.playerID     玩家ID
-~template     模板
-
-Task:Item
-~player       玩家
-
-Gift:Item
-~player       玩家
+enum ItemType {
+    ItemType_Task = 0,
+    ItemType_Gift = 1,
+    ItemType_Wish = 2,
+}
 
 Player
-.identity ID
-.name     姓名
-.birthday 出生日期
-.value    金币数量
-~items
-~history
+.identity       ID
+.name           昵称
+.birthday       出生日期
+.value          金币数量
+~items          尚未关闭的项目集合
 
+ItemTemplate
+.identity       ID
+.type           项目类型（任务、礼物）
+.name           项目名称（标题）
+.content        项目内容（描述）
+.value          项目值（金币数量）
+.remark         项目备注（仅管理员可读）
+~items          尚未关闭的项目集合
+
+Item
+.type           类型（任务、礼物）
+.name           名称
+.content        内容
+.value          值，任务报酬、礼物价格
+.state          项目状态 0:finished 1:in-progress 2:ready
+.total          总数，0表示无限
+.number         完成数量
+.creationDate   创建时间
+.expiryDate     到期时间
+.startDate      开始时间
+.finishDate     完成时间
+~template       模板
+~player         玩家
+
+ItemRecord
+.type           项目类型
+.name           任务名/礼物名/愿望名
+.content        任务内容/礼物说明/愿望内容
+.value          任务报酬/礼物价格
+.startDate      任务开始时间/礼物兑换时间
+.finishDate     任务结束时间/礼物发放时间
+.playerName     玩家名
+.playerID       玩家ID
+.templateID     模板ID

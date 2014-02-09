@@ -14,6 +14,11 @@
 		46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B9188EB79B00D722CB /* TasksViewController.m */; };
 		46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358BC188EB7BA00D722CB /* GiftsViewController.m */; };
 		46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358C2188EBFD100D722CB /* TabsViewController.m */; };
+		46DACB5718A7357B00FD6695 /* MORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5618A7357B00FD6695 /* MORecord.m */; };
+		46DACB5A18A7357C00FD6695 /* MOTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5918A7357C00FD6695 /* MOTemplate.m */; };
+		46DACB5D18A7357C00FD6695 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5C18A7357C00FD6695 /* MOPlayer.m */; };
+		46DACB6018A7357C00FD6695 /* MOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5F18A7357C00FD6695 /* MOItem.m */; };
+		46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB6218A7387400FD6695 /* WishesViewController.m */; };
 		EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE00FC7F18A62EC200C0E668 /* YouBest.txt */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
@@ -56,6 +61,16 @@
 		46D358BC188EB7BA00D722CB /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
 		46D358C1188EBFD100D722CB /* TabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsViewController.h; sourceTree = "<group>"; };
 		46D358C2188EBFD100D722CB /* TabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsViewController.m; sourceTree = "<group>"; };
+		46DACB5518A7357B00FD6695 /* MORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MORecord.h; sourceTree = "<group>"; };
+		46DACB5618A7357B00FD6695 /* MORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MORecord.m; sourceTree = "<group>"; };
+		46DACB5818A7357C00FD6695 /* MOTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTemplate.h; sourceTree = "<group>"; };
+		46DACB5918A7357C00FD6695 /* MOTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTemplate.m; sourceTree = "<group>"; };
+		46DACB5B18A7357C00FD6695 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
+		46DACB5C18A7357C00FD6695 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
+		46DACB5E18A7357C00FD6695 /* MOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItem.h; sourceTree = "<group>"; };
+		46DACB5F18A7357C00FD6695 /* MOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItem.m; sourceTree = "<group>"; };
+		46DACB6118A7387400FD6695 /* WishesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishesViewController.h; sourceTree = "<group>"; };
+		46DACB6218A7387400FD6695 /* WishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishesViewController.m; sourceTree = "<group>"; };
 		EE00FC7F18A62EC200C0E668 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -117,6 +132,14 @@
 		46B21E5D18916E9E00952309 /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
+				46DACB5E18A7357C00FD6695 /* MOItem.h */,
+				46DACB5F18A7357C00FD6695 /* MOItem.m */,
+				46DACB5B18A7357C00FD6695 /* MOPlayer.h */,
+				46DACB5C18A7357C00FD6695 /* MOPlayer.m */,
+				46DACB5818A7357C00FD6695 /* MOTemplate.h */,
+				46DACB5918A7357C00FD6695 /* MOTemplate.m */,
+				46DACB5518A7357B00FD6695 /* MORecord.h */,
+				46DACB5618A7357B00FD6695 /* MORecord.m */,
 			);
 			path = ManagedObject;
 			sourceTree = "<group>";
@@ -158,8 +181,8 @@
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
-				EE6B476F1885168E00362B84 /* YouBest.xcdatamodeld */,
 				EE00FC7F18A62EC200C0E668 /* YouBest.txt */,
+				EE6B476F1885168E00362B84 /* YouBest.xcdatamodeld */,
 				46D358B3188E390600D722CB /* YouBest.storyboard */,
 				46D358B5188E3E8900D722CB /* PlayersViewController.h */,
 				46D358B6188E3E8900D722CB /* PlayersViewController.m */,
@@ -169,6 +192,8 @@
 				46D358B9188EB79B00D722CB /* TasksViewController.m */,
 				46D358BB188EB7BA00D722CB /* GiftsViewController.h */,
 				46D358BC188EB7BA00D722CB /* GiftsViewController.m */,
+				46DACB6118A7387400FD6695 /* WishesViewController.h */,
+				46DACB6218A7387400FD6695 /* WishesViewController.m */,
 				46B21E5D18916E9E00952309 /* ManagedObject */,
 				46B21E501891655000952309 /* Utils */,
 				EE6B47641885168E00362B84 /* Supporting Files */,
@@ -307,12 +332,17 @@
 			files = (
 				46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
+				46DACB6018A7357C00FD6695 /* MOItem.m in Sources */,
 				46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */,
+				46DACB5A18A7357C00FD6695 /* MOTemplate.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
+				46DACB5718A7357B00FD6695 /* MORecord.m in Sources */,
 				46D358B7188E3E8900D722CB /* PlayersViewController.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
+				46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */,
+				46DACB5D18A7357C00FD6695 /* MOPlayer.m in Sources */,
 				EE6B47711885168E00362B84 /* YouBest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

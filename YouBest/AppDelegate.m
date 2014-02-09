@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NSManagedObjectContext+Utils.h"
-#import "PlayerMO.h"
+#import "MOPlayer.h"
 
 @implementation AppDelegate
 
@@ -18,10 +18,11 @@
     NSUInteger numPlayers = [self.managedObjectContext fetchCountForEntityName:@"Player" withPredicate:nil];
     if (0 == numPlayers) {
         // make a default player
-        PlayerMO *player = [self.managedObjectContext createObjectForEntityName:@"Player"];
-        player.birthday = NSDate.date;
+        MOPlayer *player = [self.managedObjectContext createObjectForEntityName:@"Player"];
+        player.identity = [[NSUUID UUID] UUIDString];
         player.name = @"宝贝";
-        player.money = [NSNumber numberWithInteger:0];
+        player.birthday = NSDate.date;
+        player.value = [NSNumber numberWithInteger:0];
         [self.managedObjectContext save];
         numPlayers = 1;
     }
