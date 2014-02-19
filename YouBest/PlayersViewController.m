@@ -25,6 +25,20 @@
     [super viewDidLoad];
     
     [self updateDataSourceDown];
+    
+    NSUInteger count = _players.count;
+    if (count == 0) {
+        // TODO
+        // to admin setup view.
+    }
+    else if (count == 1) {
+        _currentPlayer = _players[0];
+        TabsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabsViewController"];
+        if (viewController) {
+            viewController.player = _currentPlayer;
+            [self.navigationController pushViewController:viewController animated:NO];
+        }
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -33,6 +47,7 @@
         TabsViewController *viewController = segue.destinationViewController;
         if ([viewController isKindOfClass:TabsViewController.class]) {
             viewController.player = _currentPlayer;
+            viewController.navigationItem.leftBarButtonItem = nil;
         }
     }
 }

@@ -60,10 +60,8 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IoV-MH-4vf">
                                 <rect key="frame" x="16" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="#">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="#"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -90,8 +88,17 @@
         <!--Tabs View Controller - 宝贝-->
         <scene sceneID="8L9-0h-gFc">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="zQ3-tV-QK4" customClass="TabsViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="宝贝" id="3LD-ek-iMj"/>
+                <tabBarController storyboardIdentifier="TabsViewController" definesPresentationContext="YES" id="zQ3-tV-QK4" customClass="TabsViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="宝贝" id="3LD-ek-iMj">
+                        <barButtonItem key="leftBarButtonItem" id="qkC-YZ-IDj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C42-4K-fV2">
+                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="#"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Y9a-TW-tkS">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
