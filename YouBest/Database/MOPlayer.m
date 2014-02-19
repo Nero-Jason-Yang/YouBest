@@ -2,20 +2,20 @@
 //  MOPlayer.m
 //  YouBest
 //
-//  Created by Yang Jason on 14-2-9.
+//  Created by Jason Yang on 14-2-18.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
 #import "MOPlayer.h"
-#import "MOItem.h"
+#import "MOItemInstance.h"
 
 
 @implementation MOPlayer
 
+@dynamic birthday;
 @dynamic identity;
 @dynamic name;
-@dynamic birthday;
 @dynamic value;
-@dynamic items;
+@dynamic itemInstances;
 
 @end

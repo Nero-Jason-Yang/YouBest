@@ -14,12 +14,16 @@
 		46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B9188EB79B00D722CB /* TasksViewController.m */; };
 		46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358BC188EB7BA00D722CB /* GiftsViewController.m */; };
 		46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358C2188EBFD100D722CB /* TabsViewController.m */; };
-		46DACB5718A7357B00FD6695 /* MORecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5618A7357B00FD6695 /* MORecord.m */; };
-		46DACB5A18A7357C00FD6695 /* MOTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5918A7357C00FD6695 /* MOTemplate.m */; };
-		46DACB5D18A7357C00FD6695 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5C18A7357C00FD6695 /* MOPlayer.m */; };
-		46DACB6018A7357C00FD6695 /* MOItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB5F18A7357C00FD6695 /* MOItem.m */; };
 		46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB6218A7387400FD6695 /* WishesViewController.m */; };
 		EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE00FC7F18A62EC200C0E668 /* YouBest.txt */; };
+		EE00FCA518B4831A00C0E668 /* MOItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC9C18B4831A00C0E668 /* MOItemInstance.m */; };
+		EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */; };
+		EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */; };
+		EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA218B4831A00C0E668 /* MOOption.m */; };
+		EE00FCA918B4831A00C0E668 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA418B4831A00C0E668 /* MOPlayer.m */; };
+		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
+		EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB218B4968D00C0E668 /* YBPlayer.m */; };
+		EE00FCB618B4A6F100C0E668 /* YBItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -61,17 +65,26 @@
 		46D358BC188EB7BA00D722CB /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
 		46D358C1188EBFD100D722CB /* TabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsViewController.h; sourceTree = "<group>"; };
 		46D358C2188EBFD100D722CB /* TabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsViewController.m; sourceTree = "<group>"; };
-		46DACB5518A7357B00FD6695 /* MORecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MORecord.h; sourceTree = "<group>"; };
-		46DACB5618A7357B00FD6695 /* MORecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MORecord.m; sourceTree = "<group>"; };
-		46DACB5818A7357C00FD6695 /* MOTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTemplate.h; sourceTree = "<group>"; };
-		46DACB5918A7357C00FD6695 /* MOTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTemplate.m; sourceTree = "<group>"; };
-		46DACB5B18A7357C00FD6695 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
-		46DACB5C18A7357C00FD6695 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
-		46DACB5E18A7357C00FD6695 /* MOItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItem.h; sourceTree = "<group>"; };
-		46DACB5F18A7357C00FD6695 /* MOItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItem.m; sourceTree = "<group>"; };
 		46DACB6118A7387400FD6695 /* WishesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishesViewController.h; sourceTree = "<group>"; };
 		46DACB6218A7387400FD6695 /* WishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishesViewController.m; sourceTree = "<group>"; };
 		EE00FC7F18A62EC200C0E668 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
+		EE00FC9B18B4831A00C0E668 /* MOItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemInstance.h; sourceTree = "<group>"; };
+		EE00FC9C18B4831A00C0E668 /* MOItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemInstance.m; sourceTree = "<group>"; };
+		EE00FC9D18B4831A00C0E668 /* MOItemRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemRecord.h; sourceTree = "<group>"; };
+		EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemRecord.m; sourceTree = "<group>"; };
+		EE00FC9F18B4831A00C0E668 /* MOItemTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemTemplate.h; sourceTree = "<group>"; };
+		EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemTemplate.m; sourceTree = "<group>"; };
+		EE00FCA118B4831A00C0E668 /* MOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOOption.h; sourceTree = "<group>"; };
+		EE00FCA218B4831A00C0E668 /* MOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOOption.m; sourceTree = "<group>"; };
+		EE00FCA318B4831A00C0E668 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
+		EE00FCA418B4831A00C0E668 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
+		EE00FCAD18B4834900C0E668 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		EE00FCAE18B4834900C0E668 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		EE00FCB118B4968D00C0E668 /* YBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlayer.h; sourceTree = "<group>"; };
+		EE00FCB218B4968D00C0E668 /* YBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPlayer.m; sourceTree = "<group>"; };
+		EE00FCB418B4A6F100C0E668 /* YBItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBItemInstance.h; sourceTree = "<group>"; };
+		EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBItemInstance.m; sourceTree = "<group>"; };
+		EE00FCB718B4A87600C0E668 /* YBTypedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTypedef.h; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,19 +142,35 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		46B21E5D18916E9E00952309 /* ManagedObject */ = {
+		EE00FC9A18B4831A00C0E668 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				46DACB5E18A7357C00FD6695 /* MOItem.h */,
-				46DACB5F18A7357C00FD6695 /* MOItem.m */,
-				46DACB5B18A7357C00FD6695 /* MOPlayer.h */,
-				46DACB5C18A7357C00FD6695 /* MOPlayer.m */,
-				46DACB5818A7357C00FD6695 /* MOTemplate.h */,
-				46DACB5918A7357C00FD6695 /* MOTemplate.m */,
-				46DACB5518A7357B00FD6695 /* MORecord.h */,
-				46DACB5618A7357B00FD6695 /* MORecord.m */,
+				EE00FCAD18B4834900C0E668 /* Database.h */,
+				EE00FCAE18B4834900C0E668 /* Database.m */,
+				EE00FC9B18B4831A00C0E668 /* MOItemInstance.h */,
+				EE00FC9C18B4831A00C0E668 /* MOItemInstance.m */,
+				EE00FC9D18B4831A00C0E668 /* MOItemRecord.h */,
+				EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */,
+				EE00FC9F18B4831A00C0E668 /* MOItemTemplate.h */,
+				EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */,
+				EE00FCA118B4831A00C0E668 /* MOOption.h */,
+				EE00FCA218B4831A00C0E668 /* MOOption.m */,
+				EE00FCA318B4831A00C0E668 /* MOPlayer.h */,
+				EE00FCA418B4831A00C0E668 /* MOPlayer.m */,
 			);
-			path = ManagedObject;
+			path = Database;
+			sourceTree = "<group>";
+		};
+		EE00FCB018B4967B00C0E668 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FCB118B4968D00C0E668 /* YBPlayer.h */,
+				EE00FCB218B4968D00C0E668 /* YBPlayer.m */,
+				EE00FCB418B4A6F100C0E668 /* YBItemInstance.h */,
+				EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */,
+				EE00FCB718B4A87600C0E668 /* YBTypedef.h */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		EE6B474F1885168E00362B84 = {
@@ -194,7 +223,8 @@
 				46D358BC188EB7BA00D722CB /* GiftsViewController.m */,
 				46DACB6118A7387400FD6695 /* WishesViewController.h */,
 				46DACB6218A7387400FD6695 /* WishesViewController.m */,
-				46B21E5D18916E9E00952309 /* ManagedObject */,
+				EE00FCB018B4967B00C0E668 /* Data */,
+				EE00FC9A18B4831A00C0E668 /* Database */,
 				46B21E501891655000952309 /* Utils */,
 				EE6B47641885168E00362B84 /* Supporting Files */,
 			);
@@ -331,18 +361,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */,
+				EE00FCA918B4831A00C0E668 /* MOPlayer.m in Sources */,
+				EE00FCB618B4A6F100C0E668 /* YBItemInstance.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
-				46DACB6018A7357C00FD6695 /* MOItem.m in Sources */,
 				46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */,
-				46DACB5A18A7357C00FD6695 /* MOTemplate.m in Sources */,
+				EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */,
+				EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				46D358C3188EBFD100D722CB /* TabsViewController.m in Sources */,
+				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
-				46DACB5718A7357B00FD6695 /* MORecord.m in Sources */,
 				46D358B7188E3E8900D722CB /* PlayersViewController.m in Sources */,
+				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
+				EE00FCA518B4831A00C0E668 /* MOItemInstance.m in Sources */,
+				EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
 				46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */,
-				46DACB5D18A7357C00FD6695 /* MOPlayer.m in Sources */,
 				EE6B47711885168E00362B84 /* YouBest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

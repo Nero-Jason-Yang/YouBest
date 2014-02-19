@@ -8,9 +8,14 @@
 
 #import "TasksViewController.h"
 #import "TabsViewController.h"
+#import "Database.h"
+#import "YBPlayer.h"
+#import "YBItemInstance.h"
 
 @interface TasksViewController ()
-
+{
+    NSArray *_tasks;
+}
 @end
 
 @implementation TasksViewController
@@ -27,12 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self updateDataSourceDown];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +61,46 @@
     }
 }
 
+#pragma mark public
+
+- (void)updateDataSourceDown
+{
+    TabsViewController *tabsViewController = (TabsViewController *)self.parentViewController;
+    NSParameterAssert([tabsViewController isKindOfClass:TabsViewController.class]);
+    if (![tabsViewController isKindOfClass:TabsViewController.class]) {
+        _tasks = nil;
+        return;
+    }
+    
+    YBPlayer *player = tabsViewController.player;
+    NSParameterAssert(player);
+    if (!player) {
+        _tasks = nil;
+        return;
+    }
+    
+    NSMutableArray *array = [NSMutableArray array];
+    Database *db = Database.sharedDatabase;
+    [db.context performBlockAndWait:^{
+        NSArray *mos = [db fetchAllItemInstancesForPlayer:player.mo withType:YBItemType_Task];
+        for (MOItemInstance *mo in mos) {
+            YBItemInstance *task = [[YBItemInstance alloc] initWithMO:mo];
+            [array addObject:task];
+        }
+    }];
+    
+    dispatch_block_t block = ^{
+        _tasks = array;
+    };
+    
+    if (NSThread.isMainThread) {
+        block();
+    }
+    else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -69,7 +110,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return _tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -77,8 +118,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.textLabel.text = @"叠被子";
+    YBItemInstance *task = _tasks[indexPath.row];
+    cell.textLabel.text = task.name;
     
     return cell;
 }

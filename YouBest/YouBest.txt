@@ -1,8 +1,8 @@
 
 enum ItemType {
-    ItemType_Task = 0,
-    ItemType_Gift = 1,
-    ItemType_Wish = 2,
+    YBItemType_Task = 0,
+    YBItemType_Gift = 1,
+    YBItemType_Wish = 2,
 }
 
 Player
@@ -10,18 +10,16 @@ Player
 .name           昵称
 .birthday       出生日期
 .value          金币数量
-~items          尚未关闭的项目集合
+~itemInstances  项目实例集合
 
 ItemTemplate
-.identity       ID
 .type           项目类型（任务、礼物）
 .name           项目名称（标题）
 .content        项目内容（描述）
 .value          项目值（金币数量）
 .remark         项目备注（仅管理员可读）
-~items          尚未关闭的项目集合
 
-Item
+ItemInstance
 .type           类型（任务、礼物）
 .name           名称
 .content        内容
@@ -33,7 +31,7 @@ Item
 .expiryDate     到期时间
 .startDate      开始时间
 .finishDate     完成时间
-~template       模板
+.itemTemplate   模板的MOID
 ~player         玩家
 
 ItemRecord
@@ -44,5 +42,21 @@ ItemRecord
 .startDate      任务开始时间/礼物兑换时间
 .finishDate     任务结束时间/礼物发放时间
 .playerName     玩家名
-.playerID       玩家ID
-.templateID     模板ID
+.playerID       玩家ID（用于历史记录查询）
+
+
+================================
+|             ItemTemplate     |
+|                 ||           |
+|                 || (Create)  |
+|                 \/           |
+| Player <--> ItemInstance     |
+|                 ||           |
+|                 || (Close)   |
+|                 \/           |
+| [History]   ItemRecord       |
+================================
+
+Option
+.name   名
+.value  值

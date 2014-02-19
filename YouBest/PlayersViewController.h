@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayersViewController : UITableViewController
-
+- (void)updateDataSourceDown;
 @end

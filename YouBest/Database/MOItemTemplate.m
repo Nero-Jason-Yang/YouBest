@@ -1,23 +1,20 @@
 //
-//  MOTemplate.m
+//  MOItemTemplate.m
 //  YouBest
 //
-//  Created by Yang Jason on 14-2-9.
+//  Created by Jason Yang on 14-2-18.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
-#import "MOTemplate.h"
-#import "MOItem.h"
+#import "MOItemTemplate.h"
 
 
-@implementation MOTemplate
+@implementation MOItemTemplate
 
 @dynamic content;
-@dynamic identity;
 @dynamic name;
 @dynamic remark;
 @dynamic type;
 @dynamic value;
-@dynamic items;
 
 @end

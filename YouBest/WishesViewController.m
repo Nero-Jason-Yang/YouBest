@@ -7,37 +7,24 @@
 //
 
 #import "WishesViewController.h"
+#import "TabsViewController.h"
+#import "Database.h"
+#import "YBPlayer.h"
+#import "YBItemInstance.h"
 
 @interface WishesViewController ()
-
+{
+    NSArray *_wishes;
+}
 @end
 
 @implementation WishesViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [self updateDataSourceDown];
 }
 
 - (void)viewWillLayoutSubviews
@@ -59,6 +46,46 @@
     }
 }
 
+#pragma mark public
+
+- (void)updateDataSourceDown
+{
+    TabsViewController *tabsViewController = (TabsViewController *)self.parentViewController;
+    NSParameterAssert([tabsViewController isKindOfClass:TabsViewController.class]);
+    if (![tabsViewController isKindOfClass:TabsViewController.class]) {
+        _wishes = nil;
+        return;
+    }
+    
+    YBPlayer *player = tabsViewController.player;
+    NSParameterAssert(player);
+    if (!player) {
+        _wishes = nil;
+        return;
+    }
+    
+    NSMutableArray *array = [NSMutableArray array];
+    Database *db = Database.sharedDatabase;
+    [db.context performBlockAndWait:^{
+        NSArray *mos = [db fetchAllItemInstancesForPlayer:player.mo withType:YBItemType_Wish];
+        for (MOItemInstance *mo in mos) {
+            YBItemInstance *wish = [[YBItemInstance alloc] initWithMO:mo];
+            [array addObject:wish];
+        }
+    }];
+    
+    dispatch_block_t block = ^{
+        _wishes = array;
+    };
+    
+    if (NSThread.isMainThread) {
+        block();
+    }
+    else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -68,7 +95,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return _wishes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,8 +103,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    cell.textLabel.text = @"自行车";
+    YBItemInstance *wish = _wishes[indexPath.row];
+    cell.textLabel.text = wish.name;
     
     return cell;
 }

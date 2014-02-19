@@ -7,25 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "NSManagedObjectContext+Utils.h"
-#import "MOPlayer.h"
+#import "Database.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _managedObjectContext = [NSManagedObjectContext contextWithModelName:@"YouBest"];
-    NSUInteger numPlayers = [self.managedObjectContext fetchCountForEntityName:@"Player" withPredicate:nil];
-    if (0 == numPlayers) {
-        // make a default player
-        MOPlayer *player = [self.managedObjectContext createObjectForEntityName:@"Player"];
-        player.identity = [[NSUUID UUID] UUIDString];
-        player.name = @"宝贝";
-        player.birthday = NSDate.date;
-        player.value = [NSNumber numberWithInteger:0];
-        [self.managedObjectContext save];
-        numPlayers = 1;
-    }
+    [Database sharedDatabase];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
@@ -59,7 +47,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [self.managedObjectContext save];
+    [Database.sharedDatabase save];
 }
 
 @end

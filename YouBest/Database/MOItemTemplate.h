@@ -1,24 +1,21 @@
 //
-//  MOTemplate.h
+//  MOItemTemplate.h
 //  YouBest
 //
-//  Created by Yang Jason on 14-2-9.
+//  Created by Jason Yang on 14-2-18.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class MOItem;
 
-@interface MOTemplate : NSManagedObject
+@interface MOItemTemplate : NSManagedObject
 
 @property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSString * identity;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * remark;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * value;
-@property (nonatomic, retain) MOItem *items;
 
 @end

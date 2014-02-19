@@ -50,7 +50,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zQ3-tV-QK4" kind="push" id="T2N-8f-eZm"/>
+                                    <segue destination="zQ3-tV-QK4" kind="push" identifier="toPlayerTabs" id="T2N-8f-eZm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

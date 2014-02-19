@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Item" representedClassName="MOItem" syncable="YES">
+    <entity name="ItemInstance" representedClassName="MOItemInstance" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="expiryDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="finishDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="itemTemplate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -12,40 +13,41 @@
         <attribute name="total" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="items" inverseEntity="Player" syncable="YES"/>
-        <relationship name="template" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Template" inverseName="items" inverseEntity="Template" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Player" inverseName="itemInstances" inverseEntity="Player" syncable="YES"/>
     </entity>
-    <entity name="Player" representedClassName="MOPlayer" syncable="YES">
-        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="player" inverseEntity="Item" syncable="YES"/>
-    </entity>
-    <entity name="Record" representedClassName="MORecord" syncable="YES">
+    <entity name="ItemRecord" representedClassName="MOItemRecord" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="finishDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="templateID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Template" representedClassName="MOTemplate" syncable="YES">
+    <entity name="ItemTemplate" representedClassName="MOItemTemplate" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="template" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Option" representedClassName="MOOption" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Player" representedClassName="MOPlayer" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="itemInstances" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ItemInstance" inverseName="player" inverseEntity="ItemInstance" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Item" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ItemInstance" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Player" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Record" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Template" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ItemRecord" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ItemTemplate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Option" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

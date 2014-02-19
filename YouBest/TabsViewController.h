@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class YBPlayer;
+
 @interface TabsViewController : UITabBarController
+
+@property (nonatomic) YBPlayer *player;
 
 @end
