@@ -7,6 +7,7 @@
 //
 
 #import "GiftsViewController.h"
+#import "UITableViewController+Utils.h"
 #import "TabsViewController.h"
 #import "Database.h"
 #import "YBPlayer.h"
@@ -27,23 +28,11 @@
     [self updateDataSourceDown];
 }
 
-- (void)viewWillLayoutSubviews
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillLayoutSubviews];
+    [self correctTableViewPosition];
     
-    if (self.navigationItem) {
-        UIView *view = self.tableView;
-        UIView *superview = view.superview;
-        CGPoint point = [superview convertPoint:CGPointZero fromView:view];
-        CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
-        CGFloat height = navigationBarFrame.origin.y + navigationBarFrame.size.height;
-        if (point.y < height) {
-            point.y = height;
-            CGRect frame = view.frame;
-            frame.origin = point;
-            view.frame = frame;
-        }
-    }
+    [super viewWillAppear:animated];
 }
 
 #pragma mark public
