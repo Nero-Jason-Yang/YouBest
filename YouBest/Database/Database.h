@@ -30,6 +30,6 @@
 - (void)save;
 
 - (NSArray *)fetchAllPlayers;
-- (NSArray *)fetchAllItemInstancesForPlayer:(MOPlayer *)player withType:(YBItemType)type;
+- (NSArray *)fetchAllItemInstancesForPlayerID:(NSString *)playerID withType:(YBItemType)type;
 
 @end

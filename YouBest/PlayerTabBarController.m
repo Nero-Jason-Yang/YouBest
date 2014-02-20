@@ -1,18 +1,18 @@
 //
-//  TabsViewController.m
+//  PlayerTabBarController.m
 //  YouBest
 //
 //  Created by Yang Jason on 14-1-21.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
-#import "TabsViewController.h"
+#import "PlayerTabBarController.h"
 
-@interface TabsViewController ()
+@interface PlayerTabBarController ()
 
 @end
 
-@implementation TabsViewController
+@implementation PlayerTabBarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

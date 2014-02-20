@@ -10,7 +10,6 @@ Player
 .name           昵称
 .birthday       出生日期
 .value          金币数量
-~itemInstances  项目实例集合
 
 ItemTemplate
 .type           项目类型（任务、礼物）
@@ -32,7 +31,7 @@ ItemInstance
 .startDate      开始时间
 .finishDate     完成时间
 .itemTemplate   模板的MOID
-~player         玩家
+.playerID       玩家identity
 
 ItemRecord
 .type           项目类型
@@ -42,7 +41,7 @@ ItemRecord
 .startDate      任务开始时间/礼物兑换时间
 .finishDate     任务结束时间/礼物发放时间
 .playerName     玩家名
-.playerID       玩家ID（用于历史记录查询）
+.playerID       玩家identity
 
 
 ================================

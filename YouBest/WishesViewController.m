@@ -8,7 +8,7 @@
 
 #import "WishesViewController.h"
 #import "UITableViewController+Utils.h"
-#import "TabsViewController.h"
+#import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBItemInstance.h"
@@ -39,14 +39,14 @@
 
 - (void)updateDataSourceDown
 {
-    TabsViewController *tabsViewController = (TabsViewController *)self.parentViewController;
-    NSParameterAssert([tabsViewController isKindOfClass:TabsViewController.class]);
-    if (![tabsViewController isKindOfClass:TabsViewController.class]) {
+    PlayerTabBarController *controller = (PlayerTabBarController *)self.parentViewController;
+    NSParameterAssert([controller isKindOfClass:PlayerTabBarController.class]);
+    if (![controller isKindOfClass:PlayerTabBarController.class]) {
         _wishes = nil;
         return;
     }
     
-    YBPlayer *player = tabsViewController.player;
+    YBPlayer *player = controller.player;
     NSParameterAssert(player);
     if (!player) {
         _wishes = nil;
@@ -56,7 +56,7 @@
     NSMutableArray *array = [NSMutableArray array];
     Database *db = Database.sharedDatabase;
     [db.context performBlockAndWait:^{
-        NSArray *mos = [db fetchAllItemInstancesForPlayer:player.mo withType:YBItemType_Wish];
+        NSArray *mos = [db fetchAllItemInstancesForPlayerID:player.identity withType:YBItemType_Wish];
         for (MOItemInstance *mo in mos) {
             YBItemInstance *wish = [[YBItemInstance alloc] initWithMO:mo];
             [array addObject:wish];

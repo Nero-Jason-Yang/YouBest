@@ -2,12 +2,11 @@
 //  MOItemInstance.m
 //  YouBest
 //
-//  Created by Jason Yang on 14-2-18.
+//  Created by Jason Yang on 14-2-20.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
 #import "MOItemInstance.h"
-#import "MOPlayer.h"
 
 
 @implementation MOItemInstance
@@ -24,6 +23,6 @@
 @dynamic type;
 @dynamic value;
 @dynamic itemTemplate;
-@dynamic player;
+@dynamic playerID;
 
 @end

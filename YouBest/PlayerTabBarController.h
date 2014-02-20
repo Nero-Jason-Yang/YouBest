@@ -1,5 +1,5 @@
 //
-//  TabsViewController.h
+//  PlayerTabBarController.h
 //  YouBest
 //
 //  Created by Yang Jason on 14-1-21.
@@ -10,7 +10,7 @@
 
 @class YBPlayer;
 
-@interface TabsViewController : UITabBarController
+@interface PlayerTabBarController : UITabBarController
 
 @property (nonatomic) YBPlayer *player;
 

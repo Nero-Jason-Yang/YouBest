@@ -16,6 +16,7 @@
     if (self = [super init]) {
         _mo = mo;
         if (mo) {
+            _playerID = mo.playerID;
             _type = mo.type.shortValue;
         }
         [self updateDown];

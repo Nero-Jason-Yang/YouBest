@@ -64,7 +64,7 @@
             
             {
                 MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
-                inst.player = player;
+                inst.playerID = player.identity;
                 inst.type = temp.type;
                 inst.name = temp.name;
                 inst.content = temp.content;
@@ -81,7 +81,7 @@
             
             {
                 MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
-                inst.player = player;
+                inst.playerID = player.identity;
                 inst.type = [NSNumber numberWithShort:YBItemType_Task];
                 inst.name = @"喝杯开水";
                 inst.content = @"多喝开水有益健康";
@@ -95,7 +95,7 @@
             
             {
                 MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
-                inst.player = player;
+                inst.playerID = player.identity;
                 inst.type = [NSNumber numberWithShort:YBItemType_Gift];
                 inst.name = @"滑板车";
                 inst.content = @"森宝迪滑板车三轮粉色公主";
@@ -106,7 +106,7 @@
             
             {
                 MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
-                inst.player = player;
+                inst.playerID = player.identity;
                 inst.type = [NSNumber numberWithShort:YBItemType_Wish];
                 inst.name = @"自行车";
                 inst.content = @"迪卡龙少女自行车6-8岁";
@@ -131,13 +131,13 @@
     return [self.context fetchObjectsForEntityName:Entity_Player];
 }
 
-- (NSArray *)fetchAllItemInstancesForPlayer:(MOPlayer *)player withType:(YBItemType)type
+- (NSArray *)fetchAllItemInstancesForPlayerID:(NSString *)playerID withType:(YBItemType)type
 {
-    if (!player) {
+    if (!playerID) {
         return nil;
     }
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type == %d && player.identity == %@", type, player.identity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type == %d && playerID == %@", type, playerID];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES];
     return [self.context fetchObjectsForEntityName:Entity_ItemInstance withPredicate:predicate sortDescriptors:@[sortDescriptor]];
 }

@@ -7,7 +7,7 @@
 //
 
 #import "PlayersViewController.h"
-#import "TabsViewController.h"
+#import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 
@@ -33,7 +33,7 @@
     }
     else if (count == 1) {
         _currentPlayer = _players[0];
-        TabsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabsViewController"];
+        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
         if (viewController) {
             viewController.player = _currentPlayer;
             [self.navigationController pushViewController:viewController animated:NO];
@@ -44,8 +44,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"toPlayerTabs"] && segue.sourceViewController == self) {
-        TabsViewController *viewController = segue.destinationViewController;
-        if ([viewController isKindOfClass:TabsViewController.class]) {
+        PlayerTabBarController *viewController = segue.destinationViewController;
+        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
             viewController.player = _currentPlayer;
             viewController.navigationItem.leftBarButtonItem = nil;
         }

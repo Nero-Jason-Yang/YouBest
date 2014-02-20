@@ -14,6 +14,7 @@
 @interface YBItemInstance : NSObject
 - (id)initWithMO:(MOItemInstance *)mo;
 @property (nonatomic,readonly) MOItemInstance *mo;
+@property (nonatomic,readonly) NSString *playerID;
 @property (nonatomic,readonly) YBItemType type;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *content;

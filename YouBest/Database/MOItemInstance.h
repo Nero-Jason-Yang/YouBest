@@ -2,14 +2,13 @@
 //  MOItemInstance.h
 //  YouBest
 //
-//  Created by Jason Yang on 14-2-18.
+//  Created by Jason Yang on 14-2-20.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class MOPlayer;
 
 @interface MOItemInstance : NSManagedObject
 
@@ -25,6 +24,6 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSNumber * value;
 @property (nonatomic, retain) NSString * itemTemplate;
-@property (nonatomic, retain) MOPlayer *player;
+@property (nonatomic, retain) NSString * playerID;
 
 @end
