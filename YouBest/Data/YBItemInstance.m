@@ -30,7 +30,7 @@
     if (mo) {
         _name = mo.name;
         _content = mo.content;
-        _value = mo.value.integerValue;
+        _value = mo.value;
         _state = mo.state.shortValue;
         _total = mo.total;
         _number = mo.number;
