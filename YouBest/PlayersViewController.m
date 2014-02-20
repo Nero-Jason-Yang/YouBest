@@ -26,16 +26,14 @@
     
     [self updateDataSourceDown];
     
-    NSUInteger count = _players.count;
-    if (count == 0) {
+    if (0 == _players.count) {
         // TODO
         // to admin setup view.
     }
-    else if (count == 1) {
-        _currentPlayer = _players[0];
+    else if (1 == _players.count) {
         PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
-        if (viewController) {
-            viewController.player = _currentPlayer;
+        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+            viewController.player = _players[0];
             [self.navigationController pushViewController:viewController animated:NO];
         }
     }
