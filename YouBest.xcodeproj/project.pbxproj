@@ -11,10 +11,7 @@
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
 		46D358B4188E390600D722CB /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D358B3188E390600D722CB /* YouBest.storyboard */; };
 		46D358B7188E3E8900D722CB /* PlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B6188E3E8900D722CB /* PlayersViewController.m */; };
-		46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358B9188EB79B00D722CB /* TasksViewController.m */; };
-		46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358BC188EB7BA00D722CB /* GiftsViewController.m */; };
 		46D358C3188EBFD100D722CB /* PlayerTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D358C2188EBFD100D722CB /* PlayerTabBarController.m */; };
-		46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DACB6218A7387400FD6695 /* WishesViewController.m */; };
 		EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE00FC7F18A62EC200C0E668 /* YouBest.txt */; };
 		EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */; };
 		EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */; };
@@ -25,6 +22,13 @@
 		EE00FCBC18B59FC200C0E668 /* UITableViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCBB18B59FC200C0E668 /* UITableViewController+Utils.m */; };
 		EE00FCBF18B5A4F000C0E668 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */; };
 		EE00FCC218B5A4F100C0E668 /* MOItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */; };
+		EE00FCC718B5CDB300C0E668 /* coin_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCC618B5CDB300C0E668 /* coin_16.png */; };
+		EE00FCC918B5CFF900C0E668 /* coin_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCC818B5CFF900C0E668 /* coin_24.png */; };
+		EE00FCCB18B5D11900C0E668 /* coin_32.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCCA18B5D11900C0E668 /* coin_32.png */; };
+		EE00FCCE18B5FBA500C0E668 /* InstanceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCCD18B5FBA500C0E668 /* InstanceDetailsViewController.m */; };
+		EE00FCD118B5FCCE00C0E668 /* InstanceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCD018B5FCCE00C0E668 /* InstanceListViewController.m */; };
+		EE00FCD418B6093500C0E668 /* InstanceTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCD318B6093500C0E668 /* InstanceTabBarItem.m */; };
+		EE00FCD718B6156A00C0E668 /* InstanceListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCD618B6156A00C0E668 /* InstanceListViewCell.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -60,14 +64,8 @@
 		46D358B3188E390600D722CB /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
 		46D358B5188E3E8900D722CB /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
 		46D358B6188E3E8900D722CB /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
-		46D358B8188EB79B00D722CB /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
-		46D358B9188EB79B00D722CB /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
-		46D358BB188EB7BA00D722CB /* GiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsViewController.h; sourceTree = "<group>"; };
-		46D358BC188EB7BA00D722CB /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
 		46D358C1188EBFD100D722CB /* PlayerTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTabBarController.h; sourceTree = "<group>"; };
 		46D358C2188EBFD100D722CB /* PlayerTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTabBarController.m; sourceTree = "<group>"; };
-		46DACB6118A7387400FD6695 /* WishesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishesViewController.h; sourceTree = "<group>"; };
-		46DACB6218A7387400FD6695 /* WishesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishesViewController.m; sourceTree = "<group>"; };
 		EE00FC7F18A62EC200C0E668 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
 		EE00FC9D18B4831A00C0E668 /* MOItemRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemRecord.h; sourceTree = "<group>"; };
 		EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemRecord.m; sourceTree = "<group>"; };
@@ -88,6 +86,17 @@
 		EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
 		EE00FCC018B5A4F100C0E668 /* MOItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemInstance.h; sourceTree = "<group>"; };
 		EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemInstance.m; sourceTree = "<group>"; };
+		EE00FCC618B5CDB300C0E668 /* coin_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_16.png; sourceTree = "<group>"; };
+		EE00FCC818B5CFF900C0E668 /* coin_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_24.png; sourceTree = "<group>"; };
+		EE00FCCA18B5D11900C0E668 /* coin_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_32.png; sourceTree = "<group>"; };
+		EE00FCCC18B5FBA500C0E668 /* InstanceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDetailsViewController.h; sourceTree = "<group>"; };
+		EE00FCCD18B5FBA500C0E668 /* InstanceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDetailsViewController.m; sourceTree = "<group>"; };
+		EE00FCCF18B5FCCE00C0E668 /* InstanceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceListViewController.h; sourceTree = "<group>"; };
+		EE00FCD018B5FCCE00C0E668 /* InstanceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceListViewController.m; sourceTree = "<group>"; };
+		EE00FCD218B6093500C0E668 /* InstanceTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceTabBarItem.h; sourceTree = "<group>"; };
+		EE00FCD318B6093500C0E668 /* InstanceTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceTabBarItem.m; sourceTree = "<group>"; };
+		EE00FCD518B6156A00C0E668 /* InstanceListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceListViewCell.h; sourceTree = "<group>"; };
+		EE00FCD618B6156A00C0E668 /* InstanceListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceListViewCell.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,6 +187,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		EE00FCC318B5C97300C0E668 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FCC618B5CDB300C0E668 /* coin_16.png */,
+				EE00FCC818B5CFF900C0E668 /* coin_24.png */,
+				EE00FCCA18B5D11900C0E668 /* coin_32.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		EE6B474F1885168E00362B84 = {
 			isa = PBXGroup;
 			children = (
@@ -222,12 +241,15 @@
 				46D358B6188E3E8900D722CB /* PlayersViewController.m */,
 				46D358C1188EBFD100D722CB /* PlayerTabBarController.h */,
 				46D358C2188EBFD100D722CB /* PlayerTabBarController.m */,
-				46D358B8188EB79B00D722CB /* TasksViewController.h */,
-				46D358B9188EB79B00D722CB /* TasksViewController.m */,
-				46D358BB188EB7BA00D722CB /* GiftsViewController.h */,
-				46D358BC188EB7BA00D722CB /* GiftsViewController.m */,
-				46DACB6118A7387400FD6695 /* WishesViewController.h */,
-				46DACB6218A7387400FD6695 /* WishesViewController.m */,
+				EE00FCD218B6093500C0E668 /* InstanceTabBarItem.h */,
+				EE00FCD318B6093500C0E668 /* InstanceTabBarItem.m */,
+				EE00FCCF18B5FCCE00C0E668 /* InstanceListViewController.h */,
+				EE00FCD018B5FCCE00C0E668 /* InstanceListViewController.m */,
+				EE00FCD518B6156A00C0E668 /* InstanceListViewCell.h */,
+				EE00FCD618B6156A00C0E668 /* InstanceListViewCell.m */,
+				EE00FCCC18B5FBA500C0E668 /* InstanceDetailsViewController.h */,
+				EE00FCCD18B5FBA500C0E668 /* InstanceDetailsViewController.m */,
+				EE00FCC318B5C97300C0E668 /* Images */,
 				EE00FCB018B4967B00C0E668 /* Data */,
 				EE00FC9A18B4831A00C0E668 /* Database */,
 				46B21E501891655000952309 /* Utils */,
@@ -345,8 +367,11 @@
 			files = (
 				EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */,
 				46D358B4188E390600D722CB /* YouBest.storyboard in Resources */,
+				EE00FCCB18B5D11900C0E668 /* coin_32.png in Resources */,
+				EE00FCC718B5CDB300C0E668 /* coin_16.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
+				EE00FCC918B5CFF900C0E668 /* coin_24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,14 +390,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D358BD188EB7BA00D722CB /* GiftsViewController.m in Sources */,
 				EE00FCB618B4A6F100C0E668 /* YBItemInstance.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
-				46D358BA188EB79C00D722CB /* TasksViewController.m in Sources */,
 				EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */,
 				EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */,
+				EE00FCD418B6093500C0E668 /* InstanceTabBarItem.m in Sources */,
 				EE00FCC218B5A4F100C0E668 /* MOItemInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
+				EE00FCCE18B5FBA500C0E668 /* InstanceDetailsViewController.m in Sources */,
+				EE00FCD118B5FCCE00C0E668 /* InstanceListViewController.m in Sources */,
 				EE00FCBF18B5A4F000C0E668 /* MOPlayer.m in Sources */,
 				46D358C3188EBFD100D722CB /* PlayerTabBarController.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
@@ -381,8 +407,8 @@
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
 				EE00FCBC18B59FC200C0E668 /* UITableViewController+Utils.m in Sources */,
 				EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */,
+				EE00FCD718B6156A00C0E668 /* InstanceListViewCell.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
-				46DACB6318A7387400FD6695 /* WishesViewController.m in Sources */,
 				EE6B47711885168E00362B84 /* YouBest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

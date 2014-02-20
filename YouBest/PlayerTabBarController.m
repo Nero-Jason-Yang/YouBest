@@ -7,6 +7,8 @@
 //
 
 #import "PlayerTabBarController.h"
+#import "InstanceTabBarItem.h"
+#import "InstanceListViewController.h"
 
 @interface PlayerTabBarController ()
 
@@ -14,25 +16,32 @@
 
 @implementation PlayerTabBarController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [self setupTabItems];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark private
+
+- (void)setupTabItems
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSArray *titles = @[@"任务", @"礼物", @"愿望"];
+    NSArray *types = @[[NSNumber numberWithShort:YBItemType_Task], [NSNumber numberWithShort:YBItemType_Gift], [NSNumber numberWithShort:YBItemType_Wish]];
+    
+    int i = 0;
+    for (InstanceTabBarItem *item in self.tabBar.items) {
+        if ([item isKindOfClass:InstanceTabBarItem.class]) {
+            if (i < titles.count) {
+                item.title = titles[i];
+            }
+            if (i < types.count) {
+                item.type = ((NSNumber *)types[i]).shortValue;
+            }
+            i ++;
+        }
+    }
 }
 
 @end

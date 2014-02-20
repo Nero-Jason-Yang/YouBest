@@ -110,7 +110,6 @@
                 inst.type = [NSNumber numberWithShort:YBItemType_Wish];
                 inst.name = @"自行车";
                 inst.content = @"迪卡龙少女自行车6-8岁";
-                inst.value = [NSNumber numberWithInteger:50];
                 inst.state = [NSNumber numberWithShort:YBItemState_Ready];
                 inst.creationDate = NSDate.date;
             }
