@@ -47,7 +47,7 @@
     if (mo) {
         mo.name = _name;
         mo.content = _content;;
-        mo.value = [NSNumber numberWithInteger:_value];
+        mo.value = _value;
         mo.state = [NSNumber numberWithShort:_state];
         mo.total = _total;
         mo.number = _number;
