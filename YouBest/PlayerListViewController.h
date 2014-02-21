@@ -1,5 +1,5 @@
 //
-//  PlayersViewController.h
+//  PlayerListViewController.h
 //  YouBest
 //
 //  Created by Yang Jason on 14-1-21.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayersViewController : UITableViewController
+@interface PlayerListViewController : UITableViewController
 - (void)updateDataSourceDown;
 @end

@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     InstanceListViewTabBarItem *tabBarItem = (InstanceListViewTabBarItem *)self.tabBarItem;
+    NSParameterAssert([tabBarItem isKindOfClass:InstanceListViewTabBarItem.class]);
     if ([tabBarItem isKindOfClass:InstanceListViewTabBarItem.class]) {
         self.type = tabBarItem.type;
     }

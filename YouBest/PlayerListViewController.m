@@ -1,24 +1,24 @@
 //
-//  PlayersViewController.m
+//  PlayerListViewController.m
 //  YouBest
 //
 //  Created by Yang Jason on 14-1-21.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
-#import "PlayersViewController.h"
+#import "PlayerListViewController.h"
 #import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 
-@interface PlayersViewController ()
+@interface PlayerListViewController ()
 {
     NSArray *_players;
     YBPlayer *_currentPlayer;
 }
 @end
 
-@implementation PlayersViewController
+@implementation PlayerListViewController
 
 - (void)viewDidLoad
 {

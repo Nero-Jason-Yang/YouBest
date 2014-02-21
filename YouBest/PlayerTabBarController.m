@@ -8,6 +8,7 @@
 
 #import "PlayerTabBarController.h"
 #import "InstanceListViewController.h"
+#import "UIView+Utils.h"
 
 @interface PlayerTabBarController ()
 
@@ -20,6 +21,13 @@
     [super viewDidLoad];
     
     [self setupTabItems];
+}
+
+- (IBAction)onAdminMode:(id)sender
+{
+    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Password" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    view.alertViewStyle = UIAlertViewStyleSecureTextInput;
+    [view show];
 }
 
 #pragma mark private

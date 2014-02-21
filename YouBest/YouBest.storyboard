@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="851" y="96"/>
         </scene>
-        <!--Players View Controller - 玩家-->
+        <!--Player List View Controller - 玩家-->
         <scene sceneID="YZJ-yV-hP4">
             <objects>
-                <tableViewController id="43y-vr-xb0" customClass="PlayersViewController" sceneMemberID="viewController">
+                <tableViewController id="43y-vr-xb0" customClass="PlayerListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXx-1k-w7L">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,6 +121,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="#"/>
+                                <connections>
+                                    <action selector="onAdminMode:" destination="zQ3-tV-QK4" eventType="touchUpInside" id="2dw-t3-qN1"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="V3h-Zv-qJL">
