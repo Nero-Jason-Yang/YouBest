@@ -7,7 +7,6 @@
 //
 
 #import "PlayerTabBarController.h"
-#import "InstanceTabBarItem.h"
 #import "InstanceListViewController.h"
 
 @interface PlayerTabBarController ()
@@ -31,8 +30,8 @@
     NSArray *types = @[[NSNumber numberWithShort:YBItemType_Task], [NSNumber numberWithShort:YBItemType_Gift], [NSNumber numberWithShort:YBItemType_Wish]];
     
     int i = 0;
-    for (InstanceTabBarItem *item in self.tabBar.items) {
-        if ([item isKindOfClass:InstanceTabBarItem.class]) {
+    for (InstanceListViewTabBarItem *item in self.tabBar.items) {
+        if ([item isKindOfClass:InstanceListViewTabBarItem.class]) {
             if (i < titles.count) {
                 item.title = titles[i];
             }

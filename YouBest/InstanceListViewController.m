@@ -7,9 +7,6 @@
 //
 
 #import "InstanceListViewController.h"
-#import "InstanceListViewCell.h"
-#import "InstanceTabBarItem.h"
-#import "UITableViewController+Utils.h"
 #import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
@@ -27,26 +24,12 @@
 {
     [super viewDidLoad];
     
-    InstanceTabBarItem *tabBarItem = (InstanceTabBarItem *)self.tabBarItem;
-    if ([tabBarItem isKindOfClass:InstanceTabBarItem.class]) {
+    InstanceListViewTabBarItem *tabBarItem = (InstanceListViewTabBarItem *)self.tabBarItem;
+    if ([tabBarItem isKindOfClass:InstanceListViewTabBarItem.class]) {
         self.type = tabBarItem.type;
     }
     
     [self updateDataSourceDown];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self correctTableViewPosition];
-    
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self correctTableViewPosition];
-    
-    [super viewDidAppear:animated];
 }
 
 #pragma mark public
@@ -122,5 +105,13 @@
     
     return cell;
 }
+
+@end
+
+@implementation InstanceListViewCell
+
+@end
+
+@implementation InstanceListViewTabBarItem
 
 @end

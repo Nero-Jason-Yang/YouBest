@@ -9,12 +9,12 @@
             <objects>
                 <tableViewController storyboardIdentifier="InstanceListViewController" id="yW6-1q-jsq" customClass="InstanceListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" id="1Fx-N9-Ckb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="center" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="58" id="WUt-Ku-E3b" customClass="InstanceListViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="58"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="WUt-Ku-E3b" id="U1q-rD-Ea1">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="57"/>
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="yW6-1q-jsq" id="JVV-N3-vcM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="项目" id="nVI-yt-kLP" customClass="InstanceTabBarItem"/>
+                    <tabBarItem key="tabBarItem" title="项目" id="nVI-yt-kLP" customClass="InstanceListViewTabBarItem"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tg-45-xBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,12 +63,12 @@
             <objects>
                 <tableViewController id="43y-vr-xb0" customClass="PlayersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YXx-1k-w7L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" id="41e-ne-rgz">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="41e-ne-rgz" id="Rfs-hT-acK">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -99,7 +99,7 @@
         <scene sceneID="cpT-nD-TVo">
             <objects>
                 <navigationController definesPresentationContext="YES" id="zvR-Rf-dU1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HpN-8h-HaI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HpN-8h-HaI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -159,12 +159,12 @@
             <objects>
                 <tableViewController id="yA9-kf-0Hu" customClass="InstanceDetailsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6gM-jZ-YVU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="tbM-9U-seC">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbM-9U-seC" id="Foi-aw-CIK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
