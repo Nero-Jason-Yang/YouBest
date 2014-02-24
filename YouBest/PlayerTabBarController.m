@@ -32,7 +32,7 @@
     
     YBNavigationController *nc = (YBNavigationController *)self.navigationController;
     if ([nc isKindOfClass:YBNavigationController.class]) {
-        nc.extended = !nc.extended;
+        nc.isExtended = !nc.isExtended;
     }
 }
 

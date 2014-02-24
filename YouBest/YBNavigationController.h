@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YBNavigationController : UINavigationController
-@property (nonatomic) BOOL extended;
-@property (nonatomic) UIView *toolBar;
+@property (nonatomic) BOOL isExtended;
+@property (nonatomic) UIView *extendedView;
 @end

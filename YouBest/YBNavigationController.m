@@ -24,10 +24,10 @@
 
 #pragma mark public
 
-- (void)setExtended:(BOOL)adminEnabled
+- (void)setIsExtended:(BOOL)adminEnabled
 {
-    if (_extended != adminEnabled) {
-        _extended = adminEnabled;
+    if (_isExtended != adminEnabled) {
+        _isExtended = adminEnabled;
         
         if (adminEnabled) {
             // original navigation bar height
@@ -49,11 +49,11 @@
                 CGRect frame = promptView.frame;
                 CGRect toolBarFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, toolBarHeight);
                 
-                _toolBar = [[UIView alloc] initWithFrame:toolBarFrame];
-                [self.navigationBar addSubview:_toolBar];
+                _extendedView = [[UIView alloc] initWithFrame:toolBarFrame];
+                [self.navigationBar addSubview:_extendedView];
                 
 #ifdef DEBUG
-                _toolBar.backgroundColor = [UIColor lightGrayColor];
+//                _extendedView.backgroundColor = [UIColor lightGrayColor];
 #endif
             }
         }
@@ -62,9 +62,9 @@
                 item.prompt = nil;
             }
             
-            if (_toolBar) {
-                [_toolBar removeFromSuperview];
-                _toolBar = nil;
+            if (_extendedView) {
+                [_extendedView removeFromSuperview];
+                _extendedView = nil;
             }
         }
     }
@@ -77,7 +77,7 @@
 
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item
 {
-    if (self.extended) {
+    if (self.isExtended) {
         item.prompt = @"";
     }
     else {
