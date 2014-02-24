@@ -43,6 +43,10 @@
 		EE6B477D1885168E00362B84 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B47611885168E00362B84 /* CoreData.framework */; };
 		EE6B47851885168E00362B84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE6B47831885168E00362B84 /* InfoPlist.strings */; };
 		EE6B47871885168E00362B84 /* YouBestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B47861885168E00362B84 /* YouBestTests.m */; };
+		EEEE29E418BB159100773F2A /* YBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E318BB159100773F2A /* YBNavigationController.m */; };
+		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
+		EEEE29EA18BB53C400773F2A /* gear_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29E818BB53C400773F2A /* gear_16.png */; };
+		EEEE29EB18BB53C400773F2A /* gear_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29E918BB53C400773F2A /* gear_24.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +116,12 @@
 		EE6B47821885168E00362B84 /* YouBestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YouBestTests-Info.plist"; sourceTree = "<group>"; };
 		EE6B47841885168E00362B84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE6B47861885168E00362B84 /* YouBestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YouBestTests.m; sourceTree = "<group>"; };
+		EEEE29E218BB159100773F2A /* YBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNavigationController.h; sourceTree = "<group>"; };
+		EEEE29E318BB159100773F2A /* YBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNavigationController.m; sourceTree = "<group>"; };
+		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
+		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
+		EEEE29E818BB53C400773F2A /* gear_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_16.png; sourceTree = "<group>"; };
+		EEEE29E918BB53C400773F2A /* gear_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_24.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +161,8 @@
 				EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */,
 				EE00FCE118B71CF600C0E668 /* UIViewController+Utils.h */,
 				EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */,
+				EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */,
+				EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,6 +204,8 @@
 				EE00FCC618B5CDB300C0E668 /* coin_16.png */,
 				EE00FCC818B5CFF900C0E668 /* coin_24.png */,
 				EE00FCCA18B5D11900C0E668 /* coin_32.png */,
+				EEEE29E818BB53C400773F2A /* gear_16.png */,
+				EEEE29E918BB53C400773F2A /* gear_24.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -236,6 +250,8 @@
 				EE00FC7F18A62EC200C0E668 /* YouBest.txt */,
 				EE6B476F1885168E00362B84 /* YouBest.xcdatamodeld */,
 				46D358B3188E390600D722CB /* YouBest.storyboard */,
+				EEEE29E218BB159100773F2A /* YBNavigationController.h */,
+				EEEE29E318BB159100773F2A /* YBNavigationController.m */,
 				46D358B5188E3E8900D722CB /* PlayerListViewController.h */,
 				46D358B6188E3E8900D722CB /* PlayerListViewController.m */,
 				46D358C1188EBFD100D722CB /* PlayerTabBarController.h */,
@@ -360,9 +376,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEE29EB18BB53C400773F2A /* gear_24.png in Resources */,
 				EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */,
 				46D358B4188E390600D722CB /* YouBest.storyboard in Resources */,
 				EE00FCCB18B5D11900C0E668 /* coin_32.png in Resources */,
+				EEEE29EA18BB53C400773F2A /* gear_16.png in Resources */,
 				EE00FCC718B5CDB300C0E668 /* coin_16.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
@@ -398,7 +416,9 @@
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
+				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
+				EEEE29E418BB159100773F2A /* YBNavigationController.m in Sources */,
 				46D358B7188E3E8900D722CB /* PlayerListViewController.m in Sources */,
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
 				EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */,

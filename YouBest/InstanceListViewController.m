@@ -7,6 +7,7 @@
 //
 
 #import "InstanceListViewController.h"
+#import "YBNavigationController.h"
 #import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
@@ -28,9 +29,21 @@
     NSParameterAssert([tabBarItem isKindOfClass:InstanceListViewTabBarItem.class]);
     if ([tabBarItem isKindOfClass:InstanceListViewTabBarItem.class]) {
         self.type = tabBarItem.type;
+        self.title = tabBarItem.title;
     }
     
     [self updateDataSourceDown];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"page viewWillAppear");
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.parentViewController.navigationItem.title = self.title;
+    NSLog(@"page viewDidAppear");
 }
 
 #pragma mark public

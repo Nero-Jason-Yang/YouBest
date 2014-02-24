@@ -82,11 +82,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="玩家" id="d7L-Gv-9Ru">
                         <barButtonItem key="leftBarButtonItem" id="iW3-ud-zS3">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IoV-MH-4vf">
-                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IoV-MH-4vf">
+                                <rect key="frame" x="16" y="13" width="25" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="#"/>
+                                <state key="normal" image="gear_16.png"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -98,7 +98,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cpT-nD-TVo">
             <objects>
-                <navigationController definesPresentationContext="YES" id="zvR-Rf-dU1" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="zvR-Rf-dU1" customClass="YBNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HpN-8h-HaI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -110,17 +110,17 @@
             </objects>
             <point key="canvasLocation" x="-655" y="96"/>
         </scene>
-        <!--Player Tab Bar Controller - 宝贝-->
+        <!--Player Tab Bar Controller-->
         <scene sceneID="8L9-0h-gFc">
             <objects>
                 <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="zQ3-tV-QK4" customClass="PlayerTabBarController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="宝贝" id="3LD-ek-iMj">
+                    <navigationItem key="navigationItem" id="3LD-ek-iMj" customClass="YBNavigationItem">
                         <barButtonItem key="leftBarButtonItem" id="qkC-YZ-IDj">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C42-4K-fV2">
-                                <rect key="frame" x="16" y="5" width="71" height="33"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C42-4K-fV2">
+                                <rect key="frame" x="16" y="13" width="16" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" title="#"/>
+                                <state key="normal" image="gear_16.png"/>
                                 <connections>
                                     <action selector="onAdminMode:" destination="zQ3-tV-QK4" eventType="touchUpInside" id="2dw-t3-qN1"/>
                                 </connections>
@@ -189,6 +189,7 @@
     </scenes>
     <resources>
         <image name="coin_16.png" width="16" height="16"/>
+        <image name="gear_16.png" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

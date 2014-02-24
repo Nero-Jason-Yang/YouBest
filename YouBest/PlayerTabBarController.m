@@ -8,6 +8,7 @@
 
 #import "PlayerTabBarController.h"
 #import "InstanceListViewController.h"
+#import "YBNavigationController.h"
 #import "UIView+Utils.h"
 
 @interface PlayerTabBarController ()
@@ -25,9 +26,14 @@
 
 - (IBAction)onAdminMode:(id)sender
 {
-    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Password" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
-    view.alertViewStyle = UIAlertViewStyleSecureTextInput;
-    [view show];
+//    UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"Password" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+//    view.alertViewStyle = UIAlertViewStyleSecureTextInput;
+//    [view show];
+    
+    YBNavigationController *nc = (YBNavigationController *)self.navigationController;
+    if ([nc isKindOfClass:YBNavigationController.class]) {
+        nc.extended = !nc.extended;
+    }
 }
 
 #pragma mark private

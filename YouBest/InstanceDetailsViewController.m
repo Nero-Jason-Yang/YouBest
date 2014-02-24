@@ -14,15 +14,6 @@
 
 @implementation InstanceDetailsViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,10 +25,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Details viewWillAppear");
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"Details viewDidAppear");
 }
 
 #pragma mark - Table view data source

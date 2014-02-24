@@ -17,6 +17,8 @@
         Class superclass = self.superclass;
         name = [name stringByAppendingFormat:@":%@", NSStringFromClass(superclass) ];
     }
+    CGRect frame = self.frame;
+    name = [name stringByAppendingFormat:@"(%d,%d,%d,%d)", (int)frame.origin.x, (int)frame.origin.y, (int)frame.size.width, (int)frame.size.height];
     
     NSMutableArray *subInfoDics = [NSMutableArray array];
     for (UIView *subview in self.subviews) {
