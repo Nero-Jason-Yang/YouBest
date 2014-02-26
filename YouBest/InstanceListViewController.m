@@ -46,23 +46,6 @@
     if (pc) {
         pc.navigationItem.title = self.title;
     }
-    
-    YBNavigationController *nc = (YBNavigationController *)(pc ? pc.navigationController : self.navigationController);
-    if ([nc isKindOfClass:YBNavigationController.class]) {
-        UIView *extendedView = nc.extendedView;
-        for (UIView *subview in extendedView.subviews) {
-            [subview removeFromSuperview];
-        }
-        
-        UISegmentedControl *sc = [[UISegmentedControl alloc] initWithItems:@[@"退出管理模式", @"+"]];
-        sc.momentary = YES;
-        CGRect frame = extendedView.frame;
-        frame.origin = CGPointZero;
-        sc.frame = frame;
-        [extendedView addSubview:sc];
-    }
-    
-    NSLog(@"page viewDidAppear");
 }
 
 #pragma mark public

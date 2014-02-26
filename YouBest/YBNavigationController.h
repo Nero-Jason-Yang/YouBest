@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface YBNavigationController : UINavigationController
-@property (nonatomic) BOOL isExtended;
-@property (nonatomic) UIView *extendedView;
+@property BOOL adminMode;
 @end

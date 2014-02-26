@@ -11,7 +11,9 @@
 #import "UIView+Utils.h"
 
 @interface YBNavigationController () <UINavigationBarDelegate>
-
+{
+    UIView *_adminModeView;
+}
 @end
 
 @implementation YBNavigationController
@@ -24,12 +26,15 @@
 
 #pragma mark public
 
-- (void)setIsExtended:(BOOL)adminEnabled
+- (BOOL)adminMode
 {
-    if (_isExtended != adminEnabled) {
-        _isExtended = adminEnabled;
-        
-        if (adminEnabled) {
+    return !!_adminModeView;
+}
+
+- (void)setAdminMode:(BOOL)adminMode
+{
+    if (adminMode) {
+        if (!_adminModeView) {
             // original navigation bar height
             CGFloat originalHeight = self.navigationBar.frame.size.height;
             
@@ -38,46 +43,56 @@
                 item.prompt = @"";
             }
             
-            // calculate extended height for our tool bar
-            CGFloat toolBarHeight = self.navigationBar.frame.size.height - originalHeight;
+            // calculate extended height for our admin-mode view
+            CGFloat adminModeViewHeight = self.navigationBar.frame.size.height - originalHeight;
             // retrieve generated prompt view
             UIView *promptView = self.navigationBar.promptView;
             
             // check whether extended successfully
-            if (promptView && toolBarHeight > 0) {
-                // calculate tool bar frame
+            if (promptView && adminModeViewHeight > 0) {
+                // add admin-mode view
                 CGRect frame = promptView.frame;
-                CGRect toolBarFrame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, toolBarHeight);
+                frame.size = CGSizeMake(frame.size.width, adminModeViewHeight);
+                _adminModeView = [[UIView alloc] initWithFrame:frame];
+                [self.navigationBar addSubview:_adminModeView];
                 
-                _extendedView = [[UIView alloc] initWithFrame:toolBarFrame];
-                [self.navigationBar addSubview:_extendedView];
-                
-#ifdef DEBUG
-//                _extendedView.backgroundColor = [UIColor lightGrayColor];
-#endif
+                // fill admin-mode view with a segment control
+                frame.origin = CGPointZero;
+                UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"退出管理"]];
+                segmentControl.momentary = YES;
+                segmentControl.frame = frame;
+                segmentControl.tintColor = [UIColor redColor];
+                [segmentControl addTarget:self action:@selector(onAdminBarChanged:) forControlEvents:UIControlEventValueChanged];
+                [_adminModeView addSubview:segmentControl];
             }
         }
-        else {
+    }
+    else {
+        if (_adminModeView) {
+            // remove prompt view
             for (UINavigationItem *item in self.navigationBar.items) {
                 item.prompt = nil;
             }
             
-            if (_extendedView) {
-                [_extendedView removeFromSuperview];
-                _extendedView = nil;
-            }
+            // remove admin-mode view
+            [_adminModeView removeFromSuperview];
+            _adminModeView = nil;
         }
     }
 }
 
 #pragma mark internal
 
+- (IBAction)onAdminBarChanged:(id)sender
+{
+    self.adminMode = NO;
+}
 
 #pragma mark <UINavigationBarDelegate>
 
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item
 {
-    if (self.isExtended) {
+    if (self.adminMode) {
         item.prompt = @"";
     }
     else {
