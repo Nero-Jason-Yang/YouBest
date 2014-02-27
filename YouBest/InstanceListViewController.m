@@ -130,4 +130,25 @@
 
 @implementation InstanceListViewTabBarItem
 
+- (void)setType:(YBItemType)type
+{
+    switch (type) {
+        case YBItemType_Task:
+            self.image = [UIImage imageNamed:@"task_24.png"];
+            break;
+            
+        case YBItemType_Gift:
+            self.image = [UIImage imageNamed:@"gift_24.png"];
+            break;
+            
+        case YBItemType_Wish:
+            self.image = [UIImage imageNamed:@"strawberry_24.png"];
+            break;
+            
+        default:
+            break;
+    }
+    _type = type;
+}
+
 @end

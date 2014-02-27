@@ -22,8 +22,6 @@
 		EE00FCBF18B5A4F000C0E668 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */; };
 		EE00FCC218B5A4F100C0E668 /* MOItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */; };
 		EE00FCC718B5CDB300C0E668 /* coin_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCC618B5CDB300C0E668 /* coin_16.png */; };
-		EE00FCC918B5CFF900C0E668 /* coin_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCC818B5CFF900C0E668 /* coin_24.png */; };
-		EE00FCCB18B5D11900C0E668 /* coin_32.png in Resources */ = {isa = PBXBuildFile; fileRef = EE00FCCA18B5D11900C0E668 /* coin_32.png */; };
 		EE00FCCE18B5FBA500C0E668 /* InstanceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCCD18B5FBA500C0E668 /* InstanceDetailsViewController.m */; };
 		EE00FCD118B5FCCE00C0E668 /* InstanceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCD018B5FCCE00C0E668 /* InstanceListViewController.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
@@ -46,7 +44,13 @@
 		EEEE29E418BB159100773F2A /* YBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E318BB159100773F2A /* YBNavigationController.m */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 		EEEE29EA18BB53C400773F2A /* gear_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29E818BB53C400773F2A /* gear_16.png */; };
-		EEEE29EB18BB53C400773F2A /* gear_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29E918BB53C400773F2A /* gear_24.png */; };
+		EEEE29F118BED65000773F2A /* task_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29F018BED65000773F2A /* task_24.png */; };
+		EEEE29F518BEDAD700773F2A /* gift_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE29F318BEDAD700773F2A /* gift_24.png */; };
+		EEEE2A0F18BF149300773F2A /* coin_16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE2A0E18BF149300773F2A /* coin_16@2x.png */; };
+		EEEE2A1118BF14AA00773F2A /* gear_16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE2A1018BF14AA00773F2A /* gear_16@2x.png */; };
+		EEEE2A1318BF14C300773F2A /* gift_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE2A1218BF14C300773F2A /* gift_24@2x.png */; };
+		EEEE2A1618BF14DC00773F2A /* strawberry_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE2A1418BF14DC00773F2A /* strawberry_24.png */; };
+		EEEE2A1718BF14DC00773F2A /* strawberry_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEEE2A1518BF14DC00773F2A /* strawberry_24@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +92,6 @@
 		EE00FCC018B5A4F100C0E668 /* MOItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemInstance.h; sourceTree = "<group>"; };
 		EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemInstance.m; sourceTree = "<group>"; };
 		EE00FCC618B5CDB300C0E668 /* coin_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_16.png; sourceTree = "<group>"; };
-		EE00FCC818B5CFF900C0E668 /* coin_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_24.png; sourceTree = "<group>"; };
-		EE00FCCA18B5D11900C0E668 /* coin_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin_32.png; sourceTree = "<group>"; };
 		EE00FCCC18B5FBA500C0E668 /* InstanceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDetailsViewController.h; sourceTree = "<group>"; };
 		EE00FCCD18B5FBA500C0E668 /* InstanceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDetailsViewController.m; sourceTree = "<group>"; };
 		EE00FCCF18B5FCCE00C0E668 /* InstanceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceListViewController.h; sourceTree = "<group>"; };
@@ -121,7 +123,13 @@
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 		EEEE29E818BB53C400773F2A /* gear_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_16.png; sourceTree = "<group>"; };
-		EEEE29E918BB53C400773F2A /* gear_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_24.png; sourceTree = "<group>"; };
+		EEEE29F018BED65000773F2A /* task_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_24.png; sourceTree = "<group>"; };
+		EEEE29F318BEDAD700773F2A /* gift_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift_24.png; sourceTree = "<group>"; };
+		EEEE2A0E18BF149300773F2A /* coin_16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coin_16@2x.png"; sourceTree = "<group>"; };
+		EEEE2A1018BF14AA00773F2A /* gear_16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear_16@2x.png"; sourceTree = "<group>"; };
+		EEEE2A1218BF14C300773F2A /* gift_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift_24@2x.png"; sourceTree = "<group>"; };
+		EEEE2A1418BF14DC00773F2A /* strawberry_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strawberry_24.png; sourceTree = "<group>"; };
+		EEEE2A1518BF14DC00773F2A /* strawberry_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strawberry_24@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,10 +210,14 @@
 			isa = PBXGroup;
 			children = (
 				EE00FCC618B5CDB300C0E668 /* coin_16.png */,
-				EE00FCC818B5CFF900C0E668 /* coin_24.png */,
-				EE00FCCA18B5D11900C0E668 /* coin_32.png */,
+				EEEE2A0E18BF149300773F2A /* coin_16@2x.png */,
 				EEEE29E818BB53C400773F2A /* gear_16.png */,
-				EEEE29E918BB53C400773F2A /* gear_24.png */,
+				EEEE2A1018BF14AA00773F2A /* gear_16@2x.png */,
+				EEEE29F018BED65000773F2A /* task_24.png */,
+				EEEE29F318BEDAD700773F2A /* gift_24.png */,
+				EEEE2A1218BF14C300773F2A /* gift_24@2x.png */,
+				EEEE2A1418BF14DC00773F2A /* strawberry_24.png */,
+				EEEE2A1518BF14DC00773F2A /* strawberry_24@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -376,15 +388,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEEE29EB18BB53C400773F2A /* gear_24.png in Resources */,
+				EEEE2A0F18BF149300773F2A /* coin_16@2x.png in Resources */,
+				EEEE2A1318BF14C300773F2A /* gift_24@2x.png in Resources */,
+				EEEE2A1618BF14DC00773F2A /* strawberry_24.png in Resources */,
+				EEEE29F118BED65000773F2A /* task_24.png in Resources */,
 				EE00FC8018A62EC200C0E668 /* YouBest.txt in Resources */,
+				EEEE2A1118BF14AA00773F2A /* gear_16@2x.png in Resources */,
+				EEEE2A1718BF14DC00773F2A /* strawberry_24@2x.png in Resources */,
 				46D358B4188E390600D722CB /* YouBest.storyboard in Resources */,
-				EE00FCCB18B5D11900C0E668 /* coin_32.png in Resources */,
 				EEEE29EA18BB53C400773F2A /* gear_16.png in Resources */,
 				EE00FCC718B5CDB300C0E668 /* coin_16.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
+				EEEE29F518BEDAD700773F2A /* gift_24.png in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
-				EE00FCC918B5CFF900C0E668 /* coin_24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
