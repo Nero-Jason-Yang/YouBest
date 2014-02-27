@@ -22,6 +22,8 @@
     [super viewDidLoad];
     
     [self setupTabItems];
+    
+    [self showFirstPage];
 }
 
 - (IBAction)onAdminMode:(id)sender
@@ -55,6 +57,20 @@
             i ++;
         }
     }
+}
+
+- (void)showFirstPage
+{
+    self.selectedIndex = 0;
+    UITabBarItem *item = self.tabBar.selectedItem;
+    self.navigationItem.title = item.title;
+}
+
+#pragma mark <UITabBarDelegate>
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    self.navigationItem.title = item.title;
 }
 
 @end

@@ -93,6 +93,19 @@
                 inst.expiryDate = [NSDate dateWithTimeIntervalSinceNow:30*24*60*60]; // one month limit
             }
             
+            for (int i = 0; i < 10; i ++) {
+                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
+                inst.playerID = player.identity;
+                inst.type = [NSNumber numberWithShort:YBItemType_Task];
+                inst.name = [NSString stringWithFormat:@"Sample[%d]", i];
+                inst.content = @"...";
+                inst.value = [NSNumber numberWithInteger:1];
+                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
+                inst.total = nil; // nil means unlimited
+                inst.number = [NSNumber numberWithInteger:0]; // support number
+                inst.creationDate = NSDate.date;
+            }
+            
             {
                 MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
                 inst.playerID = player.identity;

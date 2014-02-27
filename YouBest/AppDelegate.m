@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Database.h"
+#import "YBNavigationController.h"
 
 @implementation AppDelegate
 
@@ -48,6 +49,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     [Database.sharedDatabase save];
+}
+
+#pragma mark public
+
+- (BOOL)adminMode
+{
+    YBNavigationController *nc = (YBNavigationController *)self.window.rootViewController;
+    if ([nc isKindOfClass:YBNavigationController.class]) {
+        return nc.adminMode;
+    }
+    return NO;
 }
 
 @end

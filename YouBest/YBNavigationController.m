@@ -7,6 +7,7 @@
 //
 
 #import "YBNavigationController.h"
+#import "AppDelegate.h"
 #import "UINavigationBar+Utils.h"
 #import "UIView+Utils.h"
 
@@ -79,6 +80,7 @@
             _adminModeView = nil;
         }
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:AdminModeChangedNotification object:[NSNumber numberWithBool:adminMode]];
 }
 
 #pragma mark internal

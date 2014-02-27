@@ -7,15 +7,20 @@
 //
 
 #import "InstanceListViewController.h"
-#import "YBNavigationController.h"
+#import "AppDelegate.h"
 #import "PlayerTabBarController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBItemInstance.h"
 
+#define AddButton_BackgroundColor_Normal   [UIColor colorWithWhite:0.95 alpha:0.9]
+#define AddButton_BackgroundColor_Selected [UIColor colorWithWhite:0.85 alpha:1.0]
+
 @interface InstanceListViewController ()
 {
     NSArray *_instances;
+    UIButton *_addButton;
+    UIView *_footerView;
 }
 @end
 
@@ -32,20 +37,23 @@
         self.title = tabBarItem.title;
     }
     
+    [self setupAddButton];
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    
     [self updateDataSourceDown];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"page viewWillAppear");
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    UIViewController *pc = self.parentViewController;
-    if (pc) {
-        pc.navigationItem.title = self.title;
-    }
+    [self updateUIForAdminMode:self.adminMode];
 }
 
 #pragma mark public
@@ -90,6 +98,97 @@
     }
 }
 
+#pragma mark internal
+
+- (BOOL)adminMode
+{
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    return app.adminMode;
+}
+
+- (void)setupAddButton
+{
+    NSString *buttonTitle;
+    switch (self.type) {
+        case YBItemType_Task:
+            buttonTitle = @"+ 添加任务";
+            break;
+            
+        case YBItemType_Gift:
+            buttonTitle = @"+ 添加礼物";
+            break;
+            
+        default:
+            buttonTitle = nil;
+            break;
+    }
+    
+    if (buttonTitle) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        btn.frame = CGRectMake(0, 0, self.view.frame.size.width, 40);
+        [btn setTitle:buttonTitle forState:UIControlStateNormal];
+        btn.backgroundColor = AddButton_BackgroundColor_Normal;
+        [btn addTarget:self action:@selector(onAddButtonDown:) forControlEvents:UIControlEventTouchDown];
+        [btn addTarget:self action:@selector(onAddButtonUpInside:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addTarget:self action:@selector(onAddButtonUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+        
+        _addButton = btn;
+        _footerView = [[UIView alloc] initWithFrame:btn.frame];
+    }
+}
+
+- (void)onAddButtonDown:(id)sender
+{
+    UIButton *button = sender;
+    button.backgroundColor = AddButton_BackgroundColor_Selected;
+}
+
+- (void)onAddButtonUpInside:(id)sender
+{
+    UIButton *button = sender;
+    button.backgroundColor = AddButton_BackgroundColor_Normal;
+}
+
+- (void)onAddButtonUpOutside:(id)sender
+{
+    UIButton *button = sender;
+    button.backgroundColor = AddButton_BackgroundColor_Normal;
+}
+
+- (void)onAdminModeChanged:(id)sender
+{
+    NSNotification *notification = sender;
+    NSNumber *number = notification.object;
+    [self updateUIForAdminMode:number.boolValue];
+}
+
+#pragma mark update UI
+
+- (void)updateUIForAdminMode:(BOOL)adminMode
+{
+    if (_addButton) {
+        if (adminMode) {
+            CGRect frame = _addButton.frame;
+            frame.origin = CGPointMake(0, self.view.frame.size.height - frame.size.height);
+            _addButton.frame = frame;
+            if (!_addButton.superview) {
+                [self.view.superview addSubview:_addButton];
+            }
+            if (!self.tableView.tableFooterView) {
+                self.tableView.tableFooterView = _footerView;
+            }
+        }
+        else {
+            if (self.tableView.tableFooterView) {
+                self.tableView.tableFooterView = nil;
+            }
+            if (_addButton.superview) {
+                [_addButton removeFromSuperview];
+            }
+        }
+    }
+}
+
 #pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -120,6 +219,17 @@
     }
     
     return cell;
+}
+
+#pragma mark <UITableViewDelegate>
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.adminMode) {
+        if (indexPath.row + 1 >= _instances.count) {
+            // TODO
+        }
+    }
 }
 
 @end
