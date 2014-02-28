@@ -58,13 +58,25 @@
                 [self.navigationBar addSubview:_adminModeView];
                 
                 // fill admin-mode view with a segment control
-                frame.origin = CGPointZero;
+                CGRect segmentFrame = frame;
+                segmentFrame.origin = CGPointZero;
                 UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"退出管理"]];
+                segmentControl.frame = segmentFrame;
                 segmentControl.momentary = YES;
-                segmentControl.frame = frame;
                 segmentControl.tintColor = [UIColor redColor];
                 [segmentControl addTarget:self action:@selector(onAdminBarChanged:) forControlEvents:UIControlEventValueChanged];
                 [_adminModeView addSubview:segmentControl];
+                
+                // animation for admin-mode-view join.
+                _adminModeView.alpha = 0;
+                CGFloat frame_origin_y = frame.origin.y;
+                frame.origin = CGPointMake(frame.origin.x, frame_origin_y - frame.size.height);
+                _adminModeView.frame = frame;
+                frame.origin = CGPointMake(frame.origin.x, frame_origin_y);
+                [UIView animateWithDuration:0.35 animations:^{
+                    _adminModeView.alpha = 1;
+                    _adminModeView.frame = frame;
+                }];
             }
         }
     }
@@ -75,9 +87,17 @@
                 item.prompt = nil;
             }
             
-            // remove admin-mode view
-            [_adminModeView removeFromSuperview];
-            _adminModeView = nil;
+            // animation for admin-mode-view quit.
+            CGRect frame = _adminModeView.frame;
+            frame.origin = CGPointMake(frame.origin.x, -frame.size.height);
+            [UIView animateWithDuration:0.35 animations:^{
+                _adminModeView.alpha = 0.0;
+                _adminModeView.frame = frame;
+            } completion:^(BOOL finished) {
+                // remove admin-mode view
+                [_adminModeView removeFromSuperview];
+                _adminModeView = nil;
+            }];
         }
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:AdminModeChangedNotification object:[NSNumber numberWithBool:adminMode]];

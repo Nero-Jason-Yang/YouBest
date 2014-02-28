@@ -26,6 +26,7 @@
 		EE00FCD118B5FCCE00C0E668 /* InstanceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCD018B5FCCE00C0E668 /* InstanceListViewController.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
 		EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */; };
+		EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE26F02C18C096F500B80F47 /* UILabel+Utils.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -100,6 +101,8 @@
 		EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		EE00FCE118B71CF600C0E668 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		EE26F02B18C096F500B80F47 /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
+		EE26F02C18C096F500B80F47 /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,6 +174,8 @@
 				EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */,
 				EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */,
 				EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */,
+				EE26F02B18C096F500B80F47 /* UILabel+Utils.h */,
+				EE26F02C18C096F500B80F47 /* UILabel+Utils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
 				EEEE29E418BB159100773F2A /* YBNavigationController.m in Sources */,
+				EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */,
 				46D358B7188E3E8900D722CB /* PlayerListViewController.m in Sources */,
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
 				EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */,

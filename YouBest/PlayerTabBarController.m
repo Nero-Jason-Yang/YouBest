@@ -13,6 +13,8 @@
 
 @interface PlayerTabBarController ()
 
+@property (strong, nonatomic) IBOutlet UIButton *navigationItemRightButton;
+
 @end
 
 @implementation PlayerTabBarController
@@ -68,9 +70,31 @@
 
 #pragma mark <UITabBarDelegate>
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)barItem
 {
-    self.navigationItem.title = item.title;
+    self.navigationItem.title = barItem.title;
+    
+    if ([barItem isKindOfClass:InstanceListViewTabBarItem.class]) {
+        InstanceListViewTabBarItem *item = (InstanceListViewTabBarItem *)barItem;
+        switch (item.type) {
+            case YBItemType_Task:
+            case YBItemType_Gift:
+                self.navigationItemRightButton.imageView.image = [UIImage imageNamed:@"coin_16.png"];
+                break;
+                
+            case YBItemType_Wish: {
+                self.navigationItemRightButton.imageView.image = [UIImage imageNamed:@"gift_16.png"];
+                self.navigationItemRightButton.titleLabel.text = @"123456";
+                UILabel *label = self.navigationItemRightButton.titleLabel;
+                label.autoresizesSubviews = YES;
+                self.navigationItemRightButton.autoresizesSubviews = YES;
+            }
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 @end

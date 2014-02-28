@@ -39,7 +39,7 @@
     
     [self setupAddButton];
     
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     
     [self updateDataSourceDown];
     
@@ -48,7 +48,10 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -125,7 +128,7 @@
     
     if (buttonTitle) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        btn.frame = CGRectMake(0, 0, self.view.frame.size.width, 40);
+        btn.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
         [btn setTitle:buttonTitle forState:UIControlStateNormal];
         btn.backgroundColor = AddButton_BackgroundColor_Normal;
         [btn addTarget:self action:@selector(onAddButtonDown:) forControlEvents:UIControlEventTouchDown];
@@ -160,6 +163,14 @@
     NSNotification *notification = sender;
     NSNumber *number = notification.object;
     [self updateUIForAdminMode:number.boolValue];
+    
+    if (_addButton) {
+        // animation for addButton join.
+        _addButton.alpha = 0.0;
+        [UIView animateWithDuration:0.15 delay:0.2 options:0 animations:^{
+            _addButton.alpha = 1.0;
+        } completion:nil];
+    }
 }
 
 #pragma mark update UI
@@ -171,6 +182,7 @@
             CGRect frame = _addButton.frame;
             frame.origin = CGPointMake(0, self.view.frame.size.height - frame.size.height);
             _addButton.frame = frame;
+            _addButton.alpha = 1.0;
             if (!_addButton.superview) {
                 [self.view.superview addSubview:_addButton];
             }
@@ -179,11 +191,11 @@
             }
         }
         else {
-            if (self.tableView.tableFooterView) {
-                self.tableView.tableFooterView = nil;
-            }
             if (_addButton.superview) {
                 [_addButton removeFromSuperview];
+            }
+            if (self.tableView.tableFooterView) {
+                self.tableView.tableFooterView = nil;
             }
         }
     }
