@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="-655" y="96"/>
         </scene>
-        <!--Player Tab Bar Controller-->
+        <!--Player Tabs View Controller-->
         <scene sceneID="8L9-0h-gFc">
             <objects>
-                <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="zQ3-tV-QK4" customClass="PlayerTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="zQ3-tV-QK4" customClass="PlayerTabsViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3LD-ek-iMj" customClass="YBNavigationItem">
                         <barButtonItem key="leftBarButtonItem" id="qkC-YZ-IDj">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C42-4K-fV2">

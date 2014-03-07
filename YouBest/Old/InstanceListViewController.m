@@ -8,7 +8,7 @@
 
 #import "InstanceListViewController.h"
 #import "AppDelegate.h"
-#import "PlayerTabBarController.h"
+#import "PlayerTabsViewController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBItemInstance.h"
@@ -63,9 +63,9 @@
 
 - (void)updateDataSourceDown
 {
-    PlayerTabBarController *controller = (PlayerTabBarController *)self.parentViewController;
-    NSParameterAssert([controller isKindOfClass:PlayerTabBarController.class]);
-    if (![controller isKindOfClass:PlayerTabBarController.class]) {
+    PlayerTabsViewController *controller = (PlayerTabsViewController *)self.parentViewController;
+    NSParameterAssert([controller isKindOfClass:PlayerTabsViewController.class]);
+    if (![controller isKindOfClass:PlayerTabsViewController.class]) {
         _instances = nil;
         return;
     }

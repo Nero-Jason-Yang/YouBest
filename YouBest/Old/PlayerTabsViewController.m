@@ -6,18 +6,18 @@
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
-#import "PlayerTabBarController.h"
+#import "PlayerTabsViewController.h"
 #import "InstanceListViewController.h"
 #import "YBNavigationController.h"
 #import "UIView+Utils.h"
 
-@interface PlayerTabBarController ()
+@interface PlayerTabsViewController ()
 
 @property (strong, nonatomic) IBOutlet UIButton *navigationItemRightButton;
 
 @end
 
-@implementation PlayerTabBarController
+@implementation PlayerTabsViewController
 
 - (void)viewDidLoad
 {

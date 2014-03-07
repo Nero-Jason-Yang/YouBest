@@ -7,7 +7,7 @@
 //
 
 #import "PlayerListViewController.h"
-#import "PlayerTabBarController.h"
+#import "PlayerTabsViewController.h"
 #import "Database.h"
 #import "YBPlayer.h"
 
@@ -31,8 +31,8 @@
         // to admin setup view.
     }
     else if (1 == _players.count) {
-        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
-        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+        PlayerTabsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
+        if ([viewController isKindOfClass:PlayerTabsViewController.class]) {
             viewController.player = _players[0];
             [self.navigationController pushViewController:viewController animated:NO];
         }
@@ -42,8 +42,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"toPlayerTabs"] && segue.sourceViewController == self) {
-        PlayerTabBarController *viewController = segue.destinationViewController;
-        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+        PlayerTabsViewController *viewController = segue.destinationViewController;
+        if ([viewController isKindOfClass:PlayerTabsViewController.class]) {
             viewController.player = _currentPlayer;
             viewController.navigationItem.leftBarButtonItem = nil;
         }

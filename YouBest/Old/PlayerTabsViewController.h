@@ -10,7 +10,7 @@
 
 @class YBPlayer;
 
-@interface PlayerTabBarController : UITabBarController
+@interface PlayerTabsViewController : UITabBarController
 
 @property (nonatomic) YBPlayer *player;
 
