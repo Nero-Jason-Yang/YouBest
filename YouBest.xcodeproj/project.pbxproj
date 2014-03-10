@@ -34,7 +34,7 @@
 		EE35264D18C9BE0C00937FB6 /* PlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264518C9BE0C00937FB6 /* PlayerListViewController.m */; };
 		EE35264E18C9BE0C00937FB6 /* PlayerTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */; };
 		EE35264F18C9BE0C00937FB6 /* YBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264918C9BE0C00937FB6 /* YBNavigationController.m */; };
-		EE35265018C9BE0C00937FB6 /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35264A18C9BE0C00937FB6 /* YouBest.storyboard */; };
+		EE35265018C9BE0C00937FB6 /* YouBestOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */; };
 		EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35265118C9BE2C00937FB6 /* YouBest.txt */; };
 		EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */; };
 		EE35266918C9C0F100937FB6 /* UI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35266818C9C0F100937FB6 /* UI.txt */; };
@@ -50,6 +50,7 @@
 		EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D118C9CBBF00937FB6 /* GiftEditingViewController.m */; };
 		EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */; };
 		EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */; };
+		EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3526D918CDB6B700937FB6 /* YouBest.storyboard */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -108,7 +109,7 @@
 		EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTabsViewController.m; sourceTree = "<group>"; };
 		EE35264818C9BE0C00937FB6 /* YBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNavigationController.h; sourceTree = "<group>"; };
 		EE35264918C9BE0C00937FB6 /* YBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNavigationController.m; sourceTree = "<group>"; };
-		EE35264A18C9BE0C00937FB6 /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
+		EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBestOld.storyboard; sourceTree = "<group>"; };
 		EE35265118C9BE2C00937FB6 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
 		EE35265318C9BE2C00937FB6 /* YouBest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBest.xcdatamodel; sourceTree = "<group>"; };
 		EE35266818C9C0F100937FB6 /* UI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UI.txt; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishDetailsViewController.m; sourceTree = "<group>"; };
 		EE3526D618C9CBD500937FB6 /* WishEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishEditingViewController.h; sourceTree = "<group>"; };
 		EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishEditingViewController.m; sourceTree = "<group>"; };
+		EE3526D918CDB6B700937FB6 /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				EE35266818C9C0F100937FB6 /* UI.txt */,
+				EE3526D918CDB6B700937FB6 /* YouBest.storyboard */,
 				EE3526B318C9C8E000937FB6 /* Navigation */,
 				EE3526B618C9C8E000937FB6 /* Player */,
 				EE3526BB18C9C8E000937FB6 /* Task */,
@@ -263,7 +266,7 @@
 				EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */,
 				EE35264818C9BE0C00937FB6 /* YBNavigationController.h */,
 				EE35264918C9BE0C00937FB6 /* YBNavigationController.m */,
-				EE35264A18C9BE0C00937FB6 /* YouBest.storyboard */,
+				EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */,
 			);
 			path = Old;
 			sourceTree = "<group>";
@@ -439,7 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE35265018C9BE0C00937FB6 /* YouBest.storyboard in Resources */,
+				EE35265018C9BE0C00937FB6 /* YouBestOld.storyboard in Resources */,
 				EE35263C18C9BD0400937FB6 /* strawberry_24@2x.png in Resources */,
 				EE35262D18C9BD0400937FB6 /* gear_16.png in Resources */,
 				EE35262A18C9BD0400937FB6 /* coin_16@2x.png in Resources */,
@@ -451,6 +454,7 @@
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE35262918C9BD0400937FB6 /* coin_16.png in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
+				EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */,
 				EE35262E18C9BD0400937FB6 /* gear_16@2x.png in Resources */,
 				EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */,
 			);
