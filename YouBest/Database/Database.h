@@ -7,19 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YBTypedef.h"
 #import "NSManagedObjectContext+Utils.h"
 #import "MOOption.h"
 #import "MOPlayer.h"
-#import "MOItemTemplate.h"
-#import "MOItemInstance.h"
-#import "MOItemRecord.h"
+#import "MOTaskTemplate.h"
+#import "MOTaskInstance.h"
+#import "MOTaskRecord.h"
+#import "MOGiftTemplate.h"
+#import "MOGiftInstance.h"
+#import "MOGiftRecord.h"
 
 #define Entity_Option       @"Option"
 #define Entity_Player       @"Player"
-#define Entity_ItemTemplate @"ItemTemplate"
-#define Entity_ItemInstance @"ItemInstance"
-#define Entity_ItemRecord   @"ItemRecord"
+#define Entity_TaskTemplate @"TaskTemplate"
+#define Entity_TaskInstance @"TaskInstance"
+#define Entity_TaskRecord   @"TaskRecord"
+#define Entity_GiftTemplate @"GiftTemplate"
+#define Entity_GiftInstance @"GiftInstance"
+#define Entity_GiftRecord   @"GiftRecord"
 
 @interface Database : NSObject
 
@@ -30,6 +35,9 @@
 - (void)save;
 
 - (NSArray *)fetchAllPlayers;
-- (NSArray *)fetchAllItemInstancesForPlayerID:(NSString *)playerID withType:(YBItemType)type;
+- (NSArray *)fetchAllTaskTemplatesForPlayerID:(NSString *)playerID;
+- (NSArray *)fetchAllTaskInstancesForPlayerID:(NSString *)playerID;
+- (NSArray *)fetchAllGiftTemplatesForPlayerID:(NSString *)playerID;
+- (NSArray *)fetchAllGiftInstancesForPlayerID:(NSString *)playerID;
 
 @end

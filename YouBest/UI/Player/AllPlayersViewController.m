@@ -7,53 +7,87 @@
 //
 
 #import "AllPlayersViewController.h"
+#import "PlayerTabBarController.h"
+#import "Database.h"
+#import "YBPlayer.h"
 
 @interface AllPlayersViewController ()
-
+{
+    NSArray *_players;
+    YBPlayer *_currentPlayer;
+}
 @end
 
 @implementation AllPlayersViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = NSLocalizedString(@"宝贝", @"YouBest");
+    
+    [self updateDataSourceDown];
+    
+//    if (0 == _players.count) {
+//        // TODO
+//        // to admin setup view.
+//    }
+//    else if (1 == _players.count) {
+//        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
+//        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+//            viewController.player = _players[0];
+//            [self.navigationController pushViewController:viewController animated:NO];
+//        }
+//    }
 }
 
-- (void)didReceiveMemoryWarning
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([segue.identifier isEqualToString:@"toPlayerTabBar"] && segue.sourceViewController == self) {
+        PlayerTabBarController *viewController = segue.destinationViewController;
+        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+            viewController.player = _currentPlayer;
+            viewController.navigationItem.leftBarButtonItem = nil;
+        }
+    }
 }
 
-#pragma mark - Table view data source
+#pragma mark public
+
+- (void)updateDataSourceDown
+{
+    NSMutableArray *array = [NSMutableArray array];
+    Database *db = Database.sharedDatabase;
+    [db.context performBlockAndWait:^{
+        NSArray *mos = [db fetchAllPlayers];
+        for (MOPlayer *mo in mos) {
+            YBPlayer *player = [[YBPlayer alloc] initWithMO:mo];
+            [array addObject:player];
+        }
+    }];
+    
+    dispatch_block_t block = ^{
+        _players = array;
+    };
+    
+    if (NSThread.isMainThread) {
+        block();
+    }
+    else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
+#pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return _players.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,60 +95,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    YBPlayer *player = _players[indexPath.row];
+    cell.textLabel.text = player.name;
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

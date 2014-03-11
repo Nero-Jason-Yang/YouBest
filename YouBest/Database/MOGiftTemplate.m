@@ -1,17 +1,19 @@
 //
-//  MOOption.m
+//  MOGiftTemplate.m
 //  YouBest
 //
 //  Created by Jason Yang on 14-3-11.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
-#import "MOOption.h"
+#import "MOGiftTemplate.h"
 
 
-@implementation MOOption
+@implementation MOGiftTemplate
 
-@dynamic name;
+@dynamic content;
+@dynamic title;
 @dynamic value;
+@dynamic identity;
 
 @end

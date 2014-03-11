@@ -1,5 +1,5 @@
 //
-//  MOPlayer.h
+//  MOTaskTemplate.h
 //  YouBest
 //
 //  Created by Jason Yang on 14-3-11.
@@ -10,11 +10,11 @@
 #import <CoreData/CoreData.h>
 
 
-@interface MOPlayer : NSManagedObject
+@interface MOTaskTemplate : NSManagedObject
 
-@property (nonatomic, retain) NSDate * birthday;
-@property (nonatomic, retain) NSString * identity;
-@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * content;
+@property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * value;
+@property (nonatomic, retain) NSString * identity;
 
 @end

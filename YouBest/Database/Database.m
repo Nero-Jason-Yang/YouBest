@@ -50,81 +50,58 @@
             player.birthday = NSDate.date;
             player.value = [NSNumber numberWithInteger:0];
             
-            MOItemTemplate *temp = [context createObjectForEntityName:Entity_ItemTemplate];
-            temp.type = [NSNumber numberWithShort:YBItemType_Task];
-            temp.name = @"叠被子";
+            MOTaskTemplate *temp = [context createObjectForEntityName:Entity_TaskTemplate];
+            temp.identity = [[NSUUID UUID] UUIDString];
+            temp.title = @"叠被子";
             temp.content = @"收拾好自己睡觉的床，叠好被子，整理床单";
             temp.value = [NSNumber numberWithInteger:1];
-            temp.remark = @"这里是备注，只有管理员可以读写";
-            
-            NSManagedObjectID *tempMOID = temp.objectID;
-            if (tempMOID.isTemporaryID) {
-                [context save];
-            }
             
             {
-                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
+                MOTaskInstance *inst = [context createObjectForEntityName:Entity_TaskInstance];
                 inst.playerID = player.identity;
-                inst.type = temp.type;
-                inst.name = temp.name;
+                inst.templateID = temp.identity;
+                inst.title = temp.title;
                 inst.content = temp.content;
                 inst.value = temp.value;
-                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
-                inst.total = nil;
-                inst.number = nil; // not support number, means total is one.
                 inst.creationDate = NSDate.date;
+                inst.finishedDate = nil;
                 inst.expiryDate = nil;
-                inst.startDate = nil;
-                inst.finishDate = nil;
-                inst.itemTemplate = tempMOID.URIRepresentation.absoluteString;
             }
             
             {
-                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
+                MOTaskInstance *inst = [context createObjectForEntityName:Entity_TaskInstance];
                 inst.playerID = player.identity;
-                inst.type = [NSNumber numberWithShort:YBItemType_Task];
-                inst.name = @"喝杯开水";
+                inst.templateID = nil;
+                inst.title = @"喝杯开水";
                 inst.content = @"多喝开水有益健康";
                 inst.value = [NSNumber numberWithInteger:1];
-                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
-                inst.total = nil; // nil means unlimited
-                inst.number = [NSNumber numberWithInteger:0]; // support number
                 inst.creationDate = NSDate.date;
+                inst.finishedDate = nil;
                 inst.expiryDate = [NSDate dateWithTimeIntervalSinceNow:30*24*60*60]; // one month limit
             }
             
             for (int i = 0; i < 10; i ++) {
-                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
+                MOTaskInstance *inst = [context createObjectForEntityName:Entity_TaskInstance];
                 inst.playerID = player.identity;
-                inst.type = [NSNumber numberWithShort:YBItemType_Task];
-                inst.name = [NSString stringWithFormat:@"Sample[%d]", i];
+                inst.templateID = nil;
+                inst.title = [NSString stringWithFormat:@"Sample[%d]", i];
                 inst.content = @"...";
                 inst.value = [NSNumber numberWithInteger:1];
-                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
-                inst.total = nil; // nil means unlimited
-                inst.number = [NSNumber numberWithInteger:0]; // support number
                 inst.creationDate = NSDate.date;
+                inst.finishedDate = nil;
+                inst.expiryDate = nil;
             }
             
             {
-                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
+                MOGiftInstance *inst = [context createObjectForEntityName:Entity_GiftInstance];
                 inst.playerID = player.identity;
-                inst.type = [NSNumber numberWithShort:YBItemType_Gift];
-                inst.name = @"滑板车";
+                inst.templateID = nil;
+                inst.title = @"滑板车";
                 inst.content = @"森宝迪滑板车三轮粉色公主";
                 inst.value = [NSNumber numberWithInteger:30];
-                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
                 inst.creationDate = NSDate.date;
-            }
-            
-            {
-                MOItemInstance *inst = [context createObjectForEntityName:Entity_ItemInstance];
-                inst.playerID = player.identity;
-                inst.type = [NSNumber numberWithShort:YBItemType_Wish];
-                inst.name = @"自行车";
-                inst.content = @"迪卡龙少女自行车6-8岁";
-                inst.state = [NSNumber numberWithShort:YBItemState_Ready];
-                inst.creationDate = NSDate.date;
+                inst.finishedDate = nil;
+                inst.expiryDate = nil;
             }
         }
     }
@@ -143,15 +120,44 @@
     return [self.context fetchObjectsForEntityName:Entity_Player];
 }
 
-- (NSArray *)fetchAllItemInstancesForPlayerID:(NSString *)playerID withType:(YBItemType)type
+- (NSArray *)fetchAllTaskTemplatesForPlayerID:(NSString *)playerID
 {
     if (!playerID) {
         return nil;
     }
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type == %d && playerID == %@", type, playerID];
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES];
-    return [self.context fetchObjectsForEntityName:Entity_ItemInstance withPredicate:predicate sortDescriptors:@[sortDescriptor]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"playerID == %@", playerID];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
+    return [self.context fetchObjectsForEntityName:Entity_TaskTemplate withPredicate:predicate sortDescriptors:@[sortDescriptor]];
+}
+
+- (NSArray *)fetchAllTaskInstancesForPlayerID:(NSString *)playerID
+{
+    if (!playerID) {
+        return nil;
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"playerID == %@", playerID];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
+    return [self.context fetchObjectsForEntityName:Entity_TaskInstance withPredicate:predicate sortDescriptors:@[sortDescriptor]];
+}
+
+- (NSArray *)fetchAllGiftTemplatesForPlayerID:(NSString *)playerID
+{
+    if (!playerID) {
+        return nil;
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"playerID == %@", playerID];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
+    return [self.context fetchObjectsForEntityName:Entity_GiftTemplate withPredicate:predicate sortDescriptors:@[sortDescriptor]];
+}
+
+- (NSArray *)fetchAllGiftInstancesForPlayerID:(NSString *)playerID
+{
+    if (!playerID) {
+        return nil;
+    }
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"playerID == %@", playerID];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
+    return [self.context fetchObjectsForEntityName:Entity_GiftInstance withPredicate:predicate sortDescriptors:@[sortDescriptor]];
 }
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YBTypedef.h"
+
+typedef enum {
+    YBItemType_Task = 0,
+    YBItemType_Gift = 1,
+    YBItemType_Wish = 2,
+} YBItemType;
 
 @interface InstanceListViewController : UITableViewController
 @property (nonatomic) YBItemType type;

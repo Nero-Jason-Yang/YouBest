@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="ItemInstance" representedClassName="MOItemInstance" syncable="YES">
+    <entity name="GiftInstance" representedClassName="MOGiftInstance" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="expiryDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="finishDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="itemTemplate" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="total" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="value" optional="YES" attributeType="Integer 32" syncable="YES"/>
-    </entity>
-    <entity name="ItemRecord" representedClassName="MOItemRecord" syncable="YES">
-        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="finishDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="templateID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="ItemTemplate" representedClassName="MOItemTemplate" syncable="YES">
+    <entity name="GiftRecord" representedClassName="MOGiftRecord" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="GiftTemplate" representedClassName="MOGiftTemplate" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <entity name="Option" representedClassName="MOOption" syncable="YES">
@@ -42,11 +35,39 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="TaskInstance" representedClassName="MOTaskInstance" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="expiryDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="templateID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TaskRecord" representedClassName="MOTaskRecord" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="TaskTemplate" representedClassName="MOTaskTemplate" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="ItemInstance" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="ItemRecord" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="ItemTemplate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GiftInstance" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GiftRecord" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GiftTemplate" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Option" positionX="0" positionY="0" width="0" height="0"/>
         <element name="Player" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TaskInstance" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TaskRecord" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="TaskTemplate" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

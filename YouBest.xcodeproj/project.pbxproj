@@ -9,14 +9,8 @@
 /* Begin PBXBuildFile section */
 		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
-		EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */; };
-		EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */; };
-		EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCA218B4831A00C0E668 /* MOOption.m */; };
 		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
 		EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB218B4968D00C0E668 /* YBPlayer.m */; };
-		EE00FCB618B4A6F100C0E668 /* YBItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */; };
-		EE00FCBF18B5A4F000C0E668 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */; };
-		EE00FCC218B5A4F100C0E668 /* MOItemInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
 		EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */; };
 		EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE26F02C18C096F500B80F47 /* UILabel+Utils.m */; };
@@ -29,12 +23,6 @@
 		EE35263B18C9BD0400937FB6 /* strawberry_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262518C9BD0400937FB6 /* strawberry_24.png */; };
 		EE35263C18C9BD0400937FB6 /* strawberry_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262618C9BD0400937FB6 /* strawberry_24@2x.png */; };
 		EE35263E18C9BD0400937FB6 /* task_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262818C9BD0400937FB6 /* task_24.png */; };
-		EE35264B18C9BE0C00937FB6 /* InstanceDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264118C9BE0C00937FB6 /* InstanceDetailsViewController.m */; };
-		EE35264C18C9BE0C00937FB6 /* InstanceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264318C9BE0C00937FB6 /* InstanceListViewController.m */; };
-		EE35264D18C9BE0C00937FB6 /* PlayerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264518C9BE0C00937FB6 /* PlayerListViewController.m */; };
-		EE35264E18C9BE0C00937FB6 /* PlayerTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */; };
-		EE35264F18C9BE0C00937FB6 /* YBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35264918C9BE0C00937FB6 /* YBNavigationController.m */; };
-		EE35265018C9BE0C00937FB6 /* YouBestOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */; };
 		EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35265118C9BE2C00937FB6 /* YouBest.txt */; };
 		EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */; };
 		EE35266918C9C0F100937FB6 /* UI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35266818C9C0F100937FB6 /* UI.txt */; };
@@ -51,6 +39,16 @@
 		EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */; };
 		EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */; };
 		EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3526D918CDB6B700937FB6 /* YouBest.storyboard */; };
+		EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */; };
+		EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270018CEFE2700937FB6 /* MOOption.m */; };
+		EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270218CEFE2700937FB6 /* MOPlayer.m */; };
+		EE35270F18CEFE2700937FB6 /* MOTaskRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270618CEFE2700937FB6 /* MOTaskRecord.m */; };
+		EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */; };
+		EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271518CEFEA900937FB6 /* YBGiftInstance.m */; };
+		EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271818CF031000937FB6 /* MOGiftTemplate.m */; };
+		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
+		EE35271F18CF031100937FB6 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271E18CF031100937FB6 /* MOTaskInstance.m */; };
+		EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35272418CF03F000937FB6 /* MOTaskTemplate.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -67,23 +65,10 @@
 		46B21E5818916DA500952309 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		46B21E5918916DA500952309 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
 		46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
-		EE00FC9D18B4831A00C0E668 /* MOItemRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemRecord.h; sourceTree = "<group>"; };
-		EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemRecord.m; sourceTree = "<group>"; };
-		EE00FC9F18B4831A00C0E668 /* MOItemTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemTemplate.h; sourceTree = "<group>"; };
-		EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemTemplate.m; sourceTree = "<group>"; };
-		EE00FCA118B4831A00C0E668 /* MOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOOption.h; sourceTree = "<group>"; };
-		EE00FCA218B4831A00C0E668 /* MOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOOption.m; sourceTree = "<group>"; };
 		EE00FCAD18B4834900C0E668 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		EE00FCAE18B4834900C0E668 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		EE00FCB118B4968D00C0E668 /* YBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlayer.h; sourceTree = "<group>"; };
 		EE00FCB218B4968D00C0E668 /* YBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPlayer.m; sourceTree = "<group>"; };
-		EE00FCB418B4A6F100C0E668 /* YBItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBItemInstance.h; sourceTree = "<group>"; };
-		EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBItemInstance.m; sourceTree = "<group>"; };
-		EE00FCB718B4A87600C0E668 /* YBTypedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTypedef.h; sourceTree = "<group>"; };
-		EE00FCBD18B5A4F000C0E668 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
-		EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
-		EE00FCC018B5A4F100C0E668 /* MOItemInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOItemInstance.h; sourceTree = "<group>"; };
-		EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOItemInstance.m; sourceTree = "<group>"; };
 		EE00FCDE18B71C4700C0E668 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		EE00FCE118B71CF600C0E668 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
@@ -99,17 +84,6 @@
 		EE35262518C9BD0400937FB6 /* strawberry_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strawberry_24.png; sourceTree = "<group>"; };
 		EE35262618C9BD0400937FB6 /* strawberry_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strawberry_24@2x.png"; sourceTree = "<group>"; };
 		EE35262818C9BD0400937FB6 /* task_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_24.png; sourceTree = "<group>"; };
-		EE35264018C9BE0C00937FB6 /* InstanceDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDetailsViewController.h; sourceTree = "<group>"; };
-		EE35264118C9BE0C00937FB6 /* InstanceDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDetailsViewController.m; sourceTree = "<group>"; };
-		EE35264218C9BE0C00937FB6 /* InstanceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceListViewController.h; sourceTree = "<group>"; };
-		EE35264318C9BE0C00937FB6 /* InstanceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceListViewController.m; sourceTree = "<group>"; };
-		EE35264418C9BE0C00937FB6 /* PlayerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerListViewController.h; sourceTree = "<group>"; };
-		EE35264518C9BE0C00937FB6 /* PlayerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerListViewController.m; sourceTree = "<group>"; };
-		EE35264618C9BE0C00937FB6 /* PlayerTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTabsViewController.h; sourceTree = "<group>"; };
-		EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTabsViewController.m; sourceTree = "<group>"; };
-		EE35264818C9BE0C00937FB6 /* YBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBNavigationController.h; sourceTree = "<group>"; };
-		EE35264918C9BE0C00937FB6 /* YBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBNavigationController.m; sourceTree = "<group>"; };
-		EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBestOld.storyboard; sourceTree = "<group>"; };
 		EE35265118C9BE2C00937FB6 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
 		EE35265318C9BE2C00937FB6 /* YouBest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBest.xcdatamodel; sourceTree = "<group>"; };
 		EE35266818C9C0F100937FB6 /* UI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UI.txt; sourceTree = "<group>"; };
@@ -138,6 +112,26 @@
 		EE3526D618C9CBD500937FB6 /* WishEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishEditingViewController.h; sourceTree = "<group>"; };
 		EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishEditingViewController.m; sourceTree = "<group>"; };
 		EE3526D918CDB6B700937FB6 /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
+		EE3526FB18CEFE2700937FB6 /* MOGiftRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftRecord.h; sourceTree = "<group>"; };
+		EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftRecord.m; sourceTree = "<group>"; };
+		EE3526FF18CEFE2700937FB6 /* MOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOOption.h; sourceTree = "<group>"; };
+		EE35270018CEFE2700937FB6 /* MOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOOption.m; sourceTree = "<group>"; };
+		EE35270118CEFE2700937FB6 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
+		EE35270218CEFE2700937FB6 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
+		EE35270518CEFE2700937FB6 /* MOTaskRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskRecord.h; sourceTree = "<group>"; };
+		EE35270618CEFE2700937FB6 /* MOTaskRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskRecord.m; sourceTree = "<group>"; };
+		EE35271118CEFE9D00937FB6 /* YBTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTaskInstance.h; sourceTree = "<group>"; };
+		EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTaskInstance.m; sourceTree = "<group>"; };
+		EE35271418CEFEA900937FB6 /* YBGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGiftInstance.h; sourceTree = "<group>"; };
+		EE35271518CEFEA900937FB6 /* YBGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBGiftInstance.m; sourceTree = "<group>"; };
+		EE35271718CF031000937FB6 /* MOGiftTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftTemplate.h; sourceTree = "<group>"; };
+		EE35271818CF031000937FB6 /* MOGiftTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftTemplate.m; sourceTree = "<group>"; };
+		EE35271A18CF031100937FB6 /* MOGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftInstance.h; sourceTree = "<group>"; };
+		EE35271B18CF031100937FB6 /* MOGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftInstance.m; sourceTree = "<group>"; };
+		EE35271D18CF031100937FB6 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
+		EE35271E18CF031100937FB6 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
+		EE35272318CF03F000937FB6 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
+		EE35272418CF03F000937FB6 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,16 +190,22 @@
 				EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */,
 				EE00FCAD18B4834900C0E668 /* Database.h */,
 				EE00FCAE18B4834900C0E668 /* Database.m */,
-				EE00FCC018B5A4F100C0E668 /* MOItemInstance.h */,
-				EE00FCC118B5A4F100C0E668 /* MOItemInstance.m */,
-				EE00FCBD18B5A4F000C0E668 /* MOPlayer.h */,
-				EE00FCBE18B5A4F000C0E668 /* MOPlayer.m */,
-				EE00FC9D18B4831A00C0E668 /* MOItemRecord.h */,
-				EE00FC9E18B4831A00C0E668 /* MOItemRecord.m */,
-				EE00FC9F18B4831A00C0E668 /* MOItemTemplate.h */,
-				EE00FCA018B4831A00C0E668 /* MOItemTemplate.m */,
-				EE00FCA118B4831A00C0E668 /* MOOption.h */,
-				EE00FCA218B4831A00C0E668 /* MOOption.m */,
+				EE3526FF18CEFE2700937FB6 /* MOOption.h */,
+				EE35270018CEFE2700937FB6 /* MOOption.m */,
+				EE35270118CEFE2700937FB6 /* MOPlayer.h */,
+				EE35270218CEFE2700937FB6 /* MOPlayer.m */,
+				EE35272318CF03F000937FB6 /* MOTaskTemplate.h */,
+				EE35272418CF03F000937FB6 /* MOTaskTemplate.m */,
+				EE35271D18CF031100937FB6 /* MOTaskInstance.h */,
+				EE35271E18CF031100937FB6 /* MOTaskInstance.m */,
+				EE35270518CEFE2700937FB6 /* MOTaskRecord.h */,
+				EE35270618CEFE2700937FB6 /* MOTaskRecord.m */,
+				EE35271718CF031000937FB6 /* MOGiftTemplate.h */,
+				EE35271818CF031000937FB6 /* MOGiftTemplate.m */,
+				EE35271A18CF031100937FB6 /* MOGiftInstance.h */,
+				EE35271B18CF031100937FB6 /* MOGiftInstance.m */,
+				EE3526FB18CEFE2700937FB6 /* MOGiftRecord.h */,
+				EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -215,9 +215,10 @@
 			children = (
 				EE00FCB118B4968D00C0E668 /* YBPlayer.h */,
 				EE00FCB218B4968D00C0E668 /* YBPlayer.m */,
-				EE00FCB418B4A6F100C0E668 /* YBItemInstance.h */,
-				EE00FCB518B4A6F100C0E668 /* YBItemInstance.m */,
-				EE00FCB718B4A87600C0E668 /* YBTypedef.h */,
+				EE35271118CEFE9D00937FB6 /* YBTaskInstance.h */,
+				EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */,
+				EE35271418CEFEA900937FB6 /* YBGiftInstance.h */,
+				EE35271518CEFEA900937FB6 /* YBGiftInstance.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -251,24 +252,6 @@
 				EE35262818C9BD0400937FB6 /* task_24.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		EE35263F18C9BE0C00937FB6 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				EE35264018C9BE0C00937FB6 /* InstanceDetailsViewController.h */,
-				EE35264118C9BE0C00937FB6 /* InstanceDetailsViewController.m */,
-				EE35264218C9BE0C00937FB6 /* InstanceListViewController.h */,
-				EE35264318C9BE0C00937FB6 /* InstanceListViewController.m */,
-				EE35264418C9BE0C00937FB6 /* PlayerListViewController.h */,
-				EE35264518C9BE0C00937FB6 /* PlayerListViewController.m */,
-				EE35264618C9BE0C00937FB6 /* PlayerTabsViewController.h */,
-				EE35264718C9BE0C00937FB6 /* PlayerTabsViewController.m */,
-				EE35264818C9BE0C00937FB6 /* YBNavigationController.h */,
-				EE35264918C9BE0C00937FB6 /* YBNavigationController.m */,
-				EE35264A18C9BE0C00937FB6 /* YouBestOld.storyboard */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		EE3526B018C9C8E000937FB6 /* Gift */ = {
@@ -365,7 +348,6 @@
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
-				EE35263F18C9BE0C00937FB6 /* Old */,
 				EE35261118C9BD0400937FB6 /* UI */,
 				EE00FCB018B4967B00C0E668 /* Data */,
 				EE00FC9A18B4831A00C0E668 /* Database */,
@@ -442,7 +424,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE35265018C9BE0C00937FB6 /* YouBestOld.storyboard in Resources */,
 				EE35263C18C9BD0400937FB6 /* strawberry_24@2x.png in Resources */,
 				EE35262D18C9BD0400937FB6 /* gear_16.png in Resources */,
 				EE35262A18C9BD0400937FB6 /* coin_16@2x.png in Resources */,
@@ -467,22 +448,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */,
 				EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */,
-				EE00FCB618B4A6F100C0E668 /* YBItemInstance.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
-				EE00FCA718B4831A00C0E668 /* MOItemTemplate.m in Sources */,
-				EE00FCA618B4831A00C0E668 /* MOItemRecord.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
-				EE35264E18C9BE0C00937FB6 /* PlayerTabsViewController.m in Sources */,
-				EE00FCC218B5A4F100C0E668 /* MOItemInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */,
-				EE00FCBF18B5A4F000C0E668 /* MOPlayer.m in Sources */,
-				EE35264D18C9BE0C00937FB6 /* PlayerListViewController.m in Sources */,
+				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
+				EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */,
 				EE3526CC18C9CBA500937FB6 /* TaskEditingViewController.m in Sources */,
 				EE3526C418C9C8E000937FB6 /* PlayerTabBarController.m in Sources */,
 				EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */,
@@ -490,16 +467,19 @@
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
+				EE35271F18CF031100937FB6 /* MOTaskInstance.m in Sources */,
+				EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */,
+				EE35270F18CEFE2700937FB6 /* MOTaskRecord.m in Sources */,
 				EE3526C918C9CB9A00937FB6 /* TaskDetailsViewController.m in Sources */,
 				EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */,
 				EE3526CF18C9CBB300937FB6 /* GiftDetailsViewController.m in Sources */,
+				EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */,
 				EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */,
-				EE35264F18C9BE0C00937FB6 /* YBNavigationController.m in Sources */,
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
+				EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */,
+				EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */,
 				EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */,
-				EE00FCA818B4831A00C0E668 /* MOOption.m in Sources */,
-				EE35264C18C9BE0C00937FB6 /* InstanceListViewController.m in Sources */,
-				EE35264B18C9BE0C00937FB6 /* InstanceDetailsViewController.m in Sources */,
+				EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

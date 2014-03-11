@@ -1,61 +1,68 @@
 
-enum ItemType {
-    YBItemType_Task = 0,
-    YBItemType_Gift = 1,
-    YBItemType_Wish = 2,
-}
-
-Player
-.identity       ID
-.name           昵称
-.birthday       出生日期
-.value          金币数量
-
-ItemTemplate
-.type           项目类型（任务、礼物）
-.name           项目名称（标题）
-.content        项目内容（描述）
-.value          项目值（金币数量）
-.remark         项目备注（仅管理员可读）
-
-ItemInstance
-.type           类型（任务、礼物）
-.name           名称
-.content        内容
-.value          值，任务报酬、礼物价格
-.state          项目状态 0:finished 1:in-progress 2:ready
-.total          总数，0表示无限
-.number         完成数量
-.creationDate   创建时间
-.expiryDate     到期时间
-.startDate      开始时间
-.finishDate     完成时间
-.itemTemplate   模板的MOID
-.playerID       玩家identity
-
-ItemRecord
-.type           项目类型
-.name           任务名/礼物名/愿望名
-.content        任务内容/礼物说明/愿望内容
-.value          任务报酬/礼物价格
-.startDate      任务开始时间/礼物兑换时间
-.finishDate     任务结束时间/礼物发放时间
-.playerName     玩家名
-.playerID       玩家identity
-
 
 ================================
-|             ItemTemplate     |
-|                 ||           |
-|                 || (Create)  |
-|                 \/           |
-| Player <--> ItemInstance     |
-|                 ||           |
-|                 || (Close)   |
-|                 \/           |
-| [History]   ItemRecord       |
+|            TaskTemplate      |
+|                ||            |
+|                || (Create)   |
+|                \/            |
+| Player ==> TaskInstance      |
+|                ||            |
+|                || (Verified) |
+|                \/            |
+| [History]  TaskRecord        |
 ================================
 
 Option
 .name   名
 .value  值
+
+Player
+.identity
+.name
+.birthday
+.money
+
+TaskTemplate
+.title
+.content
+.reward
+
+TaskInstance
+.title          :NSString
+.content        :NSString
+.reward         :NSUInteger
+.creationDate   :NSDate
+.finishedDate   :NSDate
+.expiryDate     :NSDate
+.playerID
+
+TaskRecord
+.title
+.content
+.reward
+.creationDate
+.finishedDate
+.playerID
+.playerName
+
+GiftTemplate
+.title
+.content
+.price
+
+GiftInstance
+.title
+.content
+.price          :NSUInteger
+.creationDate   :NSDate
+.finishedDate   :NSDate
+.expiryDate
+.playerID
+
+GiftRecord
+.title
+.content
+.price
+.creationDate
+.finishedDate
+

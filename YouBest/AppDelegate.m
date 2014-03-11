@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Database.h"
-#import "YBNavigationController.h"
+#import "RootNavigationController.h"
 
 @implementation AppDelegate
 
@@ -55,10 +55,10 @@
 
 - (BOOL)adminMode
 {
-    YBNavigationController *nc = (YBNavigationController *)self.window.rootViewController;
-    if ([nc isKindOfClass:YBNavigationController.class]) {
-        return nc.adminMode;
-    }
+//    YBNavigationController *nc = (YBNavigationController *)self.window.rootViewController;
+//    if ([nc isKindOfClass:YBNavigationController.class]) {
+//        return nc.adminMode;
+//    }
     return NO;
 }
 

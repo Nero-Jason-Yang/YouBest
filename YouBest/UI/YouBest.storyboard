@@ -4,29 +4,29 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--All Players View Controller - <All Players>-->
+        <!--All Players View Controller - Players-->
         <scene sceneID="6SE-QB-B3g">
             <objects>
                 <tableViewController id="3fe-kA-o7z" customClass="AllPlayersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zhp-Dy-VVR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Jzx-Tv-any">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Jzx-Tv-any">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jzx-Tv-any" id="xoT-PA-DyU">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6oM-kP-Sfu" kind="push" id="f8g-kz-G6M"/>
+                                    <segue destination="6oM-kP-Sfu" kind="push" identifier="toPlayerTabBar" id="f8g-kz-G6M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="&lt;All Players>" id="PMo-KZ-TAK">
+                    <navigationItem key="navigationItem" title="Players" id="PMo-KZ-TAK">
                         <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="3iu-ED-8uv"/>
                     </navigationItem>
                 </tableViewController>
@@ -53,21 +53,20 @@
             </objects>
             <point key="canvasLocation" x="1605" y="-581"/>
         </scene>
-        <!--Player Tab Bar Controller - <Selected Page Name>-->
+        <!--Player Tab Bar Controller - Player-->
         <scene sceneID="Zpz-sb-t5M">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="6oM-kP-Sfu" customClass="PlayerTabBarController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="&lt;Selected Page Name>" id="X0K-W2-KiF">
+                <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="6oM-kP-Sfu" customClass="PlayerTabBarController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Player" id="X0K-W2-KiF">
                         <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="9XD-SM-611"/>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="hFb-wg-5J9">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="gRx-Cw-gfK" kind="relationship" relationship="viewControllers" id="YWq-Ts-kJ2"/>
                         <segue destination="uyi-1h-Gx3" kind="relationship" relationship="viewControllers" id="ydB-sa-3il"/>
                         <segue destination="uK5-bS-b9J" kind="relationship" relationship="viewControllers" id="QpF-0b-UD0"/>
                     </connections>
@@ -81,12 +80,12 @@
             <objects>
                 <tableViewController id="uyi-1h-Gx3" customClass="AllTasksViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LmW-ek-ZKm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="it0-hQ-Evq">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="it0-hQ-Evq" id="M2N-Mc-clm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -110,12 +109,12 @@
             <objects>
                 <tableViewController id="uK5-bS-b9J" customClass="AllGiftsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EIc-Tq-tqb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I6j-xu-Lqf">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I6j-xu-Lqf" id="STX-7V-Fde">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -138,7 +137,7 @@
         <scene sceneID="ceb-vE-QAg">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Qvz-WA-ofA" customClass="RootNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e37-QX-U06">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="e37-QX-U06">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
