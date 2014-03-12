@@ -8,6 +8,7 @@
 
 #import "AllTasksViewController.h"
 #import "PlayerTabBarController.h"
+#import "ButtonDockedTableView.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBTaskInstance.h"
@@ -29,6 +30,17 @@
     [self setupAddButton];
     
     [self updateDataSourceDown];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    
+    ButtonDockedTableView *tableView = (ButtonDockedTableView *)self.tableView;
+    tableView.tableFooterButtonTitle = @"+ task";
 }
 
 #pragma mark public

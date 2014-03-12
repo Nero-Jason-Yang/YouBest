@@ -49,6 +49,7 @@
 		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
 		EE35271F18CF031100937FB6 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271E18CF031100937FB6 /* MOTaskInstance.m */; };
 		EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35272418CF03F000937FB6 /* MOTaskTemplate.m */; };
+		EE35273218D0572400937FB6 /* ButtonDockedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35273118D0572400937FB6 /* ButtonDockedTableView.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -133,6 +134,8 @@
 		EE35272318CF03F000937FB6 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
 		EE35272418CF03F000937FB6 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
 		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		EE35273018D0572400937FB6 /* ButtonDockedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonDockedTableView.h; sourceTree = "<group>"; };
+		EE35273118D0572400937FB6 /* ButtonDockedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonDockedTableView.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -319,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				EE35272A18D0353B00937FB6 /* Notifications.h */,
+				EE35273018D0572400937FB6 /* ButtonDockedTableView.h */,
+				EE35273118D0572400937FB6 /* ButtonDockedTableView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -487,6 +492,7 @@
 				EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */,
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
 				EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */,
+				EE35273218D0572400937FB6 /* ButtonDockedTableView.m in Sources */,
 				EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */,
 				EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */,
 				EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */,
