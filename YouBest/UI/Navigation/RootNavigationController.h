@@ -10,4 +10,6 @@
 
 @interface RootNavigationController : UINavigationController
 
+@property BOOL adminMode;
+
 @end

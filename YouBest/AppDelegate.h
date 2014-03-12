@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define AdminModeChangedNotification @"AdminModeChangedNotification"
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) UIWindow *window;
 
-@property (readonly) BOOL adminMode;
+@property BOOL adminMode;
 
 @end

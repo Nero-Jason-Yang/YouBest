@@ -55,11 +55,19 @@
 
 - (BOOL)adminMode
 {
-//    YBNavigationController *nc = (YBNavigationController *)self.window.rootViewController;
-//    if ([nc isKindOfClass:YBNavigationController.class]) {
-//        return nc.adminMode;
-//    }
+    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
+    if ([navigationController isKindOfClass:RootNavigationController.class]) {
+        return navigationController.adminMode;
+    }
     return NO;
+}
+
+- (void)setAdminMode:(BOOL)adminMode
+{
+    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
+    if ([navigationController isKindOfClass:RootNavigationController.class]) {
+        navigationController.adminMode = adminMode;
+    }
 }
 
 @end

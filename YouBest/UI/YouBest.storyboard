@@ -27,7 +27,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Players" id="PMo-KZ-TAK">
-                        <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="3iu-ED-8uv"/>
+                        <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="3iu-ED-8uv">
+                            <connections>
+                                <action selector="onAdminModeChange:" destination="3fe-kA-o7z" id="cwz-dC-syA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNq-bR-JUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -58,7 +62,11 @@
             <objects>
                 <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="6oM-kP-Sfu" customClass="PlayerTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Player" id="X0K-W2-KiF">
-                        <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="9XD-SM-611"/>
+                        <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="9XD-SM-611">
+                            <connections>
+                                <action selector="onAdminModeChange:" destination="6oM-kP-Sfu" id="UXF-mY-NrG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="hFb-wg-5J9">

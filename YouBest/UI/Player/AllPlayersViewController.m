@@ -8,6 +8,7 @@
 
 #import "AllPlayersViewController.h"
 #import "PlayerTabBarController.h"
+#import "AppDelegate.h"
 #import "Database.h"
 #import "YBPlayer.h"
 
@@ -76,6 +77,16 @@
     else {
         dispatch_async(dispatch_get_main_queue(), block);
     }
+}
+
+#pragma mark private
+
+#pragma mark actions
+
+- (IBAction)onAdminModeChange:(id)sender
+{
+    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
+    appDelegate.adminMode = !appDelegate.adminMode;
 }
 
 #pragma mark <UITableViewDataSource>

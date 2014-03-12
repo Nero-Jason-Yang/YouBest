@@ -132,6 +132,7 @@
 		EE35271E18CF031100937FB6 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
 		EE35272318CF03F000937FB6 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
 		EE35272418CF03F000937FB6 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
+		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -228,6 +229,7 @@
 			children = (
 				EE35266818C9C0F100937FB6 /* UI.txt */,
 				EE3526D918CDB6B700937FB6 /* YouBest.storyboard */,
+				EE35272918D0350E00937FB6 /* Common */,
 				EE3526B318C9C8E000937FB6 /* Navigation */,
 				EE3526B618C9C8E000937FB6 /* Player */,
 				EE3526BB18C9C8E000937FB6 /* Task */,
@@ -311,6 +313,14 @@
 				EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */,
 			);
 			path = Wish;
+			sourceTree = "<group>";
+		};
+		EE35272918D0350E00937FB6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EE35272A18D0353B00937FB6 /* Notifications.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EE6B474F1885168E00362B84 = {

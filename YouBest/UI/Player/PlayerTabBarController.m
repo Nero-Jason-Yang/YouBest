@@ -7,6 +7,7 @@
 //
 
 #import "PlayerTabBarController.h"
+#import "AppDelegate.h"
 
 @interface PlayerTabBarController ()
 
@@ -21,6 +22,8 @@
     [self showFirstPage];
 }
 
+#pragma mark public
+
 #pragma mark private
 
 - (void)showFirstPage
@@ -28,6 +31,14 @@
     self.selectedIndex = 0;
     UITabBarItem *item = self.tabBar.selectedItem;
     self.navigationItem.title = item.title;
+}
+
+#pragma mark actions
+
+- (IBAction)onAdminModeChange:(id)sender
+{
+    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
+    appDelegate.adminMode = !appDelegate.adminMode;
 }
 
 #pragma mark <UITabBarDelegate>
