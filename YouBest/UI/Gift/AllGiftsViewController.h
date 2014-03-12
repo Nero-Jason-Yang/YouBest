@@ -11,3 +11,9 @@
 @interface AllGiftsViewController : UITableViewController
 
 @end
+
+@interface AllGiftsViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UIImageView *coin;
+@property (strong, nonatomic) IBOutlet UILabel *value;
+@end

@@ -7,114 +7,91 @@
 //
 
 #import "AllTasksViewController.h"
+#import "PlayerTabBarController.h"
+#import "Database.h"
+#import "YBPlayer.h"
+#import "YBTaskInstance.h"
 
 @interface AllTasksViewController ()
-
+{
+    NSArray *_tasks;
+}
 @end
 
 @implementation AllTasksViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = NSLocalizedString(@"任务", @"Task");
+    
+    [self setupAddButton];
+    
+    [self updateDataSourceDown];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark public
+
+- (void)updateDataSourceDown
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    YBPlayer *player = self.playerTabBarController.player;
+    NSParameterAssert(player);
+    if (!player) {
+        _tasks = nil;
+        return;
+    }
+    
+    NSMutableArray *array = [NSMutableArray array];
+    Database *db = Database.sharedDatabase;
+    [db.context performBlockAndWait:^{
+        NSArray *mos = [db fetchAllTaskInstancesForPlayerID:player.identity];
+        for (MOTaskInstance *mo in mos) {
+            YBTaskInstance *task = [[YBTaskInstance alloc] initWithMO:mo];
+            if (task) {
+                [array addObject:task];
+            }
+        }
+    }];
+    
+    dispatch_block_t block = ^{
+        _tasks = array;
+    };
+    
+    if (NSThread.isMainThread) {
+        block();
+    }
+    else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return _tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    AllTasksViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    YBTaskInstance *task = _tasks[indexPath.row];
+    cell.title.text = task.title;
+    cell.value.text = [NSString stringWithFormat:@"%d", (int)task.value.integerValue];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+@end
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
+@implementation AllTasksViewCell
 
 @end

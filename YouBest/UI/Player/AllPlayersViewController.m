@@ -101,4 +101,14 @@
     return cell;
 }
 
+#pragma mark <UITableViewDelegate>
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath) {
+        _currentPlayer = _players[indexPath.row];
+    }
+    return indexPath;
+}
+
 @end
