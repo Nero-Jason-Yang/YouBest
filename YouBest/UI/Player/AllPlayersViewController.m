@@ -9,6 +9,7 @@
 #import "AllPlayersViewController.h"
 #import "PlayerTabBarController.h"
 #import "AppDelegate.h"
+#import "Notifications.h"
 #import "Database.h"
 #import "YBPlayer.h"
 
@@ -28,6 +29,9 @@
     self.title = NSLocalizedString(@"宝贝", @"YouBest");
     
     [self updateDataSourceDown];
+    [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
     
 //    if (0 == _players.count) {
 //        // TODO
@@ -80,6 +84,20 @@
 }
 
 #pragma mark private
+
+- (void)onAdminModeChanged:(id)sender
+{
+    NSNotification *notification = sender;
+    NSParameterAssert([notification isKindOfClass:NSNotification.class]);
+    NSNumber *number = notification.object;
+    NSParameterAssert([number isKindOfClass:NSNumber.class]);
+    [self didChangeAdminMode:number.boolValue];
+}
+
+- (void)didChangeAdminMode:(BOOL)adminMode
+{
+    // TODO
+}
 
 #pragma mark actions
 

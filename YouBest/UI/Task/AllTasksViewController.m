@@ -9,6 +9,8 @@
 #import "AllTasksViewController.h"
 #import "PlayerTabBarController.h"
 #import "ButtonDockedTableView.h"
+#import "AppDelegate.h"
+#import "Notifications.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBTaskInstance.h"
@@ -27,9 +29,10 @@
     
     self.title = NSLocalizedString(@"任务", @"Task");
     
-    [self setupAddButton];
-    
     [self updateDataSourceDown];
+    [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -39,8 +42,7 @@
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
     
-    ButtonDockedTableView *tableView = (ButtonDockedTableView *)self.tableView;
-    tableView.tableFooterButtonTitle = @"+ task";
+    [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
 }
 
 #pragma mark public
@@ -76,6 +78,22 @@
     else {
         dispatch_async(dispatch_get_main_queue(), block);
     }
+}
+
+#pragma mark private
+
+- (void)onAdminModeChanged:(id)sender
+{
+    NSNotification *notification = sender;
+    NSParameterAssert([notification isKindOfClass:NSNotification.class]);
+    NSNumber *number = notification.object;
+    NSParameterAssert([number isKindOfClass:NSNumber.class]);
+    [self didChangeAdminMode:number.boolValue];
+}
+
+- (void)didChangeAdminMode:(BOOL)adminMode
+{
+    // TODO
 }
 
 #pragma mark - Table view data source

@@ -17,7 +17,3 @@
 @interface UIViewController (PlayerTabBarController)
 @property (readonly) PlayerTabBarController *playerTabBarController;
 @end
-
-@interface UITableViewController (AddButton)
-- (void)setupAddButton;
-@end

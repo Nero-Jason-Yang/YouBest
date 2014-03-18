@@ -46,7 +46,7 @@
 - (void)setTableFooterButtonTitle:(NSString *)tableFooterButtonTitle
 {
     UIView *superview = self.superview;
-    NSParameterAssert(superview);
+    //NSParameterAssert(superview);
     if (!superview) {
         return;
     }

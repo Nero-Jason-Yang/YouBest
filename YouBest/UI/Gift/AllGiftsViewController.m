@@ -8,6 +8,8 @@
 
 #import "AllGiftsViewController.h"
 #import "PlayerTabBarController.h"
+#import "AppDelegate.h"
+#import "Notifications.h"
 #import "Database.h"
 #import "YBPlayer.h"
 #import "YBGiftInstance.h"
@@ -26,9 +28,10 @@
     
     self.title = NSLocalizedString(@"礼物", @"Gift");
     
-    [self setupAddButton];
-    
     [self updateDataSourceDown];
+    [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
 
 #pragma mark public
@@ -64,6 +67,22 @@
     else {
         dispatch_async(dispatch_get_main_queue(), block);
     }
+}
+
+#pragma mark private
+
+- (void)onAdminModeChanged:(id)sender
+{
+    NSNotification *notification = sender;
+    NSParameterAssert([notification isKindOfClass:NSNotification.class]);
+    NSNumber *number = notification.object;
+    NSParameterAssert([number isKindOfClass:NSNumber.class]);
+    [self didChangeAdminMode:number.boolValue];
+}
+
+- (void)didChangeAdminMode:(BOOL)adminMode
+{
+    // TODO
 }
 
 #pragma mark - Table view data source
