@@ -51,6 +51,7 @@
 		EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35272418CF03F000937FB6 /* MOTaskTemplate.m */; };
 		EE35273218D0572400937FB6 /* ButtonDockedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35273118D0572400937FB6 /* ButtonDockedTableView.m */; };
 		EE35273818D81F0600937FB6 /* UITableViewDockController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35273718D81F0600937FB6 /* UITableViewDockController.m */; };
+		EE35274418DC30C600937FB6 /* UITableViewExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35274318DC30C600937FB6 /* UITableViewExtra.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -139,6 +140,8 @@
 		EE35273118D0572400937FB6 /* ButtonDockedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonDockedTableView.m; sourceTree = "<group>"; };
 		EE35273618D81F0600937FB6 /* UITableViewDockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewDockController.h; sourceTree = "<group>"; };
 		EE35273718D81F0600937FB6 /* UITableViewDockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewDockController.m; sourceTree = "<group>"; };
+		EE35274218DC30C600937FB6 /* UITableViewExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewExtra.h; sourceTree = "<group>"; };
+		EE35274318DC30C600937FB6 /* UITableViewExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewExtra.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -329,6 +332,8 @@
 				EE35273118D0572400937FB6 /* ButtonDockedTableView.m */,
 				EE35273618D81F0600937FB6 /* UITableViewDockController.h */,
 				EE35273718D81F0600937FB6 /* UITableViewDockController.m */,
+				EE35274218DC30C600937FB6 /* UITableViewExtra.h */,
+				EE35274318DC30C600937FB6 /* UITableViewExtra.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */,
 				EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
+				EE35274418DC30C600937FB6 /* UITableViewExtra.m in Sources */,
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AllTasksViewController.h"
 #import "PlayerTabBarController.h"
 #import "ButtonDockedTableView.h"
+#import "UITableViewExtra.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
 #import "Database.h"
@@ -18,6 +19,8 @@
 @interface AllTasksViewController ()
 {
     NSArray *_tasks;
+    UITableViewExtra *_extra;
+    UITableViewCell *_headCell;
 }
 @end
 
@@ -93,10 +96,24 @@
 
 - (void)didChangeAdminMode:(BOOL)adminMode
 {
-    // TODO
+    if (adminMode) {
+        if (!_extra) {
+            _extra = [[UITableViewExtra alloc] initWithViewController:self];
+        }
+        if (!_headCell) {
+            CGRect frame = self.tableView.frame;
+            frame.size = CGSizeMake(frame.size.width, 44);
+            _headCell = [[UITableViewCell alloc] initWithFrame:frame];
+        }
+        
+        [_extra setHeadCell:_headCell forSection:0 withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    else {
+        [_extra setHeadCell:nil forSection:0 withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
-#pragma mark - Table view data source
+#pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -105,11 +122,35 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (_extra) {
+        return _tasks.count + [_extra extraNumberOfRowsInSection:section];
+    }
+    
     return _tasks.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_extra) {
+        NSNumber *height = [_extra heightForRowAtIndexPath:indexPath];
+        if (height) {
+            return height.floatValue;
+        }
+    }
+    
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (_extra) {
+        UITableViewCell *cell = [_extra cellForRowAtIndexPath:indexPath];
+        if (cell) {
+            return cell;
+        }
+        indexPath = [_extra indexPathWithoutExtraForIndexPath:indexPath];
+    }
+    
     static NSString *CellIdentifier = @"Cell";
     AllTasksViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
