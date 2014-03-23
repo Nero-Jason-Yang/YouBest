@@ -98,7 +98,7 @@
 {
     if (adminMode) {
         if (!_extra) {
-            _extra = [[UITableViewExtra alloc] initWithViewController:self];
+            _extra = [[UITableViewExtra alloc] initWithTableView:self.tableView];
         }
         if (!_headCell) {
             CGRect frame = self.tableView.frame;

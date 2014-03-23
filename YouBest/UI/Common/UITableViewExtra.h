@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface UITableViewExtra : NSObject
-- (id)initWithViewController:(UITableViewController *)viewController;
-- (id)initWithViewController:(UITableViewController *)viewController tableView:(UITableView *)tableView;
+- (id)initWithTableView:(UITableView *)tableView;
 // data
 - (UITableViewCell *)headCellForSection:(NSInteger)section;
 - (UITableViewCell *)tailCellForSection:(NSInteger)section;

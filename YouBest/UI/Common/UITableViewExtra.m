@@ -11,27 +11,15 @@
 @implementation UITableViewExtra
 {
     UITableView __weak *_tableView;
-    UITableViewController __weak *_viewController;
     NSMutableDictionary *_headCells;
     NSMutableDictionary *_tailCells;
 }
 
-- (id)initWithViewController:(UITableViewController *)viewController
+- (id)initWithTableView:(UITableView *)tableView
 {
     if (self = [super init]) {
-        NSParameterAssert(viewController);
-        _viewController = viewController;
-        _tableView = viewController.tableView;
-    }
-    return self;
-}
-
-- (id)initWithViewController:(UITableViewController *)viewController tableView:(UITableView *)tableView
-{
-    if (self = [super init]) {
-        NSParameterAssert(viewController);
-        _viewController = viewController;
-        _tableView = tableView ? tableView : viewController.tableView;
+        NSParameterAssert(tableView);
+        _tableView = tableView;
     }
     return self;
 }
@@ -176,7 +164,7 @@
 
 - (BOOL)isTailCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger numberOfRows = [_viewController tableView:_tableView numberOfRowsInSection:indexPath.section];
+    NSInteger numberOfRows = [_tableView.dataSource tableView:_tableView numberOfRowsInSection:indexPath.section];
     return (numberOfRows == indexPath.row + 1);
 }
 
