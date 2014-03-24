@@ -8,8 +8,8 @@
 
 #import "AllTasksViewController.h"
 #import "PlayerTabBarController.h"
-#import "ButtonDockedTableView.h"
-#import "UITableViewExtra.h"
+#import "UITableViewExtension.h"
+#import "TaskEditingViewController.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
 #import "Database.h"
@@ -19,8 +19,7 @@
 @interface AllTasksViewController ()
 {
     NSArray *_tasks;
-    UITableViewExtra *_extra;
-    UITableViewCell *_headCell;
+    UITableViewExtension *_extension;
 }
 @end
 
@@ -97,19 +96,15 @@
 - (void)didChangeAdminMode:(BOOL)adminMode
 {
     if (adminMode) {
-        if (!_extra) {
-            _extra = [[UITableViewExtra alloc] initWithTableView:self.tableView];
+        if (!_extension) {
+            _extension = [[UITableViewExtension alloc] initWithTableView:self.tableView];
+            [_extension registerExtraCellClass:UITableViewCell.class withReuseIdentifier:@"HeadCell" forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head];
         }
-        if (!_headCell) {
-            CGRect frame = self.tableView.frame;
-            frame.size = CGSizeMake(frame.size.width, 44);
-            _headCell = [[UITableViewCell alloc] initWithFrame:frame];
-        }
-        
-        [_extra setHeadCell:_headCell forSection:0 withRowAnimation:UITableViewRowAnimationAutomatic];
+        NSNumber *height = [NSNumber numberWithFloat:44];
+        [_extension setExtraCellHeight:height forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     else {
-        [_extra setHeadCell:nil forSection:0 withRowAnimation:UITableViewRowAnimationAutomatic];
+        [_extension setExtraCellHeight:nil forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
@@ -122,8 +117,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (_extra) {
-        return _tasks.count + [_extra extraNumberOfRowsInSection:section];
+    if (_extension) {
+        return _tasks.count + [_extension numberOfRowsInSection:section];
     }
     
     return _tasks.count;
@@ -131,8 +126,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_extra) {
-        NSNumber *height = [_extra heightForRowAtIndexPath:indexPath];
+    if (_extension) {
+        NSNumber *height = [_extension heightForRowAtIndexPath:indexPath];
         if (height) {
             return height.floatValue;
         }
@@ -143,12 +138,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_extra) {
-        UITableViewCell *cell = [_extra cellForRowAtIndexPath:indexPath];
+    if (_extension) {
+        UITableViewCell *cell = [_extension cellForRowAtIndexPath:&indexPath];
         if (cell) {
+            cell.textLabel.text = @"+ Add New Task";
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:0.9];
             return cell;
         }
-        indexPath = [_extra indexPathWithoutExtraForIndexPath:indexPath];
     }
     
     static NSString *CellIdentifier = @"Cell";
@@ -159,6 +156,19 @@
     cell.value.text = [NSString stringWithFormat:@"%d", (int)task.value.integerValue];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([_extension isExtraCellForDirection:UITableViewExtension_ExtraCellDirection_Head withIndexPath:indexPath]) {
+        TaskEditingViewController *viewController = TaskEditingViewController.viewController;
+        // TODO
+        // ...
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 @end

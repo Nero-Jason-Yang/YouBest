@@ -14,6 +14,12 @@
 
 @implementation TaskEditingViewController
 
++ (id)viewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TaskEditingView" bundle:nil];
+    return storyboard.instantiateInitialViewController;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

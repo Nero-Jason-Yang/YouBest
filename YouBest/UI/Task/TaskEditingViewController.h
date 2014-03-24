@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TaskEditingViewController : UITableViewController
-
++ (id)viewController;
 @end

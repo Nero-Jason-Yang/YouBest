@@ -8,6 +8,7 @@
 
 #import "AllGiftsViewController.h"
 #import "PlayerTabBarController.h"
+#import "UITableViewExtension.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
 #import "Database.h"
@@ -17,6 +18,7 @@
 @interface AllGiftsViewController ()
 {
     NSArray *_gifts;
+    UITableViewExtension *_extension;
 }
 @end
 
@@ -82,7 +84,17 @@
 
 - (void)didChangeAdminMode:(BOOL)adminMode
 {
-    // TODO
+    if (adminMode) {
+        if (!_extension) {
+            _extension = [[UITableViewExtension alloc] initWithTableView:self.tableView];
+            [_extension registerExtraCellClass:UITableViewCell.class withReuseIdentifier:@"HeadCell" forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head];
+        }
+        NSNumber *height = [NSNumber numberWithFloat:44];
+        [_extension setExtraCellHeight:height forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    else {
+        [_extension setExtraCellHeight:nil forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 #pragma mark - Table view data source
@@ -94,11 +106,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (_extension) {
+        return _gifts.count + [_extension numberOfRowsInSection:section];
+    }
+    
     return _gifts.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (_extension) {
+        NSNumber *height = [_extension heightForRowAtIndexPath:indexPath];
+        if (height) {
+            return height.floatValue;
+        }
+    }
+    
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (_extension) {
+        UITableViewCell *cell = [_extension cellForRowAtIndexPath:&indexPath];
+        if (cell) {
+            cell.textLabel.text = @"+ Add New Gift";
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:0.9];
+            return cell;
+        }
+    }
+    
     static NSString *CellIdentifier = @"Cell";
     AllGiftsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
