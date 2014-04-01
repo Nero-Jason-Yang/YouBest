@@ -59,6 +59,7 @@
 		EE6B476A1885168E00362B84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B47691885168E00362B84 /* main.m */; };
 		EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B476D1885168E00362B84 /* AppDelegate.m */; };
 		EE6B47731885168E00362B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6B47721885168E00362B84 /* Images.xcassets */; };
+		EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +152,8 @@
 		EE6B476D1885168E00362B84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EE6B47721885168E00362B84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EE6B47791885168E00362B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EE973ED918EA67A800C43728 /* UIButton+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UITableView.h"; sourceTree = "<group>"; };
+		EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UITableView.m"; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -327,6 +330,8 @@
 				EE35272A18D0353B00937FB6 /* Notifications.h */,
 				EE35274A18E0274900937FB6 /* UITableViewExtension.h */,
 				EE35274B18E0274900937FB6 /* UITableViewExtension.m */,
+				EE973ED918EA67A800C43728 /* UIButton+UITableView.h */,
+				EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */,
+				EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */,
 				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,

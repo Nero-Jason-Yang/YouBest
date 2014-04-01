@@ -8,7 +8,7 @@
 
 #import "AllTasksViewController.h"
 #import "PlayerTabBarController.h"
-#import "UITableViewExtension.h"
+#import "UIButton+UITableView.h"
 #import "TaskEditingViewController.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
@@ -19,7 +19,7 @@
 @interface AllTasksViewController ()
 {
     NSArray *_tasks;
-    UITableViewExtension *_extension;
+    UIButton *_headerButton;
 }
 @end
 
@@ -30,11 +30,12 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"任务", @"Task");
+    _headerButton = [UIButton tableViewHeaderButtonWithTitle:@"+ Add New Task" action:@selector(onActionAddNewTask:) target:self];
     
     [self updateDataSourceDown];
     [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -84,7 +85,7 @@
 
 #pragma mark private
 
-- (void)onAdminModeChanged:(id)sender
+- (void)onNotifyAdminModeChanged:(id)sender
 {
     NSNotification *notification = sender;
     NSParameterAssert([notification isKindOfClass:NSNotification.class]);
@@ -96,16 +97,22 @@
 - (void)didChangeAdminMode:(BOOL)adminMode
 {
     if (adminMode) {
-        if (!_extension) {
-            _extension = [[UITableViewExtension alloc] initWithTableView:self.tableView];
-            [_extension registerExtraCellClass:UITableViewCell.class withReuseIdentifier:@"HeadCell" forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head];
-        }
-        NSNumber *height = [NSNumber numberWithFloat:44];
-        [_extension setExtraCellHeight:height forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
+        self.tableView.tableHeaderView = _headerButton;
     }
     else {
-        [_extension setExtraCellHeight:nil forSection:0 direction:UITableViewExtension_ExtraCellDirection_Head withRowAnimation:UITableViewRowAnimationAutomatic];
+        self.tableView.tableHeaderView = nil;
     }
+}
+
+- (void)onActionAddNewTask:(id)sender
+{
+    UIButton *btn = sender;
+    NBLog(@"on press button: %@", [btn titleForState:UIControlStateNormal]);
+    
+    TaskEditingViewController *viewController = TaskEditingViewController.viewController;
+    // TODO
+    // ...
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark <UITableViewDataSource>
@@ -117,37 +124,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (_extension) {
-        return _tasks.count + [_extension numberOfRowsInSection:section];
-    }
-    
     return _tasks.count;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (_extension) {
-        NSNumber *height = [_extension heightForRowAtIndexPath:indexPath];
-        if (height) {
-            return height.floatValue;
-        }
-    }
-    
-    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_extension) {
-        UITableViewCell *cell = [_extension cellForRowAtIndexPath:&indexPath];
-        if (cell) {
-            cell.textLabel.text = @"+ Add New Task";
-            cell.textLabel.textAlignment = NSTextAlignmentCenter;
-            cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:0.9];
-            return cell;
-        }
-    }
-    
     static NSString *CellIdentifier = @"Cell";
     AllTasksViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -160,15 +141,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([_extension isExtraCellForDirection:UITableViewExtension_ExtraCellDirection_Head withIndexPath:indexPath]) {
-        TaskEditingViewController *viewController = TaskEditingViewController.viewController;
-        // TODO
-        // ...
-        [self.navigationController pushViewController:viewController animated:YES];
-    }
-    else {
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
+    // TODO
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AllPlayersViewController.h"
 #import "PlayerTabBarController.h"
+#import "UIButton+UITableView.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
 #import "Database.h"
@@ -17,6 +18,7 @@
 {
     NSArray *_players;
     YBPlayer *_currentPlayer;
+    UIButton *_headerButton;
 }
 @end
 
@@ -31,7 +33,7 @@
     [self updateDataSourceDown];
     [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onAdminModeChanged:) name:AdminModeChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
     
 //    if (0 == _players.count) {
 //        // TODO
@@ -44,6 +46,8 @@
 //            [self.navigationController pushViewController:viewController animated:NO];
 //        }
 //    }
+    
+    _headerButton = [UIButton tableViewHeaderButtonWithTitle:@"+ Add New Player" action:@selector(onActionAddNewPlayer:) target:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -85,7 +89,7 @@
 
 #pragma mark private
 
-- (void)onAdminModeChanged:(id)sender
+- (void)onNotifyAdminModeChanged:(id)sender
 {
     NSNotification *notification = sender;
     NSParameterAssert([notification isKindOfClass:NSNotification.class]);
@@ -96,7 +100,18 @@
 
 - (void)didChangeAdminMode:(BOOL)adminMode
 {
-    // TODO
+    if (adminMode) {
+        self.tableView.tableHeaderView = _headerButton;
+    }
+    else {
+        self.tableView.tableHeaderView = nil;
+    }
+}
+
+- (void)onActionAddNewPlayer:(id)sender
+{
+    UIButton *btn = sender;
+    NBLog(@"on press button: %@", [btn titleForState:UIControlStateNormal]);
 }
 
 #pragma mark actions
