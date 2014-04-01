@@ -41,7 +41,7 @@
 
 - (void)updateDataSourceDown
 {
-    YBPlayer *player = self.playerTabBarController.player;
+    YBPlayer *player = AppDelegate.sharedAppDelegate.currentPlayer;
     NSParameterAssert(player);
     if (!player) {
         _gifts = nil;

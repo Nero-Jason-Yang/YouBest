@@ -17,7 +17,6 @@
 @interface AllPlayersViewController ()
 {
     NSArray *_players;
-    YBPlayer *_currentPlayer;
     UIButton *_headerButton;
 }
 @end
@@ -35,17 +34,17 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
     
-//    if (0 == _players.count) {
-//        // TODO
-//        // to admin setup view.
-//    }
-//    else if (1 == _players.count) {
-//        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
-//        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
-//            viewController.player = _players[0];
-//            [self.navigationController pushViewController:viewController animated:NO];
-//        }
-//    }
+    if (0 == _players.count) {
+        // TODO
+        // to admin setup view.
+    }
+    else if (1 == _players.count) {
+        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
+        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+            AppDelegate.sharedAppDelegate.currentPlayer = _players[0];
+            [self.navigationController pushViewController:viewController animated:NO];
+        }
+    }
     
     _headerButton = [UIButton tableViewHeaderButtonWithTitle:@"+ Add New Player" action:@selector(onActionAddNewPlayer:) target:self];
 }
@@ -55,7 +54,6 @@
     if ([segue.identifier isEqualToString:@"toPlayerTabBar"] && segue.sourceViewController == self) {
         PlayerTabBarController *viewController = segue.destinationViewController;
         if ([viewController isKindOfClass:PlayerTabBarController.class]) {
-            viewController.player = _currentPlayer;
             viewController.navigationItem.leftBarButtonItem = nil;
         }
     }
@@ -149,9 +147,7 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath) {
-        _currentPlayer = _players[indexPath.row];
-    }
+    AppDelegate.sharedAppDelegate.currentPlayer = indexPath ? _players[indexPath.row] : nil;
     return indexPath;
 }
 

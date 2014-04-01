@@ -12,6 +12,11 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)sharedAppDelegate
+{
+    return UIApplication.sharedApplication.delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Database sharedDatabase];

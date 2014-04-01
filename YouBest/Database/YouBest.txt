@@ -25,12 +25,14 @@ Player
 TaskTemplate
 .title
 .content
-.reward
+.value
+.difficulty
 
 TaskInstance
 .title          :NSString
 .content        :NSString
-.reward         :NSUInteger
+.value          :NSInteger
+.difficulty     :NSInteger
 .creationDate   :NSDate
 .finishedDate   :NSDate
 .expiryDate     :NSDate
@@ -39,7 +41,8 @@ TaskInstance
 TaskRecord
 .title
 .content
-.reward
+.value
+.difficulty
 .creationDate
 .finishedDate
 .playerID
@@ -48,12 +51,12 @@ TaskRecord
 GiftTemplate
 .title
 .content
-.price
+.value          // price
 
 GiftInstance
 .title
 .content
-.price          :NSUInteger
+.value          :NSInteger
 .creationDate   :NSDate
 .finishedDate   :NSDate
 .expiryDate

@@ -49,16 +49,3 @@
 }
 
 @end
-
-@implementation UIViewController (PlayerTabBarController)
-
-- (PlayerTabBarController *)playerTabBarController
-{
-    UIViewController *parentViewController = self.parentViewController;
-    if ([parentViewController isKindOfClass:PlayerTabBarController.class]) {
-        return (PlayerTabBarController *)parentViewController;
-    }
-    return nil;
-}
-
-@end

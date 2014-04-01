@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class YBPlayer;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
++ (AppDelegate *)sharedAppDelegate;
 
 @property (nonatomic) UIWindow *window;
 
 @property BOOL adminMode;
+@property (nonatomic) YBPlayer *currentPlayer;
 
 @end

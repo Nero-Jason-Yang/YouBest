@@ -18,7 +18,7 @@
 
 @interface AllTasksViewController ()
 {
-    NSArray *_tasks;
+    NSMutableArray *_tasks;
     UIButton *_headerButton;
 }
 @end
@@ -36,6 +36,7 @@
     [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyDatabaseChange:) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -52,7 +53,7 @@
 
 - (void)updateDataSourceDown
 {
-    YBPlayer *player = self.playerTabBarController.player;
+    YBPlayer *player = AppDelegate.sharedAppDelegate.currentPlayer;
     NSParameterAssert(player);
     if (!player) {
         _tasks = nil;
@@ -110,9 +111,25 @@
     NBLog(@"on press button: %@", [btn titleForState:UIControlStateNormal]);
     
     TaskEditingViewController *viewController = TaskEditingViewController.viewController;
-    // TODO
-    // ...
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void)onNotifyDatabaseChange:(NSNotification *)notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    id insertedObjects = [userInfo objectForKey:NSInsertedObjectsKey];
+    for (id mo in insertedObjects) {
+        if ([mo isKindOfClass:MOTaskInstance.class]) {
+            YBTaskInstance *task = [[YBTaskInstance alloc] initWithMO:mo];
+            if (task) {
+                [_tasks insertObject:task atIndex:0];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                });
+            }
+        }
+    }
 }
 
 #pragma mark <UITableViewDataSource>

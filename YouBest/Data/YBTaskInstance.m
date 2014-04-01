@@ -31,6 +31,7 @@
         _title = mo.title;
         _content = mo.content;
         _value = mo.value;
+        _difficulty = mo.difficulty;
         _creationDate = mo.creationDate;
         _finishedDate = mo.finishedDate;
         _expiryDate = mo.expiryDate;
@@ -44,6 +45,7 @@
         mo.title = _title;
         mo.content = _content;
         mo.value = _value;
+        mo.difficulty = _difficulty;
         mo.creationDate = _creationDate;
         mo.finishedDate = _finishedDate;
         mo.expiryDate = _expiryDate;

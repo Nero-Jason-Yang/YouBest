@@ -42,13 +42,10 @@
 		EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */; };
 		EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270018CEFE2700937FB6 /* MOOption.m */; };
 		EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270218CEFE2700937FB6 /* MOPlayer.m */; };
-		EE35270F18CEFE2700937FB6 /* MOTaskRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270618CEFE2700937FB6 /* MOTaskRecord.m */; };
 		EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */; };
 		EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271518CEFEA900937FB6 /* YBGiftInstance.m */; };
 		EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271818CF031000937FB6 /* MOGiftTemplate.m */; };
 		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
-		EE35271F18CF031100937FB6 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271E18CF031100937FB6 /* MOTaskInstance.m */; };
-		EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35272418CF03F000937FB6 /* MOTaskTemplate.m */; };
 		EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */; };
 		EE35274C18E0274900937FB6 /* UITableViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35274B18E0274900937FB6 /* UITableViewExtension.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
@@ -60,6 +57,9 @@
 		EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B476D1885168E00362B84 /* AppDelegate.m */; };
 		EE6B47731885168E00362B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6B47721885168E00362B84 /* Images.xcassets */; };
 		EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */; };
+		EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */; };
+		EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */; };
+		EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -121,8 +121,6 @@
 		EE35270018CEFE2700937FB6 /* MOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOOption.m; sourceTree = "<group>"; };
 		EE35270118CEFE2700937FB6 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
 		EE35270218CEFE2700937FB6 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
-		EE35270518CEFE2700937FB6 /* MOTaskRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskRecord.h; sourceTree = "<group>"; };
-		EE35270618CEFE2700937FB6 /* MOTaskRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskRecord.m; sourceTree = "<group>"; };
 		EE35271118CEFE9D00937FB6 /* YBTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTaskInstance.h; sourceTree = "<group>"; };
 		EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTaskInstance.m; sourceTree = "<group>"; };
 		EE35271418CEFEA900937FB6 /* YBGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGiftInstance.h; sourceTree = "<group>"; };
@@ -131,10 +129,6 @@
 		EE35271818CF031000937FB6 /* MOGiftTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftTemplate.m; sourceTree = "<group>"; };
 		EE35271A18CF031100937FB6 /* MOGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftInstance.h; sourceTree = "<group>"; };
 		EE35271B18CF031100937FB6 /* MOGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftInstance.m; sourceTree = "<group>"; };
-		EE35271D18CF031100937FB6 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
-		EE35271E18CF031100937FB6 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
-		EE35272318CF03F000937FB6 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
-		EE35272418CF03F000937FB6 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
 		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskEditingView.storyboard; sourceTree = "<group>"; };
 		EE35274A18E0274900937FB6 /* UITableViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewExtension.h; sourceTree = "<group>"; };
@@ -154,6 +148,12 @@
 		EE6B47791885168E00362B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EE973ED918EA67A800C43728 /* UIButton+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UITableView.h"; sourceTree = "<group>"; };
 		EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UITableView.m"; sourceTree = "<group>"; };
+		EE973EDC18EA9C0900C43728 /* MOTaskRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskRecord.h; sourceTree = "<group>"; };
+		EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskRecord.m; sourceTree = "<group>"; };
+		EE973EDF18EA9C0A00C43728 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
+		EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
+		EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
+		EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,12 +203,12 @@
 				EE35270018CEFE2700937FB6 /* MOOption.m */,
 				EE35270118CEFE2700937FB6 /* MOPlayer.h */,
 				EE35270218CEFE2700937FB6 /* MOPlayer.m */,
-				EE35272318CF03F000937FB6 /* MOTaskTemplate.h */,
-				EE35272418CF03F000937FB6 /* MOTaskTemplate.m */,
-				EE35271D18CF031100937FB6 /* MOTaskInstance.h */,
-				EE35271E18CF031100937FB6 /* MOTaskInstance.m */,
-				EE35270518CEFE2700937FB6 /* MOTaskRecord.h */,
-				EE35270618CEFE2700937FB6 /* MOTaskRecord.m */,
+				EE973EDF18EA9C0A00C43728 /* MOTaskTemplate.h */,
+				EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */,
+				EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */,
+				EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */,
+				EE973EDC18EA9C0900C43728 /* MOTaskRecord.h */,
+				EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */,
 				EE35271718CF031000937FB6 /* MOGiftTemplate.h */,
 				EE35271818CF031000937FB6 /* MOGiftTemplate.m */,
 				EE35271A18CF031100937FB6 /* MOGiftInstance.h */,
@@ -417,7 +417,7 @@
 		EE6B47501885168E00362B84 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = family;
 				TargetAttributes = {
 					EE6B47571885168E00362B84 = {
@@ -472,18 +472,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE35272518CF03F000937FB6 /* MOTaskTemplate.m in Sources */,
 				EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
 				EE35274C18E0274900937FB6 /* UITableViewExtension.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
+				EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */,
 				EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */,
 				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
+				EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
+				EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
 				EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */,
 				EE3526CC18C9CBA500937FB6 /* TaskEditingViewController.m in Sources */,
@@ -493,9 +495,7 @@
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
-				EE35271F18CF031100937FB6 /* MOTaskInstance.m in Sources */,
 				EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */,
-				EE35270F18CEFE2700937FB6 /* MOTaskRecord.m in Sources */,
 				EE3526C918C9CB9A00937FB6 /* TaskDetailsViewController.m in Sources */,
 				EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */,
 				EE3526CF18C9CBB300937FB6 /* GiftDetailsViewController.m in Sources */,
@@ -528,7 +528,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -567,7 +566,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

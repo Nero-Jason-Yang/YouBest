@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="GiftInstance" representedClassName="MOGiftInstance" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -38,6 +38,7 @@
     <entity name="TaskInstance" representedClassName="MOTaskInstance" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="expiryDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
@@ -48,6 +49,7 @@
     <entity name="TaskRecord" representedClassName="MOTaskRecord" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="finishedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="playerID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="playerName" optional="YES" attributeType="String" syncable="YES"/>
@@ -56,18 +58,19 @@
     </entity>
     <entity name="TaskTemplate" representedClassName="MOTaskTemplate" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GiftInstance" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="GiftRecord" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="GiftTemplate" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Option" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Player" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="TaskInstance" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="TaskRecord" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="TaskTemplate" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="GiftInstance" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="GiftRecord" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="GiftTemplate" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Option" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="Player" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="TaskInstance" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="TaskRecord" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="TaskTemplate" positionX="0" positionY="0" width="128" height="118"/>
     </elements>
 </model>
