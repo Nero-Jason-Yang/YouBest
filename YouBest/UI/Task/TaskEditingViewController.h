@@ -10,7 +10,4 @@
 
 @interface TaskEditingViewController : UIViewController
 + (id)viewController;
-@property (strong, nonatomic) IBOutlet UITextField *taskTitle;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *taskDifficulty;
-@property (strong, nonatomic) IBOutlet UITextField *taskReward;
 @end

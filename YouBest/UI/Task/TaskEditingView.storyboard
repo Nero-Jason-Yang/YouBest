@@ -68,8 +68,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="taskDifficulty" destination="ALj-eZ-JGd" id="IX7-KY-eaL"/>
-                        <outlet property="taskReward" destination="m8i-f9-ypg" id="vnF-wX-WXB"/>
                         <outlet property="taskTitle" destination="OsX-56-MU3" id="xgV-Ue-oNy"/>
+                        <outlet property="taskValue" destination="m8i-f9-ypg" id="66l-6f-62P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaK-EC-B3u" userLabel="First Responder" sceneMemberID="firstResponder"/>

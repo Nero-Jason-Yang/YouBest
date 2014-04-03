@@ -47,7 +47,6 @@
 		EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271818CF031000937FB6 /* MOGiftTemplate.m */; };
 		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
 		EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */; };
-		EE35274C18E0274900937FB6 /* UITableViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35274B18E0274900937FB6 /* UITableViewExtension.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -60,6 +59,7 @@
 		EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */; };
 		EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */; };
 		EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */; };
+		EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -131,8 +131,6 @@
 		EE35271B18CF031100937FB6 /* MOGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftInstance.m; sourceTree = "<group>"; };
 		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskEditingView.storyboard; sourceTree = "<group>"; };
-		EE35274A18E0274900937FB6 /* UITableViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewExtension.h; sourceTree = "<group>"; };
-		EE35274B18E0274900937FB6 /* UITableViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewExtension.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,6 +152,7 @@
 		EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
 		EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
 		EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
+		EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GiftEditingView.storyboard; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,6 +270,7 @@
 				EE3526B218C9C8E000937FB6 /* AllGiftsViewController.m */,
 				EE3526CD18C9CBB300937FB6 /* GiftDetailsViewController.h */,
 				EE3526CE18C9CBB300937FB6 /* GiftDetailsViewController.m */,
+				EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */,
 				EE3526D018C9CBBF00937FB6 /* GiftEditingViewController.h */,
 				EE3526D118C9CBBF00937FB6 /* GiftEditingViewController.m */,
 			);
@@ -328,8 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				EE35272A18D0353B00937FB6 /* Notifications.h */,
-				EE35274A18E0274900937FB6 /* UITableViewExtension.h */,
-				EE35274B18E0274900937FB6 /* UITableViewExtension.m */,
 				EE973ED918EA67A800C43728 /* UIButton+UITableView.h */,
 				EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */,
 			);
@@ -457,6 +455,7 @@
 				EE35263318C9BD0400937FB6 /* gift_24.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE35262918C9BD0400937FB6 /* coin_16.png in Resources */,
+				EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
 				EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */,
 				EE35262E18C9BD0400937FB6 /* gear_16@2x.png in Resources */,
@@ -475,7 +474,6 @@
 				EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
-				EE35274C18E0274900937FB6 /* UITableViewExtension.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
 				EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,

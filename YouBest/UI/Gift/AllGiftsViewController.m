@@ -9,6 +9,7 @@
 #import "AllGiftsViewController.h"
 #import "PlayerTabBarController.h"
 #import "UIButton+UITableView.h"
+#import "GiftEditingViewController.h"
 #import "AppDelegate.h"
 #import "Notifications.h"
 #import "Database.h"
@@ -17,7 +18,7 @@
 
 @interface AllGiftsViewController ()
 {
-    NSArray *_gifts;
+    NSMutableArray *_gifts;
     UIButton *_headerButton;
 }
 @end
@@ -34,7 +35,9 @@
     [self updateDataSourceDown];
     
     [self didChangeAdminMode:((AppDelegate *)(UIApplication.sharedApplication.delegate)).adminMode];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyDatabaseChange:) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
 
 #pragma mark public
@@ -95,8 +98,26 @@
 
 - (void)onActionAddNewGift:(id)sender
 {
-    UIButton *btn = sender;
-    NBLog(@"on press button: %@", [btn titleForState:UIControlStateNormal]);
+    GiftEditingViewController *viewController = GiftEditingViewController.viewController;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+- (void)onNotifyDatabaseChange:(NSNotification *)notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    id insertedObjects = [userInfo objectForKey:NSInsertedObjectsKey];
+    for (id mo in insertedObjects) {
+        if ([mo isKindOfClass:MOGiftInstance.class]) {
+            YBGiftInstance *gift = [[YBGiftInstance alloc] initWithMO:mo];
+            if (gift) {
+                [_gifts insertObject:gift atIndex:0];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+                    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                });
+            }
+        }
+    }
 }
 
 #pragma mark - Table view data source

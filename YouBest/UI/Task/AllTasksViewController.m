@@ -107,9 +107,6 @@
 
 - (void)onActionAddNewTask:(id)sender
 {
-    UIButton *btn = sender;
-    NBLog(@"on press button: %@", [btn titleForState:UIControlStateNormal]);
-    
     TaskEditingViewController *viewController = TaskEditingViewController.viewController;
     [self.navigationController pushViewController:viewController animated:YES];
 }

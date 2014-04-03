@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GiftEditingViewController : UITableViewController
-
+@interface GiftEditingViewController : UIViewController
++ (id)viewController;
 @end

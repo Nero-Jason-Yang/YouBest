@@ -12,7 +12,9 @@
 #import "YBPlayer.h"
 
 @interface TaskEditingViewController ()
-
+@property (strong, nonatomic) IBOutlet UITextField *taskTitle;
+@property (strong, nonatomic) IBOutlet UITextField *taskValue;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *taskDifficulty;
 @end
 
 @implementation TaskEditingViewController
@@ -44,24 +46,25 @@
         return;
     }
     
-    NSString *taskTitle = self.taskTitle.text;
-    if (0 == taskTitle.length) {
+    NSString *title = self.taskTitle.text;
+    if (0 == title.length) {
         return;
     }
     
-    NSInteger taskDifficulty = self.taskDifficulty.selectedSegmentIndex;
-    NSInteger taskReward = self.taskReward.text.integerValue;
-    if (taskReward < 0) {
-        taskReward = 0;
+    NSInteger value = self.taskValue.text.integerValue;
+    if (value < 0) {
+        value = 0;
     }
+    
+    NSInteger difficulty = self.taskDifficulty.selectedSegmentIndex;
     
     Database *db = Database.sharedDatabase;
     [db.context performBlock:^{
         MOTaskInstance *task = [db.context createObjectForEntityName:Entity_TaskInstance];
         task.playerID = player.identity;
-        task.title = taskTitle;
-        task.value = [NSNumber numberWithInteger:taskReward];
-        task.difficulty = [NSNumber numberWithShort:taskDifficulty];
+        task.title = title;
+        task.value = [NSNumber numberWithInteger:value];
+        task.difficulty = [NSNumber numberWithShort:difficulty];
         task.creationDate = NSDate.date;
         [db.context save];
     }];
