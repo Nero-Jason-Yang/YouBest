@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1605" y="770"/>
         </scene>
-        <!--Root Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="ceb-vE-QAg">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Qvz-WA-ofA" customClass="RootNavigationController" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="Qvz-WA-ofA" customClass="NavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="e37-QX-U06">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

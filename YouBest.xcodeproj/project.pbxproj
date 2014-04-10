@@ -60,6 +60,8 @@
 		EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */; };
 		EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */; };
 		EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */; };
+		EE973EFA18F3BB7B00C43728 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EF918F3BB7B00C43728 /* NavigationController.m */; };
+		EE973EFD18F66C3A00C43728 /* UINavigationBar+prompt.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EFC18F66C3A00C43728 /* UINavigationBar+prompt.m */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,10 @@
 		EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
 		EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
 		EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GiftEditingView.storyboard; sourceTree = "<group>"; };
+		EE973EF818F3BB7B00C43728 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		EE973EF918F3BB7B00C43728 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		EE973EFB18F66C3A00C43728 /* UINavigationBar+prompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+prompt.h"; sourceTree = "<group>"; };
+		EE973EFC18F66C3A00C43728 /* UINavigationBar+prompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+prompt.m"; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +288,8 @@
 			children = (
 				EE3526B418C9C8E000937FB6 /* RootNavigationController.h */,
 				EE3526B518C9C8E000937FB6 /* RootNavigationController.m */,
+				EE973EF818F3BB7B00C43728 /* NavigationController.h */,
+				EE973EF918F3BB7B00C43728 /* NavigationController.m */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -330,6 +338,8 @@
 				EE35272A18D0353B00937FB6 /* Notifications.h */,
 				EE973ED918EA67A800C43728 /* UIButton+UITableView.h */,
 				EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */,
+				EE973EFB18F66C3A00C43728 /* UINavigationBar+prompt.h */,
+				EE973EFC18F66C3A00C43728 /* UINavigationBar+prompt.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -498,9 +508,11 @@
 				EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */,
 				EE3526CF18C9CBB300937FB6 /* GiftDetailsViewController.m in Sources */,
 				EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */,
+				EE973EFA18F3BB7B00C43728 /* NavigationController.m in Sources */,
 				EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */,
 				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
 				EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */,
+				EE973EFD18F66C3A00C43728 /* UINavigationBar+prompt.m in Sources */,
 				EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */,
 				EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */,
 				EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */,
