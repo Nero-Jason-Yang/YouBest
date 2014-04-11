@@ -22,7 +22,8 @@
 {
     [super viewDidLoad];
     
-    [self.navigationBar setBarTintColor:[UIColor colorWithRed:0.2 green:0.8 blue:0.5 alpha:1]];
+    [self.navigationBar setBarTintColor:[UIColor colorWithRed:32.0/255 green:151.0/255 blue:71.0/255 alpha:1]];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
@@ -74,8 +75,11 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
         [button setTitle:@"退出管理" forState:UIControlStateNormal];
         [button addTarget:self action:@selector(onActionAdminModeQuitButtonPress:) forControlEvents:UIControlEventTouchUpInside];
-        [button setFrame:CGRectMake(0, 0, 60, 30)];
+        [button setFrame:CGRectMake(0, 0, 80, 24)];
         [button setHidden:![AppDelegate sharedAppDelegate].adminMode];
+        [button.layer setCornerRadius:4];
+        [button.layer setBorderWidth:1.0];
+        [button.layer setBorderColor:UIColor.whiteColor.CGColor];
         [self.promptBar addSubview:button];
         _adminModeQuitButton = button;
     }
