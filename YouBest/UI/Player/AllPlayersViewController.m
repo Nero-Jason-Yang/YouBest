@@ -38,13 +38,13 @@
         // TODO
         // to admin setup view.
     }
-    else if (1 == _players.count) {
-        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
-        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
-            AppDelegate.sharedAppDelegate.currentPlayer = _players[0];
-            [self.navigationController pushViewController:viewController animated:NO];
-        }
-    }
+//    else if (1 == _players.count) {
+//        PlayerTabBarController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PlayerTabBarController"];
+//        if ([viewController isKindOfClass:PlayerTabBarController.class]) {
+//            AppDelegate.sharedAppDelegate.currentPlayer = _players[0];
+//            [self.navigationController pushViewController:viewController animated:NO];
+//        }
+//    }
     
     _headerButton = [UIButton tableViewHeaderButtonWithTitle:@"+ Add New Player" action:@selector(onActionAddNewPlayer:) target:self];
 }
@@ -116,8 +116,7 @@
 
 - (IBAction)onAdminModeChange:(id)sender
 {
-    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
-    appDelegate.adminMode = !appDelegate.adminMode;
+    [[NSNotificationCenter defaultCenter] postNotificationName:AdminModeChangedNotification object:@YES];
 }
 
 #pragma mark <UITableViewDataSource>

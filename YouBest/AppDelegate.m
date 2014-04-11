@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Notifications.h"
 #import "Database.h"
-#import "RootNavigationController.h"
 
 @implementation AppDelegate
 
@@ -20,6 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Database sharedDatabase];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
@@ -56,23 +58,11 @@
     [Database.sharedDatabase save];
 }
 
-#pragma mark public
+#pragma mark (private)
 
-- (BOOL)adminMode
+- (void)onNotifyAdminModeChanged:(NSNotification *)notification
 {
-    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
-    if ([navigationController isKindOfClass:RootNavigationController.class]) {
-        return navigationController.adminMode;
-    }
-    return NO;
-}
-
-- (void)setAdminMode:(BOOL)adminMode
-{
-    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
-    if ([navigationController isKindOfClass:RootNavigationController.class]) {
-        navigationController.adminMode = adminMode;
-    }
+    _adminMode = [notification.object boolValue];
 }
 
 @end

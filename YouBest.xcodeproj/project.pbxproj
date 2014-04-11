@@ -27,7 +27,6 @@
 		EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */; };
 		EE35266918C9C0F100937FB6 /* UI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35266818C9C0F100937FB6 /* UI.txt */; };
 		EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526B218C9C8E000937FB6 /* AllGiftsViewController.m */; };
-		EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526B518C9C8E000937FB6 /* RootNavigationController.m */; };
 		EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526B818C9C8E000937FB6 /* AllPlayersViewController.m */; };
 		EE3526C418C9C8E000937FB6 /* PlayerTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526BA18C9C8E000937FB6 /* PlayerTabBarController.m */; };
 		EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526BD18C9C8E000937FB6 /* AllTasksViewController.m */; };
@@ -94,8 +93,6 @@
 		EE35266818C9C0F100937FB6 /* UI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UI.txt; sourceTree = "<group>"; };
 		EE3526B118C9C8E000937FB6 /* AllGiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllGiftsViewController.h; sourceTree = "<group>"; };
 		EE3526B218C9C8E000937FB6 /* AllGiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllGiftsViewController.m; sourceTree = "<group>"; };
-		EE3526B418C9C8E000937FB6 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
-		EE3526B518C9C8E000937FB6 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		EE3526B718C9C8E000937FB6 /* AllPlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllPlayersViewController.h; sourceTree = "<group>"; };
 		EE3526B818C9C8E000937FB6 /* AllPlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllPlayersViewController.m; sourceTree = "<group>"; };
 		EE3526B918C9C8E000937FB6 /* PlayerTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTabBarController.h; sourceTree = "<group>"; };
@@ -286,8 +283,6 @@
 		EE3526B318C9C8E000937FB6 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				EE3526B418C9C8E000937FB6 /* RootNavigationController.h */,
-				EE3526B518C9C8E000937FB6 /* RootNavigationController.m */,
 				EE973EF818F3BB7B00C43728 /* NavigationController.h */,
 				EE973EF918F3BB7B00C43728 /* NavigationController.m */,
 			);
@@ -498,7 +493,6 @@
 				EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */,
 				EE3526CC18C9CBA500937FB6 /* TaskEditingViewController.m in Sources */,
 				EE3526C418C9C8E000937FB6 /* PlayerTabBarController.m in Sources */,
-				EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */,
 				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,

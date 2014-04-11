@@ -8,81 +8,105 @@
 
 #import "NavigationController.h"
 #import "UINavigationBar+prompt.h"
+#import "AppDelegate.h"
 #import "Notifications.h"
 
 @interface NavigationController ()
+@property (nonatomic,readonly) UIView *promptBar;
 @property (nonatomic,readonly) UIButton *adminModeQuitButton;
 @end
 
 @implementation NavigationController
-{
-    CGFloat _navBarOriginHeight;
-    CGFloat _navBarPromptHeight;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    _adminModeQuitButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_adminModeQuitButton setTitle:@"退出管理" forState:UIControlStateNormal];
-    [_adminModeQuitButton addTarget:self action:@selector(onActionAdminModeQuitButtonPress:) forControlEvents:UIControlEventTouchUpInside];
-    //[_adminModeQuitButton setFrame:CGRectMake(0, 0, 120, 30)];
-    [_adminModeQuitButton setBackgroundColor:[UIColor brownColor]];
+    [self.navigationBar setBarTintColor:[UIColor colorWithRed:0.2 green:0.8 blue:0.5 alpha:1]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyAdminModeChanged:) name:AdminModeChangedNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if (0 == _navBarOriginHeight) {
-        _navBarOriginHeight = self.navigationBar.frame.size.height;
-    }
+    [self showPromptBar];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+#pragma mark (private) prompt bar
+
+- (void)showPromptBar
 {
-    if (0 == _navBarPromptHeight) {
-        _navBarPromptHeight = self.navigationBar.frame.size.height - _navBarOriginHeight;
-    }
+    // original navigation bar height.
+    CGFloat navBarHeight = self.navigationBar.frame.size.height;
     
-    if (!self.adminModeQuitButton.superview) {
-        UIView *promptView = self.navigationBar.promptView;
-        if (promptView) {
-            CGRect frame = promptView.frame;
-            frame.size = CGSizeMake(frame.size.width, _navBarPromptHeight);
-            self.adminModeQuitButton.frame = frame;
-            
-            [self.navigationBar addSubview:self.adminModeQuitButton];
-            //[promptView addSubview:self.adminModeQuitButton];
+    // enable prompt bar.
+    for (UINavigationItem *item in self.navigationBar.items) {
+        if (!item.prompt) {
+            item.prompt = @"";
         }
     }
+    
+    // create prompt bar.
+    if (!self.promptBar) {
+        CGFloat promptHeight = self.navigationBar.frame.size.height - navBarHeight;
+        if (0 == promptHeight) {
+            promptHeight = 30;
+        }
+        
+        UIView *referView = self.navigationBar.promptView;
+        if (!referView) {
+            referView = self.navigationBar;
+        }
+        
+        CGRect frame = referView.frame;
+        frame.size = CGSizeMake(frame.size.width, promptHeight);
+        
+        _promptBar = [[UIView alloc] initWithFrame:frame];
+    }
+    
+    // show prompt bar.
+    if (!self.promptBar.superview) {
+        [self.navigationBar addSubview:self.promptBar];
+    }
+    
+    // fill prompt bar.
+    if (0 == self.promptBar.subviews.count) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [button setTitle:@"退出管理" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(onActionAdminModeQuitButtonPress:) forControlEvents:UIControlEventTouchUpInside];
+        [button setFrame:CGRectMake(0, 0, 60, 30)];
+        [button setHidden:![AppDelegate sharedAppDelegate].adminMode];
+        [self.promptBar addSubview:button];
+        _adminModeQuitButton = button;
+    }
 }
 
-#pragma mark public
-
-- (BOOL)hiddenOfAdminModeQuitButton
+- (void)keepPromptBar_willPushItem:(UINavigationItem *)item
 {
-    return self.adminModeQuitButton.hidden;
+    if (!item.prompt) {
+        item.prompt = @"";
+    }
 }
 
-- (void)setHiddenOfAdminModeQuitButton:(BOOL)hidden
-{
-    self.adminModeQuitButton.hidden = hidden;
-}
-
-#pragma mark private
+#pragma mark (private) actions
 
 - (void)onActionAdminModeQuitButtonPress:(id)sender
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:AdminModeChangedNotification object:@NO];
 }
 
+#pragma mark (private) notifications
+
+- (void)onNotifyAdminModeChanged:(NSNotification *)notification
+{
+    self.adminModeQuitButton.hidden = ![notification.object boolValue];
+}
+
 #pragma mark <UINavigationBarDelegate>
 
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item
 {
-    // Always show prompt view.
-    item.prompt = @"";
-    
+    [self keepPromptBar_willPushItem:item];
     return YES;
 }
 

@@ -16,7 +16,7 @@
 
 @property (nonatomic) UIWindow *window;
 
-@property BOOL adminMode;
+@property (nonatomic,readonly) BOOL adminMode;
 @property (nonatomic) YBPlayer *currentPlayer;
 
 @end

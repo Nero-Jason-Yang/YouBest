@@ -8,6 +8,7 @@
 
 #import "PlayerTabBarController.h"
 #import "AppDelegate.h"
+#import "Notifications.h"
 
 @interface PlayerTabBarController ()
 
@@ -37,8 +38,7 @@
 
 - (IBAction)onAdminModeChange:(id)sender
 {
-    AppDelegate *appDelegate = UIApplication.sharedApplication.delegate;
-    appDelegate.adminMode = !appDelegate.adminMode;
+    [[NSNotificationCenter defaultCenter] postNotificationName:AdminModeChangedNotification object:@YES];
 }
 
 #pragma mark <UITabBarDelegate>
