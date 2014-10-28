@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qvz-WA-ofA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qvz-WA-ofA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--All Players View Controller - Players-->
+        <!--Players-->
         <scene sceneID="6SE-QB-B3g">
             <objects>
                 <tableViewController id="3fe-kA-o7z" customClass="AllPlayersViewController" sceneMemberID="viewController">
@@ -38,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="575" y="92"/>
         </scene>
-        <!--View Controller - Name-->
+        <!--Name-->
         <scene sceneID="7k2-0B-arV">
             <objects>
                 <viewController id="gRx-Cw-gfK" sceneMemberID="viewController">
@@ -57,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="1605" y="-581"/>
         </scene>
-        <!--Player Tab Bar Controller - Player-->
+        <!--Player-->
         <scene sceneID="Zpz-sb-t5M">
             <objects>
                 <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="6oM-kP-Sfu" customClass="PlayerTabBarController" sceneMemberID="viewController">
@@ -83,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="1073" y="92"/>
         </scene>
-        <!--All Tasks View Controller - Task-->
+        <!--Task-->
         <scene sceneID="s2K-EC-WSO">
             <objects>
                 <tableViewController id="uyi-1h-Gx3" customClass="AllTasksViewController" sceneMemberID="viewController">
@@ -101,18 +102,15 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1b-7K-Voh">
                                             <rect key="frame" x="19" y="9" width="249" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="16" placeholderIntrinsicHeight="16" image="coin_16.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLa-62-uzm">
                                             <rect key="frame" x="19" y="33" width="16" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-fy-OLU">
                                             <rect key="frame" x="40" y="33" width="228" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -136,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1605" y="92"/>
         </scene>
-        <!--All Gifts View Controller - Gift-->
+        <!--Gift-->
         <scene sceneID="X8F-dN-NQw">
             <objects>
                 <tableViewController id="uK5-bS-b9J" customClass="AllGiftsViewController" sceneMemberID="viewController">
@@ -154,18 +152,15 @@
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-f1-l2W">
                                             <rect key="frame" x="19" y="9" width="249" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="16" placeholderIntrinsicHeight="16" image="coin_16.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQI-cD-cH6">
                                             <rect key="frame" x="19" y="33" width="16" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idy-m2-Vl1">
                                             <rect key="frame" x="40" y="33" width="228" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>

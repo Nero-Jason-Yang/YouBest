@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4650E3CC19FFC677003F39FF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4650E3CB19FFC677003F39FF /* MainViewController.m */; };
+		4650E3CF19FFC7A3003F39FF /* TabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4650E3CE19FFC7A3003F39FF /* TabsView.m */; };
 		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
 		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
@@ -64,6 +66,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4650E3CA19FFC677003F39FF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4650E3CB19FFC677003F39FF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4650E3CD19FFC7A3003F39FF /* TabsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsView.h; sourceTree = "<group>"; };
+		4650E3CE19FFC7A3003F39FF /* TabsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsView.m; sourceTree = "<group>"; };
 		46B21E5718916DA500952309 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		46B21E5818916DA500952309 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		46B21E5918916DA500952309 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
@@ -234,6 +240,10 @@
 		EE35261118C9BD0400937FB6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				4650E3CA19FFC677003F39FF /* MainViewController.h */,
+				4650E3CB19FFC677003F39FF /* MainViewController.m */,
+				4650E3CD19FFC7A3003F39FF /* TabsView.h */,
+				4650E3CE19FFC7A3003F39FF /* TabsView.m */,
 				EE35266818C9C0F100937FB6 /* UI.txt */,
 				EE3526D918CDB6B700937FB6 /* YouBest.storyboard */,
 				EE35272918D0350E00937FB6 /* Common */,
@@ -481,6 +491,7 @@
 				EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */,
 				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
+				4650E3CF19FFC7A3003F39FF /* TabsView.m in Sources */,
 				EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */,
 				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
 				EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */,
@@ -489,6 +500,7 @@
 				EE3526CC18C9CBA500937FB6 /* TaskEditingViewController.m in Sources */,
 				EE3526C418C9C8E000937FB6 /* PlayerTabBarController.m in Sources */,
 				EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */,
+				4650E3CC19FFC677003F39FF /* MainViewController.m in Sources */,
 				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,

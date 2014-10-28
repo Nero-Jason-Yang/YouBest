@@ -10,6 +10,8 @@
 #import "Database.h"
 #import "RootNavigationController.h"
 
+#import "TabsView.h"
+
 @implementation AppDelegate
 
 + (AppDelegate *)sharedAppDelegate
@@ -22,8 +24,15 @@
     [Database sharedDatabase];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
-    self.window.rootViewController = storyboard.instantiateInitialViewController;
+    if (1) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
+        self.window.rootViewController = storyboard.instantiateInitialViewController;
+    } else {
+        UIViewController *controller = [[UIViewController alloc] init];
+        CGRect frame = self.window.frame;
+        [controller.view addSubview:[[TabsView alloc] initWithFrame:frame]];
+        self.window.rootViewController = controller;
+    }
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
