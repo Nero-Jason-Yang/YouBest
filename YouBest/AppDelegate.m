@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
+#import "HonorGalleryViewController.h"
+
+
 #import "Database.h"
 #import "RootNavigationController.h"
 
@@ -24,14 +28,15 @@
     [Database sharedDatabase];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if (1) {
+    if (0) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
         self.window.rootViewController = storyboard.instantiateInitialViewController;
     } else {
-        UIViewController *controller = [[UIViewController alloc] init];
-        CGRect frame = self.window.frame;
-        [controller.view addSubview:[[TabsView alloc] initWithFrame:frame]];
-        self.window.rootViewController = controller;
+        MainViewController *mainViewController = [[MainViewController alloc] initWithStyle:UITableViewStylePlain];
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        HonorGalleryViewController *galleryViewController = [[HonorGalleryViewController alloc] initWithCollectionViewLayout:layout];
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:galleryViewController];
+        self.window.rootViewController = navigationController;
     }
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

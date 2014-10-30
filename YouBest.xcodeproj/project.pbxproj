@@ -11,6 +11,7 @@
 		4650E3CF19FFC7A3003F39FF /* TabsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4650E3CE19FFC7A3003F39FF /* TabsView.m */; };
 		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
+		46D00F931A02626C00F94EE5 /* HonorGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */; };
 		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
 		EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB218B4968D00C0E668 /* YBPlayer.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
@@ -74,6 +75,8 @@
 		46B21E5818916DA500952309 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		46B21E5918916DA500952309 /* NSManagedObjectContext+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+Utils.h"; sourceTree = "<group>"; };
 		46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
+		46D00F911A02626C00F94EE5 /* HonorGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonorGalleryViewController.h; sourceTree = "<group>"; };
+		46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonorGalleryViewController.m; sourceTree = "<group>"; };
 		EE00FCAD18B4834900C0E668 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		EE00FCAE18B4834900C0E668 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		EE00FCB118B4968D00C0E668 /* YBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlayer.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			children = (
 				4650E3CA19FFC677003F39FF /* MainViewController.h */,
 				4650E3CB19FFC677003F39FF /* MainViewController.m */,
+				46D00F911A02626C00F94EE5 /* HonorGalleryViewController.h */,
+				46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */,
 				4650E3CD19FFC7A3003F39FF /* TabsView.h */,
 				4650E3CE19FFC7A3003F39FF /* TabsView.m */,
 				EE35266818C9C0F100937FB6 /* UI.txt */,
@@ -484,6 +489,7 @@
 				EE3526C318C9C8E000937FB6 /* AllPlayersViewController.m in Sources */,
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
+				46D00F931A02626C00F94EE5 /* HonorGalleryViewController.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
 				EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
