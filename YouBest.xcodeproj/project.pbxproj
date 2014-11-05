@@ -12,6 +12,9 @@
 		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
 		46D00F931A02626C00F94EE5 /* HonorGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */; };
+		46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B21A0A44C6001D1F6D /* Main.storyboard */; };
+		46EA75B71A0A57C5001D1F6D /* Cooking-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B51A0A57C5001D1F6D /* Cooking-48.png */; };
+		46EA75B81A0A57C5001D1F6D /* Unknown-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B61A0A57C5001D1F6D /* Unknown-48.png */; };
 		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
 		EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB218B4968D00C0E668 /* YBPlayer.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
@@ -41,7 +44,6 @@
 		EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D118C9CBBF00937FB6 /* GiftEditingViewController.m */; };
 		EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */; };
 		EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */; };
-		EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3526D918CDB6B700937FB6 /* YouBest.storyboard */; };
 		EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */; };
 		EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270018CEFE2700937FB6 /* MOOption.m */; };
 		EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270218CEFE2700937FB6 /* MOPlayer.m */; };
@@ -77,6 +79,9 @@
 		46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
 		46D00F911A02626C00F94EE5 /* HonorGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonorGalleryViewController.h; sourceTree = "<group>"; };
 		46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonorGalleryViewController.m; sourceTree = "<group>"; };
+		46EA75B21A0A44C6001D1F6D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		46EA75B51A0A57C5001D1F6D /* Cooking-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cooking-48.png"; sourceTree = "<group>"; };
+		46EA75B61A0A57C5001D1F6D /* Unknown-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown-48.png"; sourceTree = "<group>"; };
 		EE00FCAD18B4834900C0E668 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		EE00FCAE18B4834900C0E668 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		EE00FCB118B4968D00C0E668 /* YBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlayer.h; sourceTree = "<group>"; };
@@ -123,7 +128,6 @@
 		EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishDetailsViewController.m; sourceTree = "<group>"; };
 		EE3526D618C9CBD500937FB6 /* WishEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishEditingViewController.h; sourceTree = "<group>"; };
 		EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishEditingViewController.m; sourceTree = "<group>"; };
-		EE3526D918CDB6B700937FB6 /* YouBest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouBest.storyboard; sourceTree = "<group>"; };
 		EE3526FB18CEFE2700937FB6 /* MOGiftRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftRecord.h; sourceTree = "<group>"; };
 		EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftRecord.m; sourceTree = "<group>"; };
 		EE3526FF18CEFE2700937FB6 /* MOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOOption.h; sourceTree = "<group>"; };
@@ -200,6 +204,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		46EA75B41A0A57C5001D1F6D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				46EA75B51A0A57C5001D1F6D /* Cooking-48.png */,
+				46EA75B61A0A57C5001D1F6D /* Unknown-48.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		EE00FC9A18B4831A00C0E668 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +263,6 @@
 				4650E3CD19FFC7A3003F39FF /* TabsView.h */,
 				4650E3CE19FFC7A3003F39FF /* TabsView.m */,
 				EE35266818C9C0F100937FB6 /* UI.txt */,
-				EE3526D918CDB6B700937FB6 /* YouBest.storyboard */,
 				EE35272918D0350E00937FB6 /* Common */,
 				EE3526B318C9C8E000937FB6 /* Navigation */,
 				EE3526B618C9C8E000937FB6 /* Player */,
@@ -383,7 +395,9 @@
 			children = (
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
+				46EA75B21A0A44C6001D1F6D /* Main.storyboard */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
+				46EA75B41A0A57C5001D1F6D /* Images */,
 				EE35261118C9BD0400937FB6 /* UI */,
 				EE00FCB018B4967B00C0E668 /* Data */,
 				EE00FC9A18B4831A00C0E668 /* Database */,
@@ -466,15 +480,17 @@
 				EE35263418C9BD0400937FB6 /* gift_24@2x.png in Resources */,
 				EE35263E18C9BD0400937FB6 /* task_24.png in Resources */,
 				EE35266918C9C0F100937FB6 /* UI.txt in Resources */,
+				46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */,
 				EE35263B18C9BD0400937FB6 /* strawberry_24.png in Resources */,
 				EE35263318C9BD0400937FB6 /* gift_24.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE35262918C9BD0400937FB6 /* coin_16.png in Resources */,
 				EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
-				EE3526DA18CDB6B700937FB6 /* YouBest.storyboard in Resources */,
 				EE35262E18C9BD0400937FB6 /* gear_16@2x.png in Resources */,
 				EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */,
+				46EA75B71A0A57C5001D1F6D /* Cooking-48.png in Resources */,
+				46EA75B81A0A57C5001D1F6D /* Unknown-48.png in Resources */,
 				EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
