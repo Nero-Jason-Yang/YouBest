@@ -52,6 +52,32 @@
 		EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271818CF031000937FB6 /* MOGiftTemplate.m */; };
 		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
 		EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */; };
+		EE4EB0F61A10B99600ABD31D /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB0F51A10B99600ABD31D /* TasksViewController.m */; };
+		EE4EB0F91A10B9DD00ABD31D /* TasksViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */; };
+		EE4EB1031A10BE7100ABD31D /* Sun_128.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB0FB1A10BE7100ABD31D /* Sun_128.png */; };
+		EE4EB1041A10BE7100ABD31D /* Sun_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB0FC1A10BE7100ABD31D /* Sun_16.png */; };
+		EE4EB1051A10BE7100ABD31D /* Sun_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB0FD1A10BE7100ABD31D /* Sun_24.png */; };
+		EE4EB1061A10BE7100ABD31D /* Sun_32.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB0FE1A10BE7100ABD31D /* Sun_32.png */; };
+		EE4EB1071A10BE7100ABD31D /* Sun_48.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB0FF1A10BE7100ABD31D /* Sun_48.png */; };
+		EE4EB1081A10BE7100ABD31D /* Sun_64.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1001A10BE7100ABD31D /* Sun_64.png */; };
+		EE4EB1091A10BE7100ABD31D /* Sun_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1011A10BE7100ABD31D /* Sun_72.png */; };
+		EE4EB10A1A10BE7100ABD31D /* Sun_96.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1021A10BE7100ABD31D /* Sun_96.png */; };
+		EE4EB1141A10C01D00ABD31D /* Moon_128.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB10C1A10C01D00ABD31D /* Moon_128.png */; };
+		EE4EB1151A10C01D00ABD31D /* Moon_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB10D1A10C01D00ABD31D /* Moon_16.png */; };
+		EE4EB1161A10C01D00ABD31D /* Moon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB10E1A10C01D00ABD31D /* Moon_24.png */; };
+		EE4EB1171A10C01D00ABD31D /* Moon_32.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB10F1A10C01D00ABD31D /* Moon_32.png */; };
+		EE4EB1181A10C01D00ABD31D /* Moon_48.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1101A10C01D00ABD31D /* Moon_48.png */; };
+		EE4EB1191A10C01D00ABD31D /* Moon_64.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1111A10C01D00ABD31D /* Moon_64.png */; };
+		EE4EB11A1A10C01D00ABD31D /* Moon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1121A10C01D00ABD31D /* Moon_72.png */; };
+		EE4EB11B1A10C01D00ABD31D /* Moon_96.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1131A10C01D00ABD31D /* Moon_96.png */; };
+		EE4EB1251A10C1DF00ABD31D /* Star_128.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB11D1A10C1DF00ABD31D /* Star_128.png */; };
+		EE4EB1261A10C1DF00ABD31D /* Star_16.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB11E1A10C1DF00ABD31D /* Star_16.png */; };
+		EE4EB1271A10C1DF00ABD31D /* Star_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB11F1A10C1DF00ABD31D /* Star_24.png */; };
+		EE4EB1281A10C1DF00ABD31D /* Star_32.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1201A10C1DF00ABD31D /* Star_32.png */; };
+		EE4EB1291A10C1DF00ABD31D /* Star_48.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1211A10C1DF00ABD31D /* Star_48.png */; };
+		EE4EB12A1A10C1DF00ABD31D /* Star_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1221A10C1DF00ABD31D /* Star_72.png */; };
+		EE4EB12B1A10C1DF00ABD31D /* Star_96.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1231A10C1DF00ABD31D /* Star_96.png */; };
+		EE4EB12C1A10C1DF00ABD31D /* Start_64.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1241A10C1DF00ABD31D /* Start_64.png */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -144,6 +170,34 @@
 		EE35271B18CF031100937FB6 /* MOGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftInstance.m; sourceTree = "<group>"; };
 		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskEditingView.storyboard; sourceTree = "<group>"; };
+		EE4EB0F41A10B99600ABD31D /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
+		EE4EB0F51A10B99600ABD31D /* TasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewController.m; sourceTree = "<group>"; };
+		EE4EB0F71A10B9DD00ABD31D /* TasksViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewCell.h; sourceTree = "<group>"; };
+		EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasksViewCell.m; sourceTree = "<group>"; };
+		EE4EB0FB1A10BE7100ABD31D /* Sun_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_128.png; sourceTree = "<group>"; };
+		EE4EB0FC1A10BE7100ABD31D /* Sun_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_16.png; sourceTree = "<group>"; };
+		EE4EB0FD1A10BE7100ABD31D /* Sun_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_24.png; sourceTree = "<group>"; };
+		EE4EB0FE1A10BE7100ABD31D /* Sun_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_32.png; sourceTree = "<group>"; };
+		EE4EB0FF1A10BE7100ABD31D /* Sun_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_48.png; sourceTree = "<group>"; };
+		EE4EB1001A10BE7100ABD31D /* Sun_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_64.png; sourceTree = "<group>"; };
+		EE4EB1011A10BE7100ABD31D /* Sun_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_72.png; sourceTree = "<group>"; };
+		EE4EB1021A10BE7100ABD31D /* Sun_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun_96.png; sourceTree = "<group>"; };
+		EE4EB10C1A10C01D00ABD31D /* Moon_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_128.png; sourceTree = "<group>"; };
+		EE4EB10D1A10C01D00ABD31D /* Moon_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_16.png; sourceTree = "<group>"; };
+		EE4EB10E1A10C01D00ABD31D /* Moon_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_24.png; sourceTree = "<group>"; };
+		EE4EB10F1A10C01D00ABD31D /* Moon_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_32.png; sourceTree = "<group>"; };
+		EE4EB1101A10C01D00ABD31D /* Moon_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_48.png; sourceTree = "<group>"; };
+		EE4EB1111A10C01D00ABD31D /* Moon_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_64.png; sourceTree = "<group>"; };
+		EE4EB1121A10C01D00ABD31D /* Moon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_72.png; sourceTree = "<group>"; };
+		EE4EB1131A10C01D00ABD31D /* Moon_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon_96.png; sourceTree = "<group>"; };
+		EE4EB11D1A10C1DF00ABD31D /* Star_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_128.png; sourceTree = "<group>"; };
+		EE4EB11E1A10C1DF00ABD31D /* Star_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_16.png; sourceTree = "<group>"; };
+		EE4EB11F1A10C1DF00ABD31D /* Star_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_24.png; sourceTree = "<group>"; };
+		EE4EB1201A10C1DF00ABD31D /* Star_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_32.png; sourceTree = "<group>"; };
+		EE4EB1211A10C1DF00ABD31D /* Star_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_48.png; sourceTree = "<group>"; };
+		EE4EB1221A10C1DF00ABD31D /* Star_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_72.png; sourceTree = "<group>"; };
+		EE4EB1231A10C1DF00ABD31D /* Star_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_96.png; sourceTree = "<group>"; };
+		EE4EB1241A10C1DF00ABD31D /* Start_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_64.png; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -207,6 +261,9 @@
 		46EA75B41A0A57C5001D1F6D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EE4EB11C1A10C1DF00ABD31D /* Star */,
+				EE4EB10B1A10C01D00ABD31D /* Moon */,
+				EE4EB0FA1A10BE7100ABD31D /* Sun */,
 				46EA75B51A0A57C5001D1F6D /* Cooking-48.png */,
 				46EA75B61A0A57C5001D1F6D /* Unknown-48.png */,
 			);
@@ -361,6 +418,51 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		EE4EB0FA1A10BE7100ABD31D /* Sun */ = {
+			isa = PBXGroup;
+			children = (
+				EE4EB0FB1A10BE7100ABD31D /* Sun_128.png */,
+				EE4EB0FC1A10BE7100ABD31D /* Sun_16.png */,
+				EE4EB0FD1A10BE7100ABD31D /* Sun_24.png */,
+				EE4EB0FE1A10BE7100ABD31D /* Sun_32.png */,
+				EE4EB0FF1A10BE7100ABD31D /* Sun_48.png */,
+				EE4EB1001A10BE7100ABD31D /* Sun_64.png */,
+				EE4EB1011A10BE7100ABD31D /* Sun_72.png */,
+				EE4EB1021A10BE7100ABD31D /* Sun_96.png */,
+			);
+			path = Sun;
+			sourceTree = "<group>";
+		};
+		EE4EB10B1A10C01D00ABD31D /* Moon */ = {
+			isa = PBXGroup;
+			children = (
+				EE4EB10C1A10C01D00ABD31D /* Moon_128.png */,
+				EE4EB10D1A10C01D00ABD31D /* Moon_16.png */,
+				EE4EB10E1A10C01D00ABD31D /* Moon_24.png */,
+				EE4EB10F1A10C01D00ABD31D /* Moon_32.png */,
+				EE4EB1101A10C01D00ABD31D /* Moon_48.png */,
+				EE4EB1111A10C01D00ABD31D /* Moon_64.png */,
+				EE4EB1121A10C01D00ABD31D /* Moon_72.png */,
+				EE4EB1131A10C01D00ABD31D /* Moon_96.png */,
+			);
+			path = Moon;
+			sourceTree = "<group>";
+		};
+		EE4EB11C1A10C1DF00ABD31D /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				EE4EB11D1A10C1DF00ABD31D /* Star_128.png */,
+				EE4EB11E1A10C1DF00ABD31D /* Star_16.png */,
+				EE4EB11F1A10C1DF00ABD31D /* Star_24.png */,
+				EE4EB1201A10C1DF00ABD31D /* Star_32.png */,
+				EE4EB1211A10C1DF00ABD31D /* Star_48.png */,
+				EE4EB1221A10C1DF00ABD31D /* Star_72.png */,
+				EE4EB1231A10C1DF00ABD31D /* Star_96.png */,
+				EE4EB1241A10C1DF00ABD31D /* Start_64.png */,
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
 		EE6B474F1885168E00362B84 = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +498,10 @@
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
 				46EA75B21A0A44C6001D1F6D /* Main.storyboard */,
+				EE4EB0F41A10B99600ABD31D /* TasksViewController.h */,
+				EE4EB0F51A10B99600ABD31D /* TasksViewController.m */,
+				EE4EB0F71A10B9DD00ABD31D /* TasksViewCell.h */,
+				EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
 				46EA75B41A0A57C5001D1F6D /* Images */,
 				EE35261118C9BD0400937FB6 /* UI */,
@@ -474,24 +580,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4EB1191A10C01D00ABD31D /* Moon_64.png in Resources */,
 				EE35263C18C9BD0400937FB6 /* strawberry_24@2x.png in Resources */,
+				EE4EB1261A10C1DF00ABD31D /* Star_16.png in Resources */,
 				EE35262D18C9BD0400937FB6 /* gear_16.png in Resources */,
+				EE4EB1271A10C1DF00ABD31D /* Star_24.png in Resources */,
+				EE4EB1291A10C1DF00ABD31D /* Star_48.png in Resources */,
 				EE35262A18C9BD0400937FB6 /* coin_16@2x.png in Resources */,
+				EE4EB1061A10BE7100ABD31D /* Sun_32.png in Resources */,
+				EE4EB1181A10C01D00ABD31D /* Moon_48.png in Resources */,
+				EE4EB1071A10BE7100ABD31D /* Sun_48.png in Resources */,
 				EE35263418C9BD0400937FB6 /* gift_24@2x.png in Resources */,
 				EE35263E18C9BD0400937FB6 /* task_24.png in Resources */,
+				EE4EB1041A10BE7100ABD31D /* Sun_16.png in Resources */,
 				EE35266918C9C0F100937FB6 /* UI.txt in Resources */,
+				EE4EB1031A10BE7100ABD31D /* Sun_128.png in Resources */,
+				EE4EB1091A10BE7100ABD31D /* Sun_72.png in Resources */,
 				46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */,
 				EE35263B18C9BD0400937FB6 /* strawberry_24.png in Resources */,
+				EE4EB1081A10BE7100ABD31D /* Sun_64.png in Resources */,
 				EE35263318C9BD0400937FB6 /* gift_24.png in Resources */,
+				EE4EB1171A10C01D00ABD31D /* Moon_32.png in Resources */,
+				EE4EB11A1A10C01D00ABD31D /* Moon_72.png in Resources */,
 				EE6B47681885168E00362B84 /* InfoPlist.strings in Resources */,
 				EE35262918C9BD0400937FB6 /* coin_16.png in Resources */,
+				EE4EB11B1A10C01D00ABD31D /* Moon_96.png in Resources */,
+				EE4EB1251A10C1DF00ABD31D /* Star_128.png in Resources */,
+				EE4EB1141A10C01D00ABD31D /* Moon_128.png in Resources */,
+				EE4EB1281A10C1DF00ABD31D /* Star_32.png in Resources */,
+				EE4EB10A1A10BE7100ABD31D /* Sun_96.png in Resources */,
+				EE4EB1161A10C01D00ABD31D /* Moon_24.png in Resources */,
 				EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */,
 				EE6B47731885168E00362B84 /* Images.xcassets in Resources */,
+				EE4EB12A1A10C1DF00ABD31D /* Star_72.png in Resources */,
+				EE4EB1151A10C01D00ABD31D /* Moon_16.png in Resources */,
 				EE35262E18C9BD0400937FB6 /* gear_16@2x.png in Resources */,
 				EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */,
 				46EA75B71A0A57C5001D1F6D /* Cooking-48.png in Resources */,
+				EE4EB12B1A10C1DF00ABD31D /* Star_96.png in Resources */,
+				EE4EB12C1A10C1DF00ABD31D /* Start_64.png in Resources */,
 				46EA75B81A0A57C5001D1F6D /* Unknown-48.png in Resources */,
 				EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */,
+				EE4EB1051A10BE7100ABD31D /* Sun_24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +639,7 @@
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
 				EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
+				EE4EB0F61A10B99600ABD31D /* TasksViewController.m in Sources */,
 				EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */,
 				EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */,
 				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
@@ -526,6 +657,7 @@
 				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,
+				EE4EB0F91A10B9DD00ABD31D /* TasksViewCell.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
 				EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */,
 				EE3526C918C9CB9A00937FB6 /* TaskDetailsViewController.m in Sources */,

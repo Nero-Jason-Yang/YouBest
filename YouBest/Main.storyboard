@@ -62,13 +62,13 @@
         <!--Tasks-->
         <scene sceneID="s2K-EC-WSO">
             <objects>
-                <tableViewController id="uyi-1h-Gx3" sceneMemberID="viewController">
+                <tableViewController id="uyi-1h-Gx3" customClass="TasksViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" id="LmW-ek-ZKm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="center" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="it0-hQ-Evq" customClass="TaskViewCell">
+                            <tableViewCell contentMode="center" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="it0-hQ-Evq" customClass="TasksViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="it0-hQ-Evq" id="M2N-Mc-clm">
@@ -84,7 +84,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="16" placeholderIntrinsicHeight="16" image="coin_16.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLa-62-uzm">
+                                        <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="16" placeholderIntrinsicHeight="16" image="Star_16.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLa-62-uzm">
                                             <rect key="frame" x="281" y="11" width="16" height="16"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3p-fy-OLU">
@@ -101,9 +101,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="coin" destination="DLa-62-uzm" id="apx-e1-KI4"/>
-                                    <outlet property="title" destination="z1b-7K-Voh" id="UFm-gz-ldG"/>
-                                    <outlet property="value" destination="j3p-fy-OLU" id="bEa-Nz-zlf"/>
+                                    <outlet property="icon" destination="jLy-gm-mMh" id="avA-98-2tt"/>
+                                    <outlet property="subtitle" destination="aEk-YL-Wpf" id="DUl-dW-5We"/>
+                                    <outlet property="title" destination="z1b-7K-Voh" id="IyK-IW-3La"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -185,6 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Star_16.png" width="16" height="16"/>
         <image name="Unknown-48.png" width="48" height="48"/>
         <image name="coin_16.png" width="16" height="16"/>
         <image name="gear_16.png" width="16" height="16"/>
