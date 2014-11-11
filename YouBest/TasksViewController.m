@@ -47,7 +47,7 @@
     switch (indexPath.row) {
         case 0:
             cell.title.text = @"First";
-            cell.subtitle.text = @"This is the first task.";
+            cell.subtitle.text = @"This is the first task. Mmmmmmmm, Mmmmmmm, Zzzzzzz.";
             break;
             
         case 1:

@@ -13,4 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *icon;
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UILabel *subtitle;
+@property (strong, nonatomic) IBOutlet UILabel *worth;
+@property (strong, nonatomic) IBOutlet UIImageView *symbol;
+
 @end

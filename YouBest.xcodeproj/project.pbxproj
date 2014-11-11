@@ -78,6 +78,7 @@
 		EE4EB12A1A10C1DF00ABD31D /* Star_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1221A10C1DF00ABD31D /* Star_72.png */; };
 		EE4EB12B1A10C1DF00ABD31D /* Star_96.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1231A10C1DF00ABD31D /* Star_96.png */; };
 		EE4EB12C1A10C1DF00ABD31D /* Start_64.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1241A10C1DF00ABD31D /* Start_64.png */; };
+		EE4EB12E1A12094200ABD31D /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB12D1A12094200ABD31D /* Entry.storyboard */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -198,6 +199,7 @@
 		EE4EB1221A10C1DF00ABD31D /* Star_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_72.png; sourceTree = "<group>"; };
 		EE4EB1231A10C1DF00ABD31D /* Star_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_96.png; sourceTree = "<group>"; };
 		EE4EB1241A10C1DF00ABD31D /* Start_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_64.png; sourceTree = "<group>"; };
+		EE4EB12D1A12094200ABD31D /* Entry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -498,6 +500,7 @@
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
 				46EA75B21A0A44C6001D1F6D /* Main.storyboard */,
+				EE4EB12D1A12094200ABD31D /* Entry.storyboard */,
 				EE4EB0F41A10B99600ABD31D /* TasksViewController.h */,
 				EE4EB0F51A10B99600ABD31D /* TasksViewController.m */,
 				EE4EB0F71A10B9DD00ABD31D /* TasksViewCell.h */,
@@ -594,6 +597,7 @@
 				EE35263E18C9BD0400937FB6 /* task_24.png in Resources */,
 				EE4EB1041A10BE7100ABD31D /* Sun_16.png in Resources */,
 				EE35266918C9C0F100937FB6 /* UI.txt in Resources */,
+				EE4EB12E1A12094200ABD31D /* Entry.storyboard in Resources */,
 				EE4EB1031A10BE7100ABD31D /* Sun_128.png in Resources */,
 				EE4EB1091A10BE7100ABD31D /* Sun_72.png in Resources */,
 				46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */,
@@ -766,6 +770,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YouBest/YouBest-Prefix.pch";
 				INFOPLIST_FILE = "YouBest/YouBest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -779,6 +784,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YouBest/YouBest-Prefix.pch";
 				INFOPLIST_FILE = "YouBest/YouBest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
