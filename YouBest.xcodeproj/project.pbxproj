@@ -12,11 +12,8 @@
 		46B21E5B18916DA500952309 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5818916DA500952309 /* Logger.m */; };
 		46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */; };
 		46D00F931A02626C00F94EE5 /* HonorGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */; };
-		46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B21A0A44C6001D1F6D /* Main.storyboard */; };
 		46EA75B71A0A57C5001D1F6D /* Cooking-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B51A0A57C5001D1F6D /* Cooking-48.png */; };
 		46EA75B81A0A57C5001D1F6D /* Unknown-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 46EA75B61A0A57C5001D1F6D /* Unknown-48.png */; };
-		EE00FCAF18B4834900C0E668 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCAE18B4834900C0E668 /* Database.m */; };
-		EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCB218B4968D00C0E668 /* YBPlayer.m */; };
 		EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */; };
 		EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE00FCE218B71CF600C0E668 /* UIViewController+Utils.m */; };
 		EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EE26F02C18C096F500B80F47 /* UILabel+Utils.m */; };
@@ -29,8 +26,6 @@
 		EE35263B18C9BD0400937FB6 /* strawberry_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262518C9BD0400937FB6 /* strawberry_24.png */; };
 		EE35263C18C9BD0400937FB6 /* strawberry_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262618C9BD0400937FB6 /* strawberry_24@2x.png */; };
 		EE35263E18C9BD0400937FB6 /* task_24.png in Resources */ = {isa = PBXBuildFile; fileRef = EE35262818C9BD0400937FB6 /* task_24.png */; };
-		EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35265118C9BE2C00937FB6 /* YouBest.txt */; };
-		EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */; };
 		EE35266918C9C0F100937FB6 /* UI.txt in Resources */ = {isa = PBXBuildFile; fileRef = EE35266818C9C0F100937FB6 /* UI.txt */; };
 		EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526B218C9C8E000937FB6 /* AllGiftsViewController.m */; };
 		EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526B518C9C8E000937FB6 /* RootNavigationController.m */; };
@@ -44,13 +39,6 @@
 		EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D118C9CBBF00937FB6 /* GiftEditingViewController.m */; };
 		EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */; };
 		EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */; };
-		EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */; };
-		EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270018CEFE2700937FB6 /* MOOption.m */; };
-		EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35270218CEFE2700937FB6 /* MOPlayer.m */; };
-		EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */; };
-		EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271518CEFEA900937FB6 /* YBGiftInstance.m */; };
-		EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271818CF031000937FB6 /* MOGiftTemplate.m */; };
-		EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE35271B18CF031100937FB6 /* MOGiftInstance.m */; };
 		EE35274618E0054F00937FB6 /* TaskEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */; };
 		EE4EB0F61A10B99600ABD31D /* TasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB0F51A10B99600ABD31D /* TasksViewController.m */; };
 		EE4EB0F91A10B9DD00ABD31D /* TasksViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */; };
@@ -78,7 +66,15 @@
 		EE4EB12A1A10C1DF00ABD31D /* Star_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1221A10C1DF00ABD31D /* Star_72.png */; };
 		EE4EB12B1A10C1DF00ABD31D /* Star_96.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1231A10C1DF00ABD31D /* Star_96.png */; };
 		EE4EB12C1A10C1DF00ABD31D /* Start_64.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB1241A10C1DF00ABD31D /* Start_64.png */; };
-		EE4EB12E1A12094200ABD31D /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB12D1A12094200ABD31D /* Entry.storyboard */; };
+		EE4EB12E1A12094200ABD31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4EB12D1A12094200ABD31D /* Main.storyboard */; };
+		EE4EB1361A134D8500ABD31D /* GiftsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB1351A134D8500ABD31D /* GiftsViewController.m */; };
+		EE4EB1391A1350E300ABD31D /* GiftsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB1381A1350E300ABD31D /* GiftsViewCell.m */; };
+		EE4EB13C1A13533A00ABD31D /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB13A1A13533A00ABD31D /* Main.xcdatamodeld */; };
+		EE4EB13F1A13556C00ABD31D /* GiftData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB13E1A13556C00ABD31D /* GiftData.m */; };
+		EE4EB1421A13556D00ABD31D /* TaskData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB1411A13556D00ABD31D /* TaskData.m */; };
+		EE4EB1451A13573C00ABD31D /* TaskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB1441A13573C00ABD31D /* TaskInfo.m */; };
+		EE4EB1481A13580900ABD31D /* GiftInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB1471A13580900ABD31D /* GiftInfo.m */; };
+		EE4EB14B1A1358F800ABD31D /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB14A1A1358F800ABD31D /* Database.m */; };
 		EE6B475C1885168E00362B84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475B1885168E00362B84 /* Foundation.framework */; };
 		EE6B475E1885168E00362B84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475D1885168E00362B84 /* CoreGraphics.framework */; };
 		EE6B47601885168E00362B84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6B475F1885168E00362B84 /* UIKit.framework */; };
@@ -88,9 +84,6 @@
 		EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B476D1885168E00362B84 /* AppDelegate.m */; };
 		EE6B47731885168E00362B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6B47721885168E00362B84 /* Images.xcassets */; };
 		EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */; };
-		EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */; };
-		EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */; };
-		EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */; };
 		EE973EF718ED010E00C43728 /* GiftEditingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
@@ -106,13 +99,8 @@
 		46B21E5A18916DA500952309 /* NSManagedObjectContext+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+Utils.m"; sourceTree = "<group>"; };
 		46D00F911A02626C00F94EE5 /* HonorGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HonorGalleryViewController.h; sourceTree = "<group>"; };
 		46D00F921A02626C00F94EE5 /* HonorGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HonorGalleryViewController.m; sourceTree = "<group>"; };
-		46EA75B21A0A44C6001D1F6D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		46EA75B51A0A57C5001D1F6D /* Cooking-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cooking-48.png"; sourceTree = "<group>"; };
 		46EA75B61A0A57C5001D1F6D /* Unknown-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unknown-48.png"; sourceTree = "<group>"; };
-		EE00FCAD18B4834900C0E668 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
-		EE00FCAE18B4834900C0E668 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
-		EE00FCB118B4968D00C0E668 /* YBPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBPlayer.h; sourceTree = "<group>"; };
-		EE00FCB218B4968D00C0E668 /* YBPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBPlayer.m; sourceTree = "<group>"; };
 		EE00FCDE18B71C4700C0E668 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		EE00FCDF18B71C4700C0E668 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		EE00FCE118B71CF600C0E668 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
@@ -128,8 +116,6 @@
 		EE35262518C9BD0400937FB6 /* strawberry_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strawberry_24.png; sourceTree = "<group>"; };
 		EE35262618C9BD0400937FB6 /* strawberry_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "strawberry_24@2x.png"; sourceTree = "<group>"; };
 		EE35262818C9BD0400937FB6 /* task_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task_24.png; sourceTree = "<group>"; };
-		EE35265118C9BE2C00937FB6 /* YouBest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YouBest.txt; sourceTree = "<group>"; };
-		EE35265318C9BE2C00937FB6 /* YouBest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBest.xcdatamodel; sourceTree = "<group>"; };
 		EE35266818C9C0F100937FB6 /* UI.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UI.txt; sourceTree = "<group>"; };
 		EE3526B118C9C8E000937FB6 /* AllGiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllGiftsViewController.h; sourceTree = "<group>"; };
 		EE3526B218C9C8E000937FB6 /* AllGiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllGiftsViewController.m; sourceTree = "<group>"; };
@@ -155,20 +141,6 @@
 		EE3526D418C9CBCB00937FB6 /* WishDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishDetailsViewController.m; sourceTree = "<group>"; };
 		EE3526D618C9CBD500937FB6 /* WishEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishEditingViewController.h; sourceTree = "<group>"; };
 		EE3526D718C9CBD500937FB6 /* WishEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishEditingViewController.m; sourceTree = "<group>"; };
-		EE3526FB18CEFE2700937FB6 /* MOGiftRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftRecord.h; sourceTree = "<group>"; };
-		EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftRecord.m; sourceTree = "<group>"; };
-		EE3526FF18CEFE2700937FB6 /* MOOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOOption.h; sourceTree = "<group>"; };
-		EE35270018CEFE2700937FB6 /* MOOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOOption.m; sourceTree = "<group>"; };
-		EE35270118CEFE2700937FB6 /* MOPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOPlayer.h; sourceTree = "<group>"; };
-		EE35270218CEFE2700937FB6 /* MOPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOPlayer.m; sourceTree = "<group>"; };
-		EE35271118CEFE9D00937FB6 /* YBTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTaskInstance.h; sourceTree = "<group>"; };
-		EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTaskInstance.m; sourceTree = "<group>"; };
-		EE35271418CEFEA900937FB6 /* YBGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBGiftInstance.h; sourceTree = "<group>"; };
-		EE35271518CEFEA900937FB6 /* YBGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBGiftInstance.m; sourceTree = "<group>"; };
-		EE35271718CF031000937FB6 /* MOGiftTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftTemplate.h; sourceTree = "<group>"; };
-		EE35271818CF031000937FB6 /* MOGiftTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftTemplate.m; sourceTree = "<group>"; };
-		EE35271A18CF031100937FB6 /* MOGiftInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOGiftInstance.h; sourceTree = "<group>"; };
-		EE35271B18CF031100937FB6 /* MOGiftInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOGiftInstance.m; sourceTree = "<group>"; };
 		EE35272A18D0353B00937FB6 /* Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		EE35274518E0054F00937FB6 /* TaskEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TaskEditingView.storyboard; sourceTree = "<group>"; };
 		EE4EB0F41A10B99600ABD31D /* TasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasksViewController.h; sourceTree = "<group>"; };
@@ -199,7 +171,22 @@
 		EE4EB1221A10C1DF00ABD31D /* Star_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_72.png; sourceTree = "<group>"; };
 		EE4EB1231A10C1DF00ABD31D /* Star_96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star_96.png; sourceTree = "<group>"; };
 		EE4EB1241A10C1DF00ABD31D /* Start_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_64.png; sourceTree = "<group>"; };
-		EE4EB12D1A12094200ABD31D /* Entry.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entry.storyboard; sourceTree = "<group>"; };
+		EE4EB12D1A12094200ABD31D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EE4EB1341A134D8500ABD31D /* GiftsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsViewController.h; sourceTree = "<group>"; };
+		EE4EB1351A134D8500ABD31D /* GiftsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewController.m; sourceTree = "<group>"; };
+		EE4EB1371A1350E300ABD31D /* GiftsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftsViewCell.h; sourceTree = "<group>"; };
+		EE4EB1381A1350E300ABD31D /* GiftsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftsViewCell.m; sourceTree = "<group>"; };
+		EE4EB13B1A13533A00ABD31D /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		EE4EB13D1A13556C00ABD31D /* GiftData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftData.h; sourceTree = "<group>"; };
+		EE4EB13E1A13556C00ABD31D /* GiftData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftData.m; sourceTree = "<group>"; };
+		EE4EB1401A13556D00ABD31D /* TaskData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskData.h; sourceTree = "<group>"; };
+		EE4EB1411A13556D00ABD31D /* TaskData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskData.m; sourceTree = "<group>"; };
+		EE4EB1431A13573C00ABD31D /* TaskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskInfo.h; sourceTree = "<group>"; };
+		EE4EB1441A13573C00ABD31D /* TaskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskInfo.m; sourceTree = "<group>"; };
+		EE4EB1461A13580900ABD31D /* GiftInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftInfo.h; sourceTree = "<group>"; };
+		EE4EB1471A13580900ABD31D /* GiftInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftInfo.m; sourceTree = "<group>"; };
+		EE4EB1491A1358F800ABD31D /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		EE4EB14A1A1358F800ABD31D /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		EE6B47581885168E00362B84 /* YouBest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B475B1885168E00362B84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EE6B475D1885168E00362B84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,12 +202,6 @@
 		EE6B47791885168E00362B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EE973ED918EA67A800C43728 /* UIButton+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UITableView.h"; sourceTree = "<group>"; };
 		EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UITableView.m"; sourceTree = "<group>"; };
-		EE973EDC18EA9C0900C43728 /* MOTaskRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskRecord.h; sourceTree = "<group>"; };
-		EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskRecord.m; sourceTree = "<group>"; };
-		EE973EDF18EA9C0A00C43728 /* MOTaskTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskTemplate.h; sourceTree = "<group>"; };
-		EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskTemplate.m; sourceTree = "<group>"; };
-		EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOTaskInstance.h; sourceTree = "<group>"; };
-		EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOTaskInstance.m; sourceTree = "<group>"; };
 		EE973EF618ED010E00C43728 /* GiftEditingView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GiftEditingView.storyboard; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
@@ -270,46 +251,6 @@
 				46EA75B61A0A57C5001D1F6D /* Unknown-48.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		EE00FC9A18B4831A00C0E668 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				EE35265118C9BE2C00937FB6 /* YouBest.txt */,
-				EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */,
-				EE00FCAD18B4834900C0E668 /* Database.h */,
-				EE00FCAE18B4834900C0E668 /* Database.m */,
-				EE3526FF18CEFE2700937FB6 /* MOOption.h */,
-				EE35270018CEFE2700937FB6 /* MOOption.m */,
-				EE35270118CEFE2700937FB6 /* MOPlayer.h */,
-				EE35270218CEFE2700937FB6 /* MOPlayer.m */,
-				EE973EDF18EA9C0A00C43728 /* MOTaskTemplate.h */,
-				EE973EE218EA9C0A00C43728 /* MOTaskInstance.h */,
-				EE973EE318EA9C0A00C43728 /* MOTaskInstance.m */,
-				EE973EE018EA9C0A00C43728 /* MOTaskTemplate.m */,
-				EE973EDC18EA9C0900C43728 /* MOTaskRecord.h */,
-				EE973EDD18EA9C0900C43728 /* MOTaskRecord.m */,
-				EE35271718CF031000937FB6 /* MOGiftTemplate.h */,
-				EE35271818CF031000937FB6 /* MOGiftTemplate.m */,
-				EE35271A18CF031100937FB6 /* MOGiftInstance.h */,
-				EE35271B18CF031100937FB6 /* MOGiftInstance.m */,
-				EE3526FB18CEFE2700937FB6 /* MOGiftRecord.h */,
-				EE3526FC18CEFE2700937FB6 /* MOGiftRecord.m */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
-		EE00FCB018B4967B00C0E668 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				EE00FCB118B4968D00C0E668 /* YBPlayer.h */,
-				EE00FCB218B4968D00C0E668 /* YBPlayer.m */,
-				EE35271118CEFE9D00937FB6 /* YBTaskInstance.h */,
-				EE35271218CEFE9D00937FB6 /* YBTaskInstance.m */,
-				EE35271418CEFEA900937FB6 /* YBGiftInstance.h */,
-				EE35271518CEFEA900937FB6 /* YBGiftInstance.m */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		EE35261118C9BD0400937FB6 /* UI */ = {
@@ -499,17 +440,29 @@
 			children = (
 				EE6B476C1885168E00362B84 /* AppDelegate.h */,
 				EE6B476D1885168E00362B84 /* AppDelegate.m */,
-				46EA75B21A0A44C6001D1F6D /* Main.storyboard */,
-				EE4EB12D1A12094200ABD31D /* Entry.storyboard */,
+				EE4EB12D1A12094200ABD31D /* Main.storyboard */,
+				EE4EB13A1A13533A00ABD31D /* Main.xcdatamodeld */,
 				EE4EB0F41A10B99600ABD31D /* TasksViewController.h */,
 				EE4EB0F51A10B99600ABD31D /* TasksViewController.m */,
 				EE4EB0F71A10B9DD00ABD31D /* TasksViewCell.h */,
 				EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */,
+				EE4EB1401A13556D00ABD31D /* TaskData.h */,
+				EE4EB1411A13556D00ABD31D /* TaskData.m */,
+				EE4EB1431A13573C00ABD31D /* TaskInfo.h */,
+				EE4EB1441A13573C00ABD31D /* TaskInfo.m */,
+				EE4EB1341A134D8500ABD31D /* GiftsViewController.h */,
+				EE4EB1351A134D8500ABD31D /* GiftsViewController.m */,
+				EE4EB1371A1350E300ABD31D /* GiftsViewCell.h */,
+				EE4EB1381A1350E300ABD31D /* GiftsViewCell.m */,
+				EE4EB13D1A13556C00ABD31D /* GiftData.h */,
+				EE4EB13E1A13556C00ABD31D /* GiftData.m */,
+				EE4EB1461A13580900ABD31D /* GiftInfo.h */,
+				EE4EB1471A13580900ABD31D /* GiftInfo.m */,
+				EE4EB1491A1358F800ABD31D /* Database.h */,
+				EE4EB14A1A1358F800ABD31D /* Database.m */,
 				EE6B47721885168E00362B84 /* Images.xcassets */,
 				46EA75B41A0A57C5001D1F6D /* Images */,
 				EE35261118C9BD0400937FB6 /* UI */,
-				EE00FCB018B4967B00C0E668 /* Data */,
-				EE00FC9A18B4831A00C0E668 /* Database */,
 				46B21E501891655000952309 /* Utils */,
 				EE6B47641885168E00362B84 /* Supporting Files */,
 			);
@@ -597,10 +550,9 @@
 				EE35263E18C9BD0400937FB6 /* task_24.png in Resources */,
 				EE4EB1041A10BE7100ABD31D /* Sun_16.png in Resources */,
 				EE35266918C9C0F100937FB6 /* UI.txt in Resources */,
-				EE4EB12E1A12094200ABD31D /* Entry.storyboard in Resources */,
+				EE4EB12E1A12094200ABD31D /* Main.storyboard in Resources */,
 				EE4EB1031A10BE7100ABD31D /* Sun_128.png in Resources */,
 				EE4EB1091A10BE7100ABD31D /* Sun_72.png in Resources */,
-				46EA75B31A0A44C6001D1F6D /* Main.storyboard in Resources */,
 				EE35263B18C9BD0400937FB6 /* strawberry_24.png in Resources */,
 				EE4EB1081A10BE7100ABD31D /* Sun_64.png in Resources */,
 				EE35263318C9BD0400937FB6 /* gift_24.png in Resources */,
@@ -624,7 +576,6 @@
 				EE4EB12B1A10C1DF00ABD31D /* Star_96.png in Resources */,
 				EE4EB12C1A10C1DF00ABD31D /* Start_64.png in Resources */,
 				46EA75B81A0A57C5001D1F6D /* Unknown-48.png in Resources */,
-				EE35265418C9BE2C00937FB6 /* YouBest.txt in Resources */,
 				EE4EB1051A10BE7100ABD31D /* Sun_24.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,39 +592,34 @@
 				EE3526D218C9CBBF00937FB6 /* GiftEditingViewController.m in Sources */,
 				46D00F931A02626C00F94EE5 /* HonorGalleryViewController.m in Sources */,
 				EE3526D818C9CBD500937FB6 /* WishEditingViewController.m in Sources */,
-				EE973EE418EA9C0A00C43728 /* MOTaskInstance.m in Sources */,
+				EE4EB1391A1350E300ABD31D /* GiftsViewCell.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				EE4EB0F61A10B99600ABD31D /* TasksViewController.m in Sources */,
-				EE35265518C9BE2C00937FB6 /* YouBest.xcdatamodeld in Sources */,
 				EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */,
-				EE35270D18CEFE2700937FB6 /* MOPlayer.m in Sources */,
+				EE4EB1451A13573C00ABD31D /* TaskInfo.m in Sources */,
 				EE00FCE318B71CF600C0E668 /* UIViewController+Utils.m in Sources */,
 				4650E3CF19FFC7A3003F39FF /* TabsView.m in Sources */,
-				EE973EDE18EA9C0900C43728 /* MOTaskRecord.m in Sources */,
-				EE00FCB318B4968D00C0E668 /* YBPlayer.m in Sources */,
-				EE973EE118EA9C0A00C43728 /* MOTaskTemplate.m in Sources */,
 				46B21E5C18916DA500952309 /* NSManagedObjectContext+Utils.m in Sources */,
-				EE35271C18CF031100937FB6 /* MOGiftInstance.m in Sources */,
+				EE4EB13C1A13533A00ABD31D /* Main.xcdatamodeld in Sources */,
 				EE3526CC18C9CBA500937FB6 /* TaskEditingViewController.m in Sources */,
 				EE3526C418C9C8E000937FB6 /* PlayerTabBarController.m in Sources */,
+				EE4EB1361A134D8500ABD31D /* GiftsViewController.m in Sources */,
 				EE3526C218C9C8E000937FB6 /* RootNavigationController.m in Sources */,
 				4650E3CC19FFC677003F39FF /* MainViewController.m in Sources */,
+				EE4EB13F1A13556C00ABD31D /* GiftData.m in Sources */,
+				EE4EB1421A13556D00ABD31D /* TaskData.m in Sources */,
 				EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */,
 				EE3526C518C9C8E000937FB6 /* AllTasksViewController.m in Sources */,
 				EE3526C618C9C8E000937FB6 /* AllWishesViewController.m in Sources */,
 				EE4EB0F91A10B9DD00ABD31D /* TasksViewCell.m in Sources */,
 				EE00FCE018B71C4700C0E668 /* UIView+Utils.m in Sources */,
-				EE35270A18CEFE2700937FB6 /* MOGiftRecord.m in Sources */,
+				EE4EB14B1A1358F800ABD31D /* Database.m in Sources */,
+				EE4EB1481A13580900ABD31D /* GiftInfo.m in Sources */,
 				EE3526C918C9CB9A00937FB6 /* TaskDetailsViewController.m in Sources */,
 				EE3526D518C9CBCB00937FB6 /* WishDetailsViewController.m in Sources */,
 				EE3526CF18C9CBB300937FB6 /* GiftDetailsViewController.m in Sources */,
-				EE35271318CEFE9D00937FB6 /* YBTaskInstance.m in Sources */,
 				EE26F02D18C096F500B80F47 /* UILabel+Utils.m in Sources */,
-				EE00FCAF18B4834900C0E668 /* Database.m in Sources */,
-				EE35271918CF031000937FB6 /* MOGiftTemplate.m in Sources */,
-				EE35271618CEFEA900937FB6 /* YBGiftInstance.m in Sources */,
 				EE3526C118C9C8E000937FB6 /* AllGiftsViewController.m in Sources */,
-				EE35270C18CEFE2700937FB6 /* MOOption.m in Sources */,
 				EE6B476A1885168E00362B84 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,13 +760,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EE35265218C9BE2C00937FB6 /* YouBest.xcdatamodeld */ = {
+		EE4EB13A1A13533A00ABD31D /* Main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EE35265318C9BE2C00937FB6 /* YouBest.xcdatamodel */,
+				EE4EB13B1A13533A00ABD31D /* Main.xcdatamodel */,
 			);
-			currentVersion = EE35265318C9BE2C00937FB6 /* YouBest.xcdatamodel */;
-			path = YouBest.xcdatamodeld;
+			currentVersion = EE4EB13B1A13533A00ABD31D /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
