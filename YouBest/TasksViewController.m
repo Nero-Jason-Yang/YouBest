@@ -8,9 +8,10 @@
 
 #import "TasksViewController.h"
 #import "TasksViewCell.h"
+#import "Database.h"
 
 @interface TasksViewController ()
-
+@property (nonatomic,readonly) NSArray *tasks;
 @end
 
 @implementation TasksViewController
@@ -23,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    _tasks = [Database sharedDatabase].allTasks;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,34 +40,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.tasks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= self.tasks.count) {
+        return nil; // out of range.
+    }
+    
     static NSString *identifier = @"Cell";
     TasksViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
-    switch (indexPath.row) {
-        case 0:
-            cell.title.text = @"First";
-            cell.subtitle.text = @"This is the first task. Mmmmmmmm, Mmmmmmm, Zzzzzzz.";
-            break;
-            
-        case 1:
-            cell.title.text = @"Second";
-            cell.subtitle.text = @"Another task to do.";
-            break;
-            
-        case 2:
-            cell.title.text = @"Third";
-            cell.subtitle.text = @"Well, you have more tasks.";
-            break;
-            
-        default:
-            cell.title.text = @"A Task";
-            cell.subtitle.text = [NSString stringWithFormat:@"Task at row number %d", indexPath.row];
-            break;
-    }
+    TaskInfo *task = self.tasks[indexPath.row];
+    cell.title.text = task.title;
+    cell.subtitle.text = task.subtitle;
+    cell.worth.text = task.worth.description;
     
     return cell;
 }

@@ -2,12 +2,12 @@
 //  MainViewController.h
 //  YouBest
 //
-//  Created by Yang Jason on 14/10/28.
+//  Created by Jason Yang on 14/11/17.
 //  Copyright (c) 2014年 family. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UITableViewController
+@interface MainViewController : UITabBarController
 
 @end

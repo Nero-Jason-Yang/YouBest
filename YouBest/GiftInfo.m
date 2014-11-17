@@ -25,4 +25,14 @@
     return self;
 }
 
+- (void)fillToData:(GiftData *)data {
+    NSParameterAssert(data);
+    data.icon = self.icon;
+    data.title = self.title;
+    data.subtitle = self.subtitle;
+    data.worth = self.worth;
+    data.symbol = self.symbol;
+    data.creationDate = self.creationDate;
+}
+
 @end

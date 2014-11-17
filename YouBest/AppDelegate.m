@@ -7,14 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
-#import "HonorGalleryViewController.h"
-
-
-#import "Database.h"
-#import "RootNavigationController.h"
-
-#import "TabsView.h"
 
 @implementation AppDelegate
 
@@ -25,22 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    return YES;
-    [Database sharedDatabase];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if (0) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YouBest" bundle:nil];
-        self.window.rootViewController = storyboard.instantiateInitialViewController;
-    } else {
-        MainViewController *mainViewController = [[MainViewController alloc] initWithStyle:UITableViewStylePlain];
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        HonorGalleryViewController *galleryViewController = [[HonorGalleryViewController alloc] initWithCollectionViewLayout:layout];
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:galleryViewController];
-        self.window.rootViewController = navigationController;
-    }
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -68,26 +44,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [Database.sharedDatabase save];
-}
-
-#pragma mark public
-
-- (BOOL)adminMode
-{
-    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
-    if ([navigationController isKindOfClass:RootNavigationController.class]) {
-        return navigationController.adminMode;
-    }
-    return NO;
-}
-
-- (void)setAdminMode:(BOOL)adminMode
-{
-    RootNavigationController *navigationController = (RootNavigationController *)self.window.rootViewController;
-    if ([navigationController isKindOfClass:RootNavigationController.class]) {
-        navigationController.adminMode = adminMode;
-    }
+    // [Database.sharedDatabase save];
 }
 
 @end

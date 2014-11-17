@@ -2,6 +2,18 @@
 
 @implementation NSManagedObjectContext (Utils)
 
++ (id)contextWithModelName:(NSString *)modelName
+{
+    return [NSManagedObjectContext contextWithModelName:modelName storeName:modelName concurrencyType:NSPrivateQueueConcurrencyType];
+}
+
++ (id)contextWithModelName:(NSString *)modelName storeName:(NSString *)storeName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType
+{
+    NSURL *modelURL = [NSManagedObjectContext modelURLWithModelName:modelName extension:@"momd"];
+    NSURL *storeURL = [NSManagedObjectContext storeURLWithStoreName:storeName extension:@"sqlite"];
+    return [NSManagedObjectContext contextWithModelURL:modelURL storeURL:storeURL concurrencyType:concurrencyType];
+}
+
 + (id)contextWithModelURL:(NSURL *)modelURL storeURL:(NSURL *)storeURL concurrencyType:(NSManagedObjectContextConcurrencyType)type
 {
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -22,19 +34,6 @@
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:type];
     [context setPersistentStoreCoordinator:store];
     return context;
-}
-
-+ (id)contextWithModelName:(NSString *)modelName storeName:(NSString *)storeName
-{
-    NSURL *modelURL = [NSManagedObjectContext modelURLWithModelName:modelName extension:@"momd"];
-    NSURL *storeURL = [NSManagedObjectContext storeURLWithStoreName:storeName extension:@"sqlite"];
-    NSManagedObjectContext *context = [NSManagedObjectContext contextWithModelURL:modelURL storeURL:storeURL concurrencyType:NSPrivateQueueConcurrencyType];
-    return context;
-}
-
-+ (id)contextWithModelName:(NSString *)modelName
-{
-    return [NSManagedObjectContext contextWithModelName:modelName storeName:modelName];
 }
 
 - (void)save

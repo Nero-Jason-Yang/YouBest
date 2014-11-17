@@ -6,17 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Player Tab Bar Controller-->
+        <!--Main-->
         <scene sceneID="O39-48-LCB">
             <objects>
-                <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="sgO-8h-9Ww" customClass="PlayerTabBarController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="iC3-ep-e5C">
-                        <barButtonItem key="leftBarButtonItem" image="gear_16.png" id="Ocm-ym-fbC">
-                            <connections>
-                                <action selector="onAdminModeChange:" destination="sgO-8h-9Ww" id="5ny-iC-XRm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                <tabBarController storyboardIdentifier="PlayerTabBarController" definesPresentationContext="YES" id="sgO-8h-9Ww" customClass="MainViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Main" id="iC3-ep-e5C"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="bWU-RD-yQO">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -24,8 +18,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="bLe-dC-Q8Y" kind="relationship" relationship="viewControllers" id="Vap-Ps-v1a"/>
-                        <segue destination="u9h-dv-P1C" kind="relationship" relationship="viewControllers" id="lqa-uS-QXl"/>
+                        <segue destination="NZD-gh-8m2" kind="relationship" relationship="viewControllers" id="inF-Yj-FT3"/>
+                        <segue destination="bLe-dC-Q8Y" kind="relationship" relationship="viewControllers" id="Wwk-Dy-KO9"/>
+                        <segue destination="u9h-dv-P1C" kind="relationship" relationship="viewControllers" id="aO3-qK-R39"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDh-Yx-Lt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,7 +32,7 @@
             <objects>
                 <tableViewController id="NZD-gh-8m2" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WuO-uI-miD">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -54,6 +49,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Me" id="hXJ-b5-xIg"/>
+                    <navigationItem key="navigationItem" title="Me" id="10q-7d-XXj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6c-fI-tK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +60,7 @@
             <objects>
                 <tableViewController id="bLe-dC-Q8Y" customClass="TasksViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="hpl-J5-b00">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
@@ -134,17 +130,94 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Tasks" id="gn7-Jy-PIz"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="BuC-qU-9c5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ptc-ad-Tb4">
+                            <connections>
+                                <segue destination="ajJ-eU-pTi" kind="show" id="QVj-Q6-eXu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOO-5Y-Znb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073" y="839"/>
+        </scene>
+        <!--New Task-->
+        <scene sceneID="wDh-CB-2bJ">
+            <objects>
+                <viewController id="ajJ-eU-pTi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6VE-oE-sCG"/>
+                        <viewControllerLayoutGuide type="bottom" id="fqx-jh-OGD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ifW-wT-t9y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZ2-1g-aGM">
+                                <rect key="frame" x="64" y="46" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="mXp-QI-P9M">
+                                <rect key="frame" x="64" y="8" width="530" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yiC-gr-iKo">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.6549019814" green="0.88235300780000003" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Fon-M5-WIF"/>
+                                    <constraint firstAttribute="width" secondItem="yiC-gr-iKo" secondAttribute="height" multiplier="1:1" id="KpF-OV-g24"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-hR-2WD">
+                                <rect key="frame" x="8" y="84" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="w22-vK-Ciu">
+                                <rect key="frame" x="64" y="84" width="94" height="29"/>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-Dy-wWd">
+                                <rect key="frame" x="64" y="121" width="94" height="29"/>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Worth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZr-lV-QUy">
+                                <rect key="frame" x="166" y="88" width="428" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symbol" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NL4-rJ-F8D">
+                                <rect key="frame" x="166" y="125" width="428" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coin_16.png" translatesAutoresizingMaskIntoConstraints="NO" id="29Z-bb-v47">
+                                <rect key="frame" x="24" y="128" width="16" height="16"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="New Task" id="kko-lL-lTB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="xKI-Ub-B97"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RO-iw-PCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="1546"/>
         </scene>
         <!--Gifts-->
         <scene sceneID="YN0-2c-gwN">
             <objects>
                 <tableViewController id="u9h-dv-P1C" customClass="GiftsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="s7o-oy-Ibj">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
@@ -214,6 +287,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Gifts" id="8MG-kt-c6M"/>
+                    <navigationItem key="navigationItem" title="Gifts" id="49n-zD-qN5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpN-ey-VCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,6 +311,5 @@
     </scenes>
     <resources>
         <image name="coin_16.png" width="16" height="16"/>
-        <image name="gear_16.png" width="16" height="16"/>
     </resources>
 </document>

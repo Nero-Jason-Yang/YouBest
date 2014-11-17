@@ -20,5 +20,6 @@
 @property (nonatomic) NSDate * creationDate;
 
 - (id)initWithData:(TaskData *)data;
+- (void)fillToData:(TaskData *)data;
 
 @end
