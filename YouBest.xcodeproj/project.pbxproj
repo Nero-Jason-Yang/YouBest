@@ -68,6 +68,7 @@
 		EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B476D1885168E00362B84 /* AppDelegate.m */; };
 		EE6B47731885168E00362B84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6B47721885168E00362B84 /* Images.xcassets */; };
 		EE973EDB18EA67A800C43728 /* UIButton+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */; };
+		EEBAD6351A1AC95200FA4EB8 /* TaskEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAD6341A1AC95200FA4EB8 /* TaskEditingViewController.m */; };
 		EEEE29E718BB222200773F2A /* UINavigationBar+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,8 @@
 		EE6B47791885168E00362B84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EE973ED918EA67A800C43728 /* UIButton+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+UITableView.h"; sourceTree = "<group>"; };
 		EE973EDA18EA67A800C43728 /* UIButton+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UITableView.m"; sourceTree = "<group>"; };
+		EEBAD6331A1AC95200FA4EB8 /* TaskEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskEditingViewController.h; sourceTree = "<group>"; };
+		EEBAD6341A1AC95200FA4EB8 /* TaskEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskEditingViewController.m; sourceTree = "<group>"; };
 		EEEE29E518BB222200773F2A /* UINavigationBar+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Utils.h"; sourceTree = "<group>"; };
 		EEEE29E618BB222200773F2A /* UINavigationBar+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -319,6 +322,8 @@
 				EE4EB0F51A10B99600ABD31D /* TasksViewController.m */,
 				EE4EB0F71A10B9DD00ABD31D /* TasksViewCell.h */,
 				EE4EB0F81A10B9DD00ABD31D /* TasksViewCell.m */,
+				EEBAD6331A1AC95200FA4EB8 /* TaskEditingViewController.h */,
+				EEBAD6341A1AC95200FA4EB8 /* TaskEditingViewController.m */,
 				EE4EB1401A13556D00ABD31D /* TaskData.h */,
 				EE4EB1411A13556D00ABD31D /* TaskData.m */,
 				EE4EB1431A13573C00ABD31D /* TaskInfo.h */,
@@ -459,6 +464,7 @@
 			files = (
 				EE6B476E1885168E00362B84 /* AppDelegate.m in Sources */,
 				EE4EB1391A1350E300ABD31D /* GiftsViewCell.m in Sources */,
+				EEBAD6351A1AC95200FA4EB8 /* TaskEditingViewController.m in Sources */,
 				46B21E5B18916DA500952309 /* Logger.m in Sources */,
 				EE4EB1601A199C9400ABD31D /* MainViewController.m in Sources */,
 				EE4EB0F61A10B99600ABD31D /* TasksViewController.m in Sources */,
