@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2s2-Ff-qYr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2s2-Ff-qYr">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -81,61 +81,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell-Editing" rowHeight="122" id="HOY-DC-7lf">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell-Editing" rowHeight="124" id="HOY-DC-7lf">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HOY-DC-7lf" id="w2H-s4-Hzt">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tasks" translatesAutoresizingMaskIntoConstraints="NO" id="2xT-gK-irM">
-                                            <rect key="frame" x="8" y="9" width="48" height="48"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tasks" translatesAutoresizingMaskIntoConstraints="NO" id="2xT-gK-irM">
+                                            <rect key="frame" x="15" y="13" width="24" height="24"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="48" id="mni-Rx-u7H"/>
-                                                <constraint firstAttribute="width" constant="48" id="qKn-yQ-ZRo"/>
+                                                <constraint firstAttribute="height" constant="24" id="mni-Rx-u7H"/>
+                                                <constraint firstAttribute="width" constant="24" id="qKn-yQ-ZRo"/>
                                             </constraints>
                                         </imageView>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subtitle" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXt-Zk-NtK">
-                                            <rect key="frame" x="64" y="47" width="528" height="30"/>
+                                            <rect key="frame" x="54" y="46" width="538" height="30"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="hdR-WE-xiR">
-                                            <rect key="frame" x="64" y="9" width="528" height="30"/>
+                                            <rect key="frame" x="54" y="8" width="538" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4V8-9g-hxJ">
-                                            <rect key="frame" x="64" y="85" width="48" height="30"/>
+                                            <rect key="frame" x="54" y="84" width="48" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="48" id="cmt-pD-i00"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin_16.png" translatesAutoresizingMaskIntoConstraints="NO" id="65c-Rx-380">
-                                            <rect key="frame" x="8" y="76" width="48" height="48"/>
-                                        </imageView>
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bFN-HG-aST">
-                                            <rect key="frame" x="120" y="85" width="94" height="29"/>
+                                            <rect key="frame" x="110" y="85" width="94" height="29"/>
                                         </stepper>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="65c-Rx-380">
+                                            <rect key="frame" x="15" y="87" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="QcC-W4-IkO"/>
+                                                <constraint firstAttribute="width" constant="24" id="f6u-gZ-ScC"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="leading" secondItem="2xT-gK-irM" secondAttribute="trailing" constant="8" id="37n-Iy-WlK"/>
-                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="leading" secondItem="MXt-Zk-NtK" secondAttribute="leading" id="4uj-n7-GA3"/>
-                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="centerY" secondItem="65c-Rx-380" secondAttribute="centerY" id="7qm-WH-1Th"/>
-                                        <constraint firstItem="2xT-gK-irM" firstAttribute="centerX" secondItem="65c-Rx-380" secondAttribute="centerX" id="9Sa-Uo-aEe"/>
-                                        <constraint firstItem="bFN-HG-aST" firstAttribute="leading" secondItem="4V8-9g-hxJ" secondAttribute="trailing" constant="8" id="BaF-et-0ST"/>
-                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="trailing" secondItem="w2H-s4-Hzt" secondAttribute="trailingMargin" id="Bk5-q8-g9M"/>
-                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="trailing" secondItem="hdR-WE-xiR" secondAttribute="trailing" id="H3B-cA-H01"/>
-                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="top" secondItem="hdR-WE-xiR" secondAttribute="bottom" constant="8" id="PE6-5r-LOv"/>
-                                        <constraint firstItem="2xT-gK-irM" firstAttribute="top" secondItem="w2H-s4-Hzt" secondAttribute="topMargin" id="PlI-IQ-eTt"/>
-                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="leading" secondItem="hdR-WE-xiR" secondAttribute="leading" id="S73-ke-6Nn"/>
-                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="centerY" secondItem="bFN-HG-aST" secondAttribute="centerY" constant="0.5" id="dGO-TF-iCa"/>
-                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="top" secondItem="w2H-s4-Hzt" secondAttribute="topMargin" constant="1" id="fBF-xJ-R86"/>
-                                        <constraint firstItem="2xT-gK-irM" firstAttribute="leading" secondItem="w2H-s4-Hzt" secondAttribute="leadingMargin" id="lG2-Pw-1PW"/>
-                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="top" secondItem="MXt-Zk-NtK" secondAttribute="bottom" constant="8" id="o47-41-DiX"/>
-                                        <constraint firstItem="2xT-gK-irM" firstAttribute="height" secondItem="65c-Rx-380" secondAttribute="height" id="r84-DH-ekx"/>
-                                        <constraint firstItem="2xT-gK-irM" firstAttribute="width" secondItem="65c-Rx-380" secondAttribute="width" id="yo8-GH-TWm"/>
+                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="top" secondItem="hdR-WE-xiR" secondAttribute="bottom" constant="8" id="1R3-tz-uH3"/>
+                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="leading" secondItem="MXt-Zk-NtK" secondAttribute="leading" id="2vA-Bs-4ru"/>
+                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="top" secondItem="w2H-s4-Hzt" secondAttribute="topMargin" id="2vu-Eh-KZK"/>
+                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="centerY" secondItem="65c-Rx-380" secondAttribute="centerY" id="3T9-b2-vPS"/>
+                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="leading" secondItem="2xT-gK-irM" secondAttribute="trailing" constant="15" id="7B5-IH-2PR"/>
+                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="top" secondItem="MXt-Zk-NtK" secondAttribute="bottom" constant="8" id="7np-YV-5Bd"/>
+                                        <constraint firstItem="65c-Rx-380" firstAttribute="centerX" secondItem="2xT-gK-irM" secondAttribute="centerX" id="CsX-AI-9RU"/>
+                                        <constraint firstItem="2xT-gK-irM" firstAttribute="leading" secondItem="w2H-s4-Hzt" secondAttribute="leadingMargin" constant="7" id="Ohs-8J-hoN"/>
+                                        <constraint firstItem="2xT-gK-irM" firstAttribute="centerY" secondItem="hdR-WE-xiR" secondAttribute="centerY" constant="2" id="X4V-mU-Pte"/>
+                                        <constraint firstItem="bFN-HG-aST" firstAttribute="leading" secondItem="4V8-9g-hxJ" secondAttribute="trailing" constant="8" id="bff-kp-ihg"/>
+                                        <constraint firstItem="hdR-WE-xiR" firstAttribute="trailing" secondItem="w2H-s4-Hzt" secondAttribute="trailingMargin" id="fMU-oV-z2x"/>
+                                        <constraint firstItem="4V8-9g-hxJ" firstAttribute="bottom" secondItem="bFN-HG-aST" secondAttribute="bottom" id="oWa-dL-lxG"/>
+                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="leading" secondItem="hdR-WE-xiR" secondAttribute="leading" id="obs-jK-hY6"/>
+                                        <constraint firstItem="MXt-Zk-NtK" firstAttribute="trailing" secondItem="hdR-WE-xiR" secondAttribute="trailing" id="r11-A7-Dp0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -171,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gc1-YM-Lux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1486"/>
+            <point key="canvasLocation" x="0.0" y="1478"/>
         </scene>
         <!--Gifts-->
         <scene sceneID="oeo-qD-aHh">
@@ -240,7 +242,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coin_16.png" width="16" height="16"/>
+        <image name="coin" width="16" height="16"/>
         <image name="gifts" width="24" height="24"/>
         <image name="tasks" width="24" height="24"/>
     </resources>
