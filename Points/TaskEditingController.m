@@ -7,8 +7,10 @@
 //
 
 #import "TaskEditingController.h"
+#import "Database.h"
 
 @interface TaskEditingController ()
+@property (nonatomic,readonly) TaskInfo *info;
 @property (nonatomic,readonly) NSArray *templates;
 @end
 
@@ -17,21 +19,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _templates = @[];
+    _info = [[TaskInfo alloc] init];
+    _templates = [Database sharedDatabase].allTasks;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onDone:(id)sender {
+    if (self == self.navigationController.visibleViewController) {
+        TaskEditingCell *cell = (TaskEditingCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        if (cell) {
+            self.info.icon = cell.icon.text;
+            self.info.symbol = cell.symbol.text;
+            self.info.title = cell.title.text;
+            self.info.subtitle = cell.subtitle.text;
+            self.info.worth = @(cell.worth.text.integerValue);
+        }
+        
+        if (self.delegate) {
+            [self.delegate taskEditingController:self didFinishTaskWithInfo:self.info];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
-#pragma mark - Table view data source
+#pragma mark <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
@@ -42,28 +52,43 @@
         return 1;
     }
     else {
-        return self.templates.count + 1;
+        return self.templates.count;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (0 == indexPath.section) {
+    if (0 == indexPath.section && 0 == indexPath.row) {
         static NSString *identifier = @"Cell-Editing";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-        
-        // Configure the cell...
-        
+        TaskEditingCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+        cell.icon.text = self.info.icon;
+        cell.symbol.text = self.info.symbol;
+        cell.title.text = self.info.title;
+        cell.subtitle.text = self.info.subtitle;
+        cell.worth.text = self.info.worth.description;
         return cell;
     }
-    else {
+    
+    if (1 == indexPath.section) {
         static NSString *identifier = @"Cell-Template";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-        
-        cell.textLabel.text = @"Hello";
-        
+        TaskInfo *info = self.templates[indexPath.row];
+        cell.textLabel.text = info.title;
+        cell.detailTextLabel.text = info.subtitle;
+        //cell.worth.text = info.worth.description;
         return cell;
     }
+    
+    return nil;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (1 == section) {
+        return @"Templates";
+    }
+    return nil;
+}
+
+#pragma mark <UITableViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (0 == indexPath.section) {
@@ -74,48 +99,48 @@
     }
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (1 == section) {
+        return 36;
+    }
+    else {
+        return 0;
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section > 0) {
+        TaskInfo *info = self.templates[indexPath.row];
+        TaskEditingCell *cell = (TaskEditingCell *)[tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        cell.icon.text = info.icon;
+        cell.symbol.text = info.symbol;
+        cell.title.text = info.title;
+        cell.subtitle.text = info.subtitle;
+        cell.worth.text = info.worth.description;
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && indexPath.row == 0 && [cell isKindOfClass:TaskEditingCell.class]) {
+        TaskEditingCell *taskCell = (TaskEditingCell *)cell;
+        self.info.icon = taskCell.icon.text;
+        self.info.symbol = taskCell.symbol.text;
+        self.info.title = taskCell.title.text;
+        self.info.subtitle = taskCell.subtitle.text;
+        self.info.worth = @(taskCell.worth.text.integerValue);
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+@end
+
+@interface TaskEditingCell ()
+@property (strong, nonatomic) IBOutlet UIStepper *stepper;
+@end
+
+@implementation TaskEditingCell
+
+- (IBAction)onStepper:(id)sender {
+    self.worth.text = @(((UIStepper *)sender).value).description;
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

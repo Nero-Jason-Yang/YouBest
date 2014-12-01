@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE64AF531A2C4EBC00519D3D /* IDImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE64AF521A2C4EBC00519D3D /* IDImageView.m */; };
+		EE64AF561A2C55E400519D3D /* IDImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE64AF551A2C55E400519D3D /* IDImageButton.m */; };
 		EEBAD6451A1F234900FA4EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAD6441A1F234900FA4EB8 /* main.m */; };
 		EEBAD6481A1F234900FA4EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBAD6471A1F234900FA4EB8 /* AppDelegate.m */; };
 		EEBAD6511A1F234900FA4EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBAD64F1A1F234900FA4EB8 /* Main.storyboard */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE64AF511A2C4EBC00519D3D /* IDImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDImageView.h; sourceTree = "<group>"; };
+		EE64AF521A2C4EBC00519D3D /* IDImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDImageView.m; sourceTree = "<group>"; };
+		EE64AF541A2C55E400519D3D /* IDImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDImageButton.h; sourceTree = "<group>"; };
+		EE64AF551A2C55E400519D3D /* IDImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDImageButton.m; sourceTree = "<group>"; };
 		EEBAD63F1A1F234900FA4EB8 /* Points.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Points.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBAD6431A1F234900FA4EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBAD6441A1F234900FA4EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				EEBAD68F1A1F300B00FA4EB8 /* GiftsViewController.m */,
 				EEBAD6941A1F36C000FA4EB8 /* TaskEditingController.h */,
 				EEBAD6951A1F36C000FA4EB8 /* TaskEditingController.m */,
+				EE64AF511A2C4EBC00519D3D /* IDImageView.h */,
+				EE64AF521A2C4EBC00519D3D /* IDImageView.m */,
+				EE64AF541A2C55E400519D3D /* IDImageButton.h */,
+				EE64AF551A2C55E400519D3D /* IDImageButton.m */,
 				EEBAD6521A1F234900FA4EB8 /* Images.xcassets */,
 				EEBAD6541A1F234900FA4EB8 /* LaunchScreen.xib */,
 				EEBAD6421A1F234900FA4EB8 /* Supporting Files */,
@@ -299,9 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE64AF561A2C55E400519D3D /* IDImageButton.m in Sources */,
 				EEBAD6861A1F270500FA4EB8 /* NSManagedObjectContext+Utils.m in Sources */,
 				EEBAD66D1A1F249900FA4EB8 /* TasksViewController.m in Sources */,
 				EEBAD6961A1F36C000FA4EB8 /* TaskEditingController.m in Sources */,
+				EE64AF531A2C4EBC00519D3D /* IDImageView.m in Sources */,
 				EEBAD6831A1F269C00FA4EB8 /* TaskData.m in Sources */,
 				EEBAD6811A1F269C00FA4EB8 /* Database.m in Sources */,
 				EEBAD6481A1F234900FA4EB8 /* AppDelegate.m in Sources */,
