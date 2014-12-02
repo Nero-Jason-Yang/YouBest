@@ -59,6 +59,12 @@
             data.subtitle = @"Inside one hour.";
             data.worth = @(1);
             data.creationDate = [NSDate date];
+            
+            data = [self.context createObjectForEntityName:EntityName_Task];
+            data.title = @"Multiple Lines";
+            data.subtitle = @"Hello world, please help me to make the third line by word wrap.";
+            data.worth = @(1);
+            data.creationDate = [NSDate date];
         }
         
         if (0 == [self.context fetchCountForEntityName:EntityName_Gift withPredicate:nil]) {
